@@ -9,7 +9,7 @@ import LargeD from "../images/defender_assets.svg"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="container p-8 lg:p-24">
+    <div className="container p-8 md:p-12 xl:p-24">
       <section className="">
         <img src={LargeD} className="block bg-red md:mx-24 xl:mx-48" />
         <div className="flex justify-end">
