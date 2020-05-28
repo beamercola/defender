@@ -1,8 +1,8 @@
 import React from "react"
 
 const Footer = () => (
-  <footer className="container text-xs bg-canvas p-6 xl:px-24 lg:fixed lg:bottom-0 lg:inset-x-0">
-    <div className="flex flex-wrap -mx-2 border-t-2 border-black py-4">
+  <footer className="border-t-2 border-black text-xs bg-canvas xl:mx-24 lg:fixed lg:bottom-0 lg:inset-x-0">
+    <div className="flex flex-wrap -mx-2 py-4">
       <div className="px-2 w-1/2 lg:w-1/5">
         <h4 className="font-bold">Adult Division - HOJ</h4>
         <p>555 Seventh Street</p>
