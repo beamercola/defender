@@ -9,11 +9,11 @@ import LargeD from "../images/defender_assets.svg"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="container lg:p-24">
+    <div className="container p-8 lg:p-24">
       <section className="">
-        <img src={LargeD} className="block bg-red mx-48" />
+        <img src={LargeD} className="block bg-red md:mx-24 xl:mx-48" />
         <div className="flex justify-end">
-          <p className="text-2xl w-3/4 md:w-1/2">
+          <p className="text-2xl md:w-1/2">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy Lorem ipsum dolor sit amet, consectetuer adipi - scing elit,
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
@@ -22,7 +22,7 @@ const IndexPage = () => (
         </div>
       </section>
 
-      <section className="mt-64 font-serif text-xl w-2/3">
+      <section className="mt-64 font-serif text-xl md:w-2/3">
         <p className="mb-16">To Whom It May Concern,</p>
         <p className="mb-16">
           The Office of the San Francisco Public Defender is thrilled for the
