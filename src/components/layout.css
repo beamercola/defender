@@ -5,5 +5,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-canvas;
+  @apply bg-canvas bg-contain bg-repeat-y;
+  background-image: url(../images/bg.png);
 }

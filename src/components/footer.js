@@ -1,7 +1,7 @@
 import React from "react"
 
 const Footer = () => (
-  <footer className="border-t-2 border-black text-xs bg-canvas xl:mx-24 lg:fixed lg:bottom-0 lg:inset-x-0">
+  <footer className="border-t-2 border-black text-xs md:mx-12 xl:mx-24">
     <div className="flex flex-wrap -mx-2 py-4">
       <div className="px-2 w-1/2 lg:w-1/5">
         <h4 className="font-bold">Adult Division - HOJ</h4>
