@@ -6,6 +6,9 @@ module.exports = {
     container: {
       center: true,
     },
+    fontFamily: {
+      gothic: ["cstm_xprmntl_03regular", "serif"],
+    },
     extend: {
       colors: {
         canvas: "#E5E5C3",

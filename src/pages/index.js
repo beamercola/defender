@@ -44,17 +44,17 @@ const IndexPage = () => {
       <section className="mt-32 font-serif leading-tight">
         <p className="mb-8">To Whom It May Concern,</p>
         <p className="mb-8">
-          The Office of the San Francisco Public
+          The Office of the San Francisco Public{" "}
           <strong className="font-gothic">Defender</strong> is thrilled for the
-          opportunity to work with
+          opportunity to work with{" "}
           <strong className="font-sans">Even/Odd Films</strong> and
           <strong className="font-sans">Compound</strong> to continue the legacy
-          of the late San Francisco Public
-          <strong className="font-gothic">Defender Jeff Adachi</strong> , who
-          was also a filmmaker dedicated to using storytelling to
+          of the late San Francisco Public{" "}
+          <strong className="font-gothic">Defender Jeff Adachi</strong>, who was
+          also a filmmaker dedicated to using storytelling to
           <em>convey the realities</em> of the criminal legal system. The Adachi
-          Fund is an important project that will endeavor to educate and in -
-          spire the public to understand what public
+          Fund is an important project that will endeavor to educate and inspire
+          the public to understand what public{" "}
           <strong className="font-gothic">defenders</strong> do, who our clients
           and their communities are, and why our mandate to fight for their
           rights is a dire calling to expose <strong>inequities</strong>
