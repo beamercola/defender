@@ -1,19 +1,19 @@
 import React from "react"
 
 const Footer = () => (
-  <div className="mx-4 mt-64 mb-4 md:mx-16 xl:mx-24 md:mb-16 xl:mb-24">
+  <div className="mx-4 mt-12 mb-4 md:mx-16 xl:mx-24 md:mb-16 lg:mt-64 xl:mb-24">
     <div className="flex flex-col items-center py-2 -mx-2 lg:flex-row">
       <div className="px-2 w-full mb-4 lg:w-1/5 text-xs font-bold">
         GET INVOLVED
       </div>
       <div className="px-2 w-full mb-4 lg:w-1/5">
         <input
-          className="rounded-lg bg-orange-600 px-2 py-1 w-full h-8"
+          className="rounded-lg bg-orange-600 w-full px-4 py-2 lg:h-8 lg:px-2 lg:py-1"
           type="text"
         />
       </div>
       <div className="px-2 w-full mb-4 lg:w-1/5">
-        <a className="block rounded-lg bg-yellow-400 text-xs font-bold h-8 flex justify-center items-center cursor-pointer">
+        <a className="block rounded-lg bg-yellow-400 text-xs font-bold flex justify-center items-center cursor-pointer px-4 py-3 lg:h-8">
           DONATE
         </a>
       </div>
