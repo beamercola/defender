@@ -6,11 +6,29 @@
   font-family: "cstm_xprmntl_03regular";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/blackletter.otf") format("woff2"),
-    url("../fonts/blackletter.otf") format("woff");
+  src: url("../fonts/blackletter.woff2") format("woff2"),
+    url("../fonts/blackletter.woff") format("woff");
 }
 
 body {
   @apply bg-canvas bg-contain bg-repeat-y;
   background-image: url(../images/bg.png);
+}
+
+article p {
+  @apply mb-4 text-lg;
+}
+
+.rotate {
+  transform: rotateY(45deg);
+  animation: rotateAnimation 2s linear infinite;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(45deg);
+  }
+  to {
+    transform: rotateY(225deg);
+  }
 }
