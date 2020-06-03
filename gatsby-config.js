@@ -28,5 +28,12 @@ module.exports = {
         postCssPlugins: [require("autoprefixer")],
       },
     },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://evenoddfilms.us10.list-manage.com/subscribe/post?u=6fc42c7780850744db834e177&amp;id=a6cf0e406b",
+      },
+    },
   ],
 }
