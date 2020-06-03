@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="border-b-2 border-black fixed top-0 inset-x-0 md:mx-12 xl:mx-24"
+      className="border-b-2 border-black fixed top-0 inset-x-0 mx-4 md:mx-16 xl:mx-24"
       style={{
         height: scale,
       }}
@@ -17,6 +17,11 @@ const Header = () => {
       <Link className="" to="/">
         <img className="h-full mx-auto object-contain" src={Logo} />
       </Link>
+      <div className="flex mt-4 justify-between">
+        <strong className="text-xs font-bold block ">
+          DEFENDER IS SUPPORTED BY THE ADACHI FUND
+        </strong>
+      </div>
     </motion.header>
   )
 }
