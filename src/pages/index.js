@@ -6,6 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import LargeD from "../images/defender_assets.svg"
 import Seal from "../images/san-francisco-city-seal.png"
+import DefenderD from "../images/defender-d.svg"
 
 const IndexPage = () => (
   <Layout>
@@ -14,7 +15,7 @@ const IndexPage = () => (
       <img src={LargeD} className="block bg-red mb-12 md:mx-24 xl:mx-48" />
       <div className="flex justify-end">
         <p className="text-lg leading-tight md:w-1/2">
-          AN URGENT STORYTELLING PROJECT FOR{" "}
+          AN URGENT STORYTELLING PROJECT FOR
           <strong>THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER</strong>
           CREATED TO BRING REFORM TO THE CRIMINAL JUSTICE SYSTEM. TRUTH
           LIBERATES. WE ILLUMI - NATE AND DEFEND IT.
@@ -70,6 +71,7 @@ const IndexPage = () => (
       </strong>
       <br />
       San Francisco Public Defender
+      <img className="mt-12 w-48" src={DefenderD} alt="Defender" />
     </section>
   </Layout>
 )
