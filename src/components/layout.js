@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { ParallaxProvider } from "react-scroll-parallax"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="px-4 md:px-16 xl:px-24">{children}</main>
       <Footer />
-    </>
+    </ParallaxProvider>
   )
 }
 

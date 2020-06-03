@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="border-b-2 border-black fixed top-0 inset-x-0 mx-4 md:mx-16 xl:mx-24"
+      className="border-b-2 border-black fixed top-0 inset-x-0 mx-4 z-50 md:mx-16 xl:mx-24"
       style={{
         height: scale,
       }}

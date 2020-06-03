@@ -1,7 +1,7 @@
 import React from "react"
 
 const Footer = () => (
-  <div className="mx-4 mt-64 md:mx-16 xl:mx-24">
+  <div className="mx-4 mt-64 mb-4 md:mx-16 xl:mx-24 md:mb-16 xl:mb-24">
     <div className="flex flex-col items-center py-2 -mx-2 lg:flex-row">
       <div className="px-2 w-full mb-4 lg:w-1/5 text-xs font-bold">
         GET INVOLVED
@@ -19,10 +19,10 @@ const Footer = () => (
       </div>
       <div className="px-2 w-full mb-4 lg:w-1/5">&nbsp;</div>
       <div className="px-2 w-full lg:w-1/5 flex justify-between">
-        <a href="">
+        <a href="https://twitter.com/_wearedefender/" target="_blank">
           <img className="h-8" src="social-twitter.png" />
         </a>
-        <a href="">
+        <a href="http://www.instagram.com/wearedefender" target="_blank">
           <img className="h-8" src="social-ig.png" />
         </a>
       </div>
