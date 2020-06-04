@@ -18,7 +18,7 @@ const IndexPage = () => {
           </Parallax>
         </div>
         <Parallax y={[20, -100]}>
-          <p className="text-lg leading-tight ml-auto md:w-1/2">
+          <p className="text-2xl leading-tight ml-auto md:w-1/3">
             AN URGENT STORYTELLING PROJECT FOR
             <strong>THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER</strong>
             CREATED TO BRING REFORM TO THE CRIMINAL JUSTICE SYSTEM. TRUTH
