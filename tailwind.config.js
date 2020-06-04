@@ -10,6 +10,7 @@ module.exports = {
       gothic: ["cstm_xprmntl_03regular", "serif"],
       serif: ["Times New Roman", "serif"],
       bureau: ["bureau-grot", "sans-serif"],
+      "bureau-wide": ["bureau-grot-wide", "sans-serif"],
     },
     extend: {
       colors: {

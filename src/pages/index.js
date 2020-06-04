@@ -18,7 +18,7 @@ const IndexPage = () => {
           </Parallax>
         </div>
         <Parallax y={[20, -100]}>
-          <p className="font-bureau font-light text-2xl leading-tight ml-auto md:w-1/3">
+          <p className="font-bureau-wide text-2xl leading-tight ml-auto md:w-1/3">
             DEFENDER IS AN{" "}
             <strong>URGENT JOURNALISTIC FILM, ART, AND MEDIA PROJECT</strong>{" "}
             CREATED TO BRING AWARENESS AND CHANGE TO THE INJUSTICES OF THE

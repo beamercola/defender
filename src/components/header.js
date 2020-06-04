@@ -19,8 +19,8 @@ const Header = () => {
         <img className="h-full mx-auto object-contain" src={Logo} />
       </Link>
       <div className="flex mt-2 items-center justify-between">
-        <strong className="text-xs font-bold block">
-          DEFENDER IS SUPPORTED BY THE ADACHI FUND
+        <strong className="text-xs font-bold block uppercase">
+          Presented by the Adachi Fund
         </strong>
         <img
           className="h-8"
