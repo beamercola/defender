@@ -12,7 +12,6 @@
 
 body {
   @apply bg-canvas bg-contain bg-repeat-y;
-  background-image: url(../images/bg.png);
 }
 
 article p {
