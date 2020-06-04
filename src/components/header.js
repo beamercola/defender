@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import Logo from "../images/logo.svg"
+import Hopeless from "../images/hopeless_text.svg"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 const Header = () => {
@@ -17,10 +18,15 @@ const Header = () => {
       <Link className="" to="/">
         <img className="h-full mx-auto object-contain" src={Logo} />
       </Link>
-      <div className="flex mt-4 justify-between">
-        <strong className="text-xs font-bold block ">
+      <div className="flex mt-2 items-center justify-between">
+        <strong className="text-xs font-bold block">
           DEFENDER IS SUPPORTED BY THE ADACHI FUND
         </strong>
+        <img
+          className="h-8"
+          src={Hopeless}
+          alt="Hopeless is the Enemy of Justice"
+        />
       </div>
     </motion.header>
   )
