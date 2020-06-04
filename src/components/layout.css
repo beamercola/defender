@@ -11,7 +11,8 @@
 }
 
 body {
-  @apply bg-canvas bg-contain bg-repeat-y;
+  @apply bg-contain bg-repeat-y;
+  background-image: linear-gradient(#b87d6b, #cccccc);
 }
 
 article p {
