@@ -9,6 +9,7 @@ module.exports = {
     fontFamily: {
       gothic: ["cstm_xprmntl_03regular", "serif"],
       serif: ["Times New Roman", "serif"],
+      bureau: ["bureau-grot", "sans-serif"],
     },
     extend: {
       colors: {

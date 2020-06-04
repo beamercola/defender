@@ -16,7 +16,7 @@ body {
 }
 
 article p {
-  @apply mb-4 text-lg font-serif;
+  @apply mb-4 text-lg font-serif font-medium;
 }
 
 .rotate {
