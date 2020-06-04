@@ -13,9 +13,10 @@ const Newsletter = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className="rounded-lg bg-orange-600 w-full px-4 py-4 mb-1 lg:h-8 lg:px-2 lg:pt-2"
+        className="rounded-lg bg-orange-600 w-full px-4 py-4 mb-1 placeholder-white lg:px-2 lg:py-1"
         type="text"
         onChange={e => setEmail(e.target.value)}
+        placeholder="email address"
         value={email}
       />
       <input

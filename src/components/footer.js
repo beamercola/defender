@@ -2,9 +2,9 @@ import React from "react"
 import Newsletter from "../components/newsletter"
 
 const Footer = () => (
-  <div className="mx-4 mt-12 mb-4 lg:mb-0 md:mx-16 xl:mx-24 md:mb-16 lg:mt-64 xl:mb-24">
+  <div className="mx-4 mt-12 mb-4 lg:mb-0 md:mx-16 xl:mx-24 md:mb-16 lg:mt-24 xl:mb-24">
     <div className="flex flex-col items-end py-2 -mx-4 lg:flex-row">
-      <div className="px-4 w-full mb-4 lg:mb-0 lg:w-1/5 text-xs font-bold text-center md:text-right">
+      <div className="px-4 w-full mb-4 lg:mb-0 lg:w-1/5 text-xs font-bold text-center md:text-left">
         GET INVOLVED
       </div>
       <div className="px-4 w-full mb-4 lg:mb-0 lg:w-1/5">
@@ -25,7 +25,7 @@ const Footer = () => (
         </a>
       </div>
     </div>
-    <footer className="border-t-2 border-black text-xs">
+    <footer className="border-t-2 border-black text-xs mb-2">
       <div className="flex flex-wrap -mx-4 py-4 tracking-tighter font-medium">
         <div className="px-4 w-1/2 lg:w-1/5">
           <h4 className="font-extrabold">Adult Division - HOJ</h4>
@@ -75,6 +75,12 @@ const Footer = () => (
         </div>
       </div>
     </footer>
+    <a
+      className="text-xs font-bold tracking-wider text-orange-600 block"
+      href="mailto:FIGHT@WEAREDEFENDER.COM"
+    >
+      FIGHT@WEAREDEFENDER.COM
+    </a>
     <strong className="text-xs font-bold">
       PENDING BOARD OF SUPERVISOR APPROVAL
     </strong>

@@ -19,10 +19,10 @@ const IndexPage = () => {
         </div>
         <Parallax y={[20, -100]}>
           <p className="font-bureau font-light text-2xl leading-tight ml-auto md:w-1/3">
-            AN URGENT STORYTELLING PROJECT FOR{" "}
-            <strong>THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER</strong>{" "}
-            CREATED TO BRING REFORM TO THE CRIMINAL JUSTICE SYSTEM. TRUTH
-            LIBERATES. WE ILLUMINATE AND DEFEND IT.
+            DEFENDER IS AN{" "}
+            <strong>URGENT JOURNALISTIC FILM, ART, AND MEDIA PROJECT</strong>{" "}
+            CREATED TO BRING AWARENESS AND CHANGE TO THE INJUSTICES OF THE
+            CRIMINAL JUSTICE SYSTEM.
           </p>
         </Parallax>
       </section>
@@ -91,7 +91,7 @@ const IndexPage = () => {
           We will expose unjust and racist immigration laws.
         </p>
         <p className="italic">
-          We will burn the flame of hopefulness, because we know that
+          We will burn the flame of hopefulness, because we know that{" "}
           <strong>hopelessness is the enemy of justice</strong>.
         </p>
         <p>All power belongs to the people,</p>
