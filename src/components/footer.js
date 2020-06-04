@@ -33,7 +33,9 @@ const Footer = () => (
           <p>San Francisco, CA 94103</p>
           <p>P: 415.553.1671</p>
           <p>F: 415.553.9810</p>
-          <p>www.sfpublicdefender.org</p>
+          <a href="https://www.sfpublicdefender.org" target="_blank">
+            www.sfpublicdefender.org
+          </a>
         </div>
         <div className="px-2 w-1/2 lg:w-1/5">
           <h4 className="font-extrabold">Juvenile Division - YGC 375</h4>
@@ -52,7 +54,9 @@ const Footer = () => (
         <div className="px-2 w-1/2 lg:w-1/5">
           <h4 className="font-extrabold">Clean Slate</h4>
           <p>P: 415.553.9337</p>
-          <p>sfpublicdefender.org/services</p>
+          <a href="https://sfpublicdefender.org/services" target="_blank">
+            sfpublicdefender.org/services
+          </a>
           <h4 className="font-extrabold mt-4">Community Justice Center</h4>
           <p>P: 415.202.2832</p>
           <p>F: 415.563.8506</p>
@@ -60,10 +64,14 @@ const Footer = () => (
         <div className="px-2 w-1/2 lg:w-1/5">
           <h4 className="font-extrabold">Bayview Magic</h4>
           <p>P: 415.558.2428</p>
-          <p>www.bayviewmagic.org</p>
+          <a href="https://www.bayviewmagic.org" target="_blank">
+            www.bayviewmagic.org
+          </a>
           <h4 className="font-extrabold mt-4">MoMagic</h4>
           <p>P: 415.567.0400</p>
-          <p>www.momagic.org</p>
+          <a href="https://www.momagic.org" target="_blank">
+            www.momagic.org
+          </a>
         </div>
       </div>
     </footer>
