@@ -18,7 +18,7 @@ const Header = () => {
       <Link className="" to="/">
         <img className="h-full mx-auto object-contain" src={Logo} />
       </Link>
-      <div className="flex mt-2 items-center justify-between">
+      <div className="flex flex-col mt-2 items-center justify-between md:flex-row">
         <strong className="text-xs font-bold block uppercase">
           Presented by the Adachi Fund
         </strong>
