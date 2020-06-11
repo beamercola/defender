@@ -35,6 +35,7 @@ const Footer = () => (
             FIGHT@WEAREDEFENDER.COM
           </a>
           <p>Pending Board Of Supervisor Approval</p>
+          <img className="h-12 mt-8" src="adachi_fund_logo.png" />
         </div>
         <div className="px-4 w-1/2 lg:w-1/3">
           <span className="font-gothic">Defender</span> is created by{" "}
