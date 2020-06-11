@@ -55,7 +55,7 @@ const IndexPage = () => {
           </animated.p>
         </section>
 
-        <section>
+        <section className="my-24">
           <img className="w-full" src={ComingSoon} alt="Coming Soon" />
         </section>
 
