@@ -6,29 +6,33 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 const Header = () => {
   const { scrollY } = useViewportScroll()
-  const scale = useTransform(scrollY, [0, 200], [200, 80])
+  const scale = useTransform(scrollY, [0, 300], [250, 80])
+  const textScale = useTransform(scrollY, [0, 300], [1.5, 1])
 
   return (
-    <motion.header
-      className="border-b-2 border-black fixed top-0 inset-x-0 mx-4 z-50 md:mx-16 xl:mx-24"
-      style={{
-        height: scale,
-      }}
-    >
-      <Link className="" to="/">
-        <img className="h-full mx-auto object-contain" src={Logo} />
-      </Link>
+    <div className="fixed top-0 inset-x-0 mx-auto max-w-5xl z-50">
+      <motion.header
+        className="border-b-2 border-black w-full"
+        style={{
+          height: scale,
+        }}
+      >
+        <Link className="" to="/">
+          <img className="h-full mx-auto object-contain" src={Logo} />
+        </Link>
+      </motion.header>
       <div className="flex flex-col mt-2 items-center justify-between md:flex-row">
         <strong className="text-xs font-bold block uppercase">
           Presented by the Adachi Fund
         </strong>
-        <img
+        <motion.img
           className="h-8"
           src={Hopeless}
           alt="Hopeless is the Enemy of Justice"
+          style={{ scale: textScale, transformOrigin: "top right" }}
         />
       </div>
-    </motion.header>
+    </div>
   )
 }
 
