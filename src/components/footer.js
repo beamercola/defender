@@ -53,7 +53,11 @@ const Footer = () => (
         </div>
         <div className="px-4 w-full text-center my-12 lg:my-0 lg:w-3/12 lg:text-right">
           Site design by{" "}
-          <a className="text-orange-600" href="https://houseofgul.com">
+          <a
+            className="text-orange-600"
+            href="https://houseofgul.com"
+            target="_blank"
+          >
             House of Gul
           </a>
         </div>
