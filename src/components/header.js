@@ -17,22 +17,20 @@ const Header = () => {
           height: scale,
         }}
       >
-        <Link className="" to="/">
-          <img className="h-full mx-auto object-contain" src={Logo} />
-        </Link>
+        <img className="h-full mx-auto object-contain" src={Logo} />
       </motion.header>
       <div className="flex flex-col mt-2 items-center justify-between md:flex-row">
         <strong className="text-xs font-bold block uppercase">
           Presented by the Adachi Fund
         </strong>
-        <motion.img
-          className="hopeless h-6 mx-auto md:mx-0 lg:h-8"
-          src={Hopeless}
-          alt="Hopeless is the Enemy of Justice"
+        <motion.p
+          className="font-snell text-2xl hopeless pl-4"
           style={{
             scale: textScale,
           }}
-        />
+        >
+          Hopelessness is the Enemy of Justice
+        </motion.p>
       </div>
     </div>
   )

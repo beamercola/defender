@@ -11,10 +11,15 @@ module.exports = {
       serif: ["Times New Roman", "serif"],
       bureau: ["bureau-grot", "sans-serif"],
       "bureau-wide": ["bureau-grot-wide", "sans-serif"],
+      snell: ["snellregular", "serif"],
     },
     extend: {
       colors: {
         canvas: "#E5E5C3",
+        blue: {
+          ...colors.blue,
+          "600": "#0D0DCC",
+        },
         orange: {
           ...colors.yellow,
           "600": "#F55926",

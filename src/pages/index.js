@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 import { animated, useSpring } from "react-spring"
 import Layout from "../components/layout"
 import Header from "../components/header"
@@ -41,9 +42,12 @@ const IndexPage = () => {
             className="md:px-24 xl:px-32"
             style={{ transform: offset.interpolate(calcLargeD) }}
           >
-            <img
+            <motion.img
               src="defender_gif.gif"
               className="block w-full bg-red mb-12 w-2/3"
+              initial={{ opacity: 0, y: 200 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2, ease: "easeOut" }}
             />
           </animated.div>
           <animated.p
@@ -66,11 +70,13 @@ const IndexPage = () => {
         <section>
           <p className="text-center font-serif text-lg max-w-xl mx-auto">
             For now, please watch{" "}
-            <img
-              className="h-8 inline"
-              src={Birthday}
-              alt="Happy Birthday Mario Woods"
-            />
+            <a
+              className="font-snell text-2xl text-blue-600 px-2"
+              href="https://www.theatlantic.com/video/index/501716/happy-birthday-mario-woods/"
+              target="_blank"
+            >
+              Happy Birthday Mario Woods
+            </a>
             <br />
             Mario Woods was murdered by SFPD on December 2nd, 2015.
           </p>
@@ -127,7 +133,7 @@ const IndexPage = () => {
           </p>
           <img
             className="h-64 -my-8 mx-auto"
-            src={Signature}
+            src="mano_sig.png"
             alt="Manohar Raju"
           />
           <strong>

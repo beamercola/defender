@@ -12,7 +12,11 @@ const Footer = () => (
       </div>
 
       <div className="px-2 w-full mb-4 lg:mb-0 lg:w-3/12">
-        <a className="font-bureau block rounded-lg bg-yellow-500 text-xs font-bold flex justify-center items-center cursor-pointer px-4 pt-16 pb-12 rounded-t-full lg:h-8">
+        <a
+          className="font-bureau block rounded-lg bg-yellow-500 text-xs font-bold flex justify-center items-center cursor-pointer px-4 pt-16 pb-12 rounded-t-full lg:h-8"
+          href="https://wearedefender.wedid.it/"
+          target="_blank"
+        >
           DONATE
         </a>
       </div>

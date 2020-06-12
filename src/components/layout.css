@@ -10,6 +10,14 @@
     url("../fonts/blackletter.woff") format("woff");
 }
 
+@font-face {
+  font-family: "snellregular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/snellbt-regular-webfont.woff2") format("woff2"),
+    url("../fonts/snellbt-regular-webfont.woff") format("woff");
+}
+
 body {
   @apply bg-contain bg-repeat-y;
   background-image: linear-gradient(#b87d6b, #cccccc);
