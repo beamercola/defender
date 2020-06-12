@@ -61,15 +61,14 @@ const IndexPage = () => {
 
         <section>
           <p className="text-center font-serif text-lg max-w-xl mx-auto">
-            <p>
-              For now, please watch{" "}
-              <img
-                className="h-8 inline"
-                src={Birthday}
-                alt="Happy Birthday Mario Woods"
-              />
-            </p>
-            <p>Mario Woods was murdered by SFPD on December 2nd 2015.</p>
+            For now, please watch{" "}
+            <img
+              className="h-8 inline"
+              src={Birthday}
+              alt="Happy Birthday Mario Woods"
+            />
+            <br />
+            Mario Woods was murdered by SFPD on December 2nd 2015.
           </p>
           <img className="my-12 w-32 mx-auto" src={DefenderD} alt="Defender" />
           <p className="font-serif italic text-xl">
