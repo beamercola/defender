@@ -4,13 +4,9 @@ import { motion } from "framer-motion"
 import { animated, useSpring } from "react-spring"
 import Layout from "../components/layout"
 import Header from "../components/header"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import Seal from "../images/san-francisco-city-seal.png"
 import DefenderD from "../images/defender-d.svg"
-import Signature from "../images/mano_sig.svg"
 import ComingSoon from "../images/comingsoon.svg"
-import Birthday from "../images/birthday.svg"
 
 const calcLargeD = o => `translateY(${o * -0.3}px)`
 const calcSubtitle = o => `translateY(${o * -0.1}px)`
@@ -57,7 +53,7 @@ const IndexPage = () => {
             <span className="font-gothic normal-case text-5xl">Defender</span>{" "}
             IS AN URGENT{" "}
             <strong>JOURNALISTIC FILM, ART, AND MEDIA PROJECT</strong> ABOUT THE
-            THE WORK OF THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER. IT IS
+            WORK OF THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER. IT IS
             CREATED TO BRING REFORM TO THE INEQUITIES OF THE CRIMINAL LEGAL
             SYSTEM
           </animated.p>
@@ -78,7 +74,7 @@ const IndexPage = () => {
               Happy Birthday Mario Woods
             </a>
             <br />
-            Mario Woods was murdered by SFPD on December 2nd, 2015.
+            Mario Woods was killed by SFPD on December 2nd, 2015.
           </p>
           <img className="my-12 w-32 mx-auto" src={DefenderD} alt="Defender" />
           <p className="font-serif italic text-xl">

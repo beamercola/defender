@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import Logo from "../images/logo.svg"
-import Hopeless from "../images/hopeless_text.svg"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 const Header = () => {
@@ -24,7 +23,7 @@ const Header = () => {
           Presented by the Adachi Fund
         </strong>
         <motion.p
-          className="font-snell text-2xl hopeless pl-4"
+          className="font-snell text-lg lg:text-2xl hopeless pl-4"
           style={{
             scale: textScale,
           }}

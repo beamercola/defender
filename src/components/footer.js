@@ -68,7 +68,10 @@ const Footer = () => (
             House of Gul
           </a>
           <br />
-          Development by Beamer
+          Development by{" "}
+          <a href="https://twitter.com/beamercola" target="_blank">
+            @beamercola
+          </a>
         </div>
       </div>
     </footer>
