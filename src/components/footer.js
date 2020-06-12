@@ -51,7 +51,7 @@ const Footer = () => (
           and is a project of The Adachi Fund, a collaboration between the San
           Francisco Public Defender's Office , Even/Odd and Compound
         </div>
-        <div className="px-4 w-full text-center my-12 lg:my-0 lg:w-3/12 lg:text-left">
+        <div className="px-4 w-full text-center my-12 lg:my-0 lg:w-3/12 lg:text-right">
           Site design by{" "}
           <a className="text-orange-600" href="https://houseofgul.com">
             House of Gul
