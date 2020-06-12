@@ -24,6 +24,16 @@ article p {
   animation: rotateAnimation 2s linear infinite;
 }
 
+.hopeless {
+  transform-origin: top center;
+}
+
+@screen lg {
+  .hopeless {
+    transform-origin: top right;
+  }
+}
+
 @keyframes rotateAnimation {
   from {
     transform: rotateY(45deg);
