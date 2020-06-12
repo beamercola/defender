@@ -38,20 +38,24 @@ const IndexPage = () => {
       <div className="" ref={ref}>
         <section className="pt-84">
           <animated.div
-            className="md:px-24 xl:px-48"
+            className="md:px-24 xl:px-32"
             style={{ transform: offset.interpolate(calcLargeD) }}
           >
-            <img src="defender_gif.gif" className="block w-full bg-red mb-12" />
+            <img
+              src="defender_gif.gif"
+              className="block w-full bg-red mb-12 w-2/3"
+            />
           </animated.div>
           <animated.p
             className="font-bureau-wide text-xl leading-tight ml-auto uppercase lg:-mt-32 md:w-5/12"
             style={{ transform: offset.interpolate(calcSubtitle) }}
           >
-            <span className="font-gothic normal-case text-2xl">Defender</span>{" "}
-            is an urgent{" "}
-            <strong>journalistic film, art, and media project</strong> created
-            to bring awareness and change the injustices of the criminal justice
-            system.
+            <span className="font-gothic normal-case text-5xl">Defender</span>{" "}
+            IS AN URGENT{" "}
+            <strong>JOURNALISTIC FILM, ART, AND MEDIA PROJECT</strong> ABOUT THE
+            THE WORK OF THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER. IT IS
+            CREATED TO BRING REFORM TO THE INEQUITIES OF THE CRIMINAL LEGAL
+            SYSTEM
           </animated.p>
         </section>
 
@@ -68,7 +72,7 @@ const IndexPage = () => {
               alt="Happy Birthday Mario Woods"
             />
             <br />
-            Mario Woods was murdered by SFPD on December 2nd 2015.
+            Mario Woods was murdered by SFPD on December 2nd, 2015.
           </p>
           <img className="my-12 w-32 mx-auto" src={DefenderD} alt="Defender" />
           <p className="font-serif italic text-xl">
@@ -88,19 +92,18 @@ const IndexPage = () => {
             FIGHT FOR JUSTICE.
           </p>
           <p>
-            I WILL BE WILLING TO SEE ALL THE BEAUTY, POWER, AND POTEN - TIAL OF
+            I WILL BE WILLING TO SEE ALL THE BEAUTY, POWER, AND POTENTIAL OF
             EACH PERSON I REPRESENT.
           </p>
           <p>
             I WILL ADVOCATE FOR STRUCTURAL CHANGES THAT CONTRIBUTE TO ENDING THE
-            MASS INCARCERATION SYSTEM THAT HAS DEVAS - TATED OUR SOCIETY FOR FAR
+            MASS INCARCERATION SYSTEM THAT HAS DEVASTATED OUR SOCIETY FOR FAR
             TOO LONG.
           </p>
           <p>
             I WILL FIGHT AGAINST UNJUST AND RACIST IMMIGRATION LAWS, DEFEND ALL
             PEOPLE REGARDLESS OF THEIR BIRTHPLACE OR IMMIGRATION STATUS, AND
-            FIGHT MASS DEPORTATION AS VIGOR - OUSLY AS I FIGHT MASS
-            INCARCERATION.
+            FIGHT MASS DEPORTATION AS VIGOROUSLY AS I FIGHT MASS INCARCERATION.
           </p>
           <p>I WILL REMAIN COMMITTED TO RACIAL JUSTICE.</p>
           <p>I WILL GROW EXCELLENCE AMONG DEFENDERS.</p>
@@ -111,7 +114,7 @@ const IndexPage = () => {
           <p>
             I WILL REMEMBER THAT MY REPRESENTATION OF INDIVIDUALS RIPPLES OUT TO
             THE FOLKS WHO LOVE THEM, AND THEREFORE STRIVE TO STAY ENGAGED WITH
-            THEIR FAMILIES AND COMMUNI - TIES.
+            THEIR FAMILIES AND COMMUNITIES.
           </p>
           <p>
             I WILL KEEP BURNING THE FLAME OF HOPEFULNESS BECAUSE WE KNOW THAT
@@ -128,7 +131,7 @@ const IndexPage = () => {
             alt="Manohar Raju"
           />
           <strong>
-            <em>Monohar Raju</em>
+            <em>Manohar Raju</em>
           </strong>
           <br />
           San Francisco Public <span className="font-gothic">Defender</span>

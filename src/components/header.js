@@ -3,7 +3,7 @@ import React from "react"
 import Logo from "../images/logo.svg"
 import Hopeless from "../images/hopeless_text.svg"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
-import { isMobile } from "react-device-detect"
+import { isBrowser } from "react-device-detect"
 
 const Header = () => {
   const { scrollY } = useViewportScroll()
@@ -32,7 +32,7 @@ const Header = () => {
           alt="Hopeless is the Enemy of Justice"
           style={{
             scale: textScale,
-            transformOrigin: isMobile ? "top center" : "top right",
+            transformOrigin: isBrowser ? "top right" : "top center",
           }}
         />
       </div>

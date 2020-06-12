@@ -29,7 +29,7 @@ const Footer = () => (
 
     <footer className="border-t-2 border-black text-xs font-bureau mb-2">
       <div className="flex flex-wrap -mx-4 py-4 font-medium">
-        <div className="px-4 w-1/2 lg:w-5/12">
+        <div className="px-4 w-full md:w-1/2 lg:w-5/12">
           <a
             className="block text-orange-600"
             href="mailto:fight@wearedefender.com"
@@ -37,10 +37,13 @@ const Footer = () => (
             FIGHT@WEAREDEFENDER.COM
           </a>
           <p>Pending Board Of Supervisor Approval</p>
-          <img className="h-12 mt-4" src="adachi_fund_logo.png" />
+          <img
+            className="h-12 my-4 mx-auto md:mx-0"
+            src="adachi_fund_logo.png"
+          />
         </div>
-        <div className="px-4 w-1/2 lg:w-4/12">
-          <span className="font-gothic">Defender</span> is created by{" "}
+        <div className="px-4 w-full md:w-1/2 lg:w-4/12">
+          <span className="font-gothic text-lg">Defender</span> is created by{" "}
           <a
             className="text-orange-600"
             href="https://evenoddfilms.com"
@@ -49,7 +52,7 @@ const Footer = () => (
             Even/Odd
           </a>{" "}
           and is a project of The Adachi Fund, a collaboration between the San
-          Francisco Public Defender's Office , Even/Odd and Compound
+          Francisco Public Defender's Office, Even/Odd and Compound
         </div>
         <div className="px-4 w-full text-center my-12 lg:my-0 lg:w-3/12 lg:text-right">
           Site design by{" "}
@@ -60,6 +63,8 @@ const Footer = () => (
           >
             House of Gul
           </a>
+          <br />
+          Development by Beamer
         </div>
       </div>
     </footer>
