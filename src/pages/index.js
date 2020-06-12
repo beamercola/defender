@@ -72,7 +72,7 @@ const IndexPage = () => {
             <p>Mario Woods was murdered by SFPD on December 2nd 2015.</p>
           </p>
           <img className="my-12 w-32 mx-auto" src={DefenderD} alt="Defender" />
-          <p className="italic font-serif text-xl">
+          <p className="font-serif italic text-xl">
             On February 27, 2020, recently elected Public Defender Mano Raju,
             penned a community-centered oath. It is a statement of conscience
             and a contract with the public and guides the San Francisco Public
