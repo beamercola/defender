@@ -60,7 +60,7 @@ const IndexPage = () => {
         </section>
 
         <section>
-          <p className="text-center max-w-xl mx-auto italic">
+          <p className="text-center font-serif text-lg max-w-xl mx-auto">
             <p>
               For now, please watch{" "}
               <img
@@ -72,7 +72,7 @@ const IndexPage = () => {
             <p>Mario Woods was murdered by SFPD on December 2nd 2015.</p>
           </p>
           <img className="my-12 w-32 mx-auto" src={DefenderD} alt="Defender" />
-          <p className="italic">
+          <p className="italic font-serif">
             On February 27, 2020, recently elected Public Defender Mano Raju,
             penned a community-centered oath. It is a statement of conscience
             and a contract with the public and guides the San Francisco Public
@@ -124,7 +124,7 @@ const IndexPage = () => {
             This is the creed of <span className="font-gothic">Defender</span>
           </p>
           <img
-            className="h-64 -my-12 mx-auto"
+            className="h-64 -my-8 mx-auto"
             src={Signature}
             alt="Manohar Raju"
           />
