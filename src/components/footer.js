@@ -56,7 +56,9 @@ const Footer = () => (
             Even/Odd
           </a>{" "}
           and is a project of The Adachi Fund, a collaboration between the San
-          Francisco Public Defender's Office, Even/Odd and Compound
+          Francisco Public Defender’s Office, Even/Odd and Compound honoring the
+          legacy of the late Jeff Adachi, San Francisco’s Public Defender from
+          2003 to 2019.
         </div>
         <div className="px-4 w-full text-center my-12 lg:my-0 lg:w-3/12 lg:text-right">
           Site design by{" "}
