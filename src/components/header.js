@@ -19,9 +19,13 @@ const Header = () => {
         <img className="h-full mx-auto object-contain" src={Logo} />
       </motion.header>
       <div className="flex flex-col mt-2 items-center justify-between md:flex-row">
-        <strong className="text-xs font-bold block uppercase">
+        <a
+          className="text-xs font-bold block uppercase"
+          href="https://www.theadachifund.org"
+          target="_blank"
+        >
           Presented by the Adachi Fund
-        </strong>
+        </a>
         <motion.p
           className="font-snell text-lg lg:text-2xl hopeless pl-4"
           style={{
