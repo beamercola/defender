@@ -50,11 +50,17 @@ const Footer = () => (
             FIGHT@WEAREDEFENDER.COM
           </a>
           <p>Pending Board Of Supervisor Approval</p>
-          <img
-            className="h-12 my-4 mx-auto md:mx-0"
-            src="adachi_fund_logo.png"
-            alt="Adachi Fund"
-          />
+          <a
+            href="http://sfpublicdefender.org/jeff-adachi/"
+            target="blank"
+            rel="noreferrer"
+          >
+            <img
+              className="h-12 my-4 mx-auto md:mx-0"
+              src="adachi_fund_logo.png"
+              alt="Adachi Fund"
+            />
+          </a>
         </div>
         <div className="px-4 w-full md:w-1/2 lg:w-4/12">
           <span className="font-gothic text-lg">Defender</span> is created by{" "}

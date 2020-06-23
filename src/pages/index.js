@@ -131,10 +131,10 @@ const IndexPage = () => {
           <img
             className="h-64 -my-8 mx-auto"
             src="mano_sig.png"
-            alt="Manohar Raju"
+            alt="Mano Raju"
           />
           <strong>
-            <em>Manohar Raju</em>
+            <em>Mano Raju</em>
           </strong>
           <br />
           San Francisco Public <span className="font-gothic">Defender</span>
