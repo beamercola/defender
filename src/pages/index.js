@@ -70,6 +70,7 @@ const IndexPage = () => {
               className="font-snell text-2xl text-blue-600 px-2"
               href="https://www.theatlantic.com/video/index/501716/happy-birthday-mario-woods/"
               target="_blank"
+              rel="noreferrer"
             >
               Happy Birthday Mario Woods
             </a>

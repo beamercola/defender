@@ -16,13 +16,18 @@ const Header = () => {
           height: scale,
         }}
       >
-        <img className="h-full mx-auto object-contain" src={Logo} />
+        <img
+          className="h-full mx-auto object-contain"
+          src={Logo}
+          alt="Defender"
+        />
       </motion.header>
       <div className="flex flex-col mt-2 items-center justify-between md:flex-row">
         <a
           className="text-xs font-bold block uppercase"
-          href="https://www.theadachifund.org"
+          href="http://sfpublicdefender.org/jeff-adachi/"
           target="_blank"
+          rel="noreferrer"
         >
           Presented by the Adachi Fund
         </a>
