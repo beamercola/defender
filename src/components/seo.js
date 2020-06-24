@@ -36,8 +36,16 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: `icon`,
+          content: "/favicon.png",
+        },
+        {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: "/og-image.png",
         },
         {
           property: `og:title`,
