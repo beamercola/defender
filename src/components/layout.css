@@ -26,6 +26,10 @@ article p {
   @apply mb-8;
 }
 
+article p:last-child {
+  @apply mb-0;
+}
+
 .rotate {
   transform: rotateY(45deg);
   animation: rotateAnimation 2s linear infinite;

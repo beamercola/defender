@@ -1,6 +1,7 @@
 import React from "react"
 import Content from "./Content"
 import Image from "./Image"
+import Blockquote from "./Blockquote"
 
 const Slices = ({ classNames, slices }) => {
   return slices.map(slice => {
@@ -10,7 +11,6 @@ const Slices = ({ classNames, slices }) => {
       case "content":
         return <Content html={slice.primary.content.html} key={key} />
       case "image":
-        console.log(slice.primary)
         return (
           <Image
             src={slice.primary.image.url}
@@ -19,6 +19,8 @@ const Slices = ({ classNames, slices }) => {
             size={slice.primary.size}
           />
         )
+      case "blockquote":
+        return <Blockquote html={slice.primary.content.html} />
       default:
         return null
     }
