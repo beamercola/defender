@@ -19,12 +19,11 @@
 }
 
 body {
-  @apply bg-contain bg-repeat-y;
-  background-image: linear-gradient(#b87d6b, #cccccc);
+  @apply bg-white;
 }
 
 article p {
-  @apply mb-8 text-lg font-medium;
+  @apply mb-8;
 }
 
 .rotate {

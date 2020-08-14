@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <ParallaxProvider>
-      <main className="relative max-w-5xl px-8 mx-auto">
+      <main className="">
         {children}
         <Footer />
       </main>

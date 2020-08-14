@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Defender`,
@@ -5,6 +7,19 @@ module.exports = {
     author: ``,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-prismic",
+      options: {
+        repositoryName: process.env.PRISMIC_NAME,
+        accessToken: process.env.PRISMIC_TOKEN,
+        schemas: {
+          article: require("./src/schemas/article.json"),
+        },
+        shouldDownloadImage: ({ node, key, value }) => {
+          return false
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
