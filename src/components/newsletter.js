@@ -11,20 +11,25 @@ const Newsletter = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        className="rounded-lg bg-orange-600 w-full px-4 py-4 mb-1 placeholder-white lg:px-2 lg:py-1 lg:h-8"
-        type="text"
-        onChange={e => setEmail(e.target.value)}
-        placeholder="email address"
-        value={email}
-      />
-      <input
-        className="rounded-lg bg-black text-white text-xs font-bureau w-full px-4 py-4 lg:h-8 lg:px-2 lg:pt-2"
-        type="submit"
-        value="SUBMIT"
-      />
-    </form>
+    <div className="p-12 border-t border-black text-center">
+      <h3 className="uppercase text-2xl font-black mb-12">
+        Sign Up To Get Involved
+      </h3>
+      <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
+        <input
+          className="bg-orange-600 w-full px-4 py-4 mb-4 placeholder-white lg:px-2 lg:py-1 lg:h-8"
+          type="text"
+          onChange={e => setEmail(e.target.value)}
+          placeholder="email address"
+          value={email}
+        />
+        <input
+          className="bg-black text-white text-xs font-bureau w-full px-4 py-4 lg:h-8 lg:px-2 lg:pt-2"
+          type="submit"
+          value="SUBMIT"
+        />
+      </form>
+    </div>
   )
 }
 

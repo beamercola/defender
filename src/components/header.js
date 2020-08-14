@@ -1,46 +1,32 @@
 import { Link } from "gatsby"
 import React from "react"
 import Logo from "../images/logo.svg"
-import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 const Header = () => {
-  const { scrollY } = useViewportScroll()
-  const scale = useTransform(scrollY, [0, 300], [250, 80])
-  const textScale = useTransform(scrollY, [0, 300], [1.4, 1])
-
   return (
-    <div className="fixed top-0 inset-x-0 px-8 mx-auto max-w-5xl z-50">
-      <motion.header
-        className="border-b-2 border-black w-full"
-        style={{
-          height: scale,
-        }}
-      >
+    <header>
+      <div className="px-8 mx-auto bg-red-600">
         <img
-          className="h-full mx-auto object-contain"
+          className="mx-auto h-32 object-contain"
           src={Logo}
           alt="Defender"
         />
-      </motion.header>
-      <div className="flex flex-col mt-2 items-center justify-between md:flex-row">
-        <a
-          className="text-xs font-bold block uppercase"
-          href="http://sfpublicdefender.org/jeff-adachi/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Presented by the Adachi Fund
-        </a>
-        <motion.p
-          className="font-snell text-lg lg:text-2xl hopeless pl-4"
-          style={{
-            scale: textScale,
-          }}
-        >
-          Hopelessness is the Enemy of Justice
-        </motion.p>
       </div>
-    </div>
+      <div className="flex border-t border-b border-black px-2 text-lg flex text-center">
+        <Link className="flex-grow" to="">
+          Menu
+        </Link>
+        <Link className="flex-grow" to="">
+          Resources
+        </Link>
+        <Link className="flex-grow" to="">
+          Donate
+        </Link>
+        <Link className="flex-grow" to="">
+          Shop
+        </Link>
+      </div>
+    </header>
   )
 }
 

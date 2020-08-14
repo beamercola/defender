@@ -9,7 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { ParallaxProvider } from "react-scroll-parallax"
-import Footer from "./footer"
+import Footer from "./Footer"
+import Header from "./Header"
+import Explore from "../components/Explore"
+import Newsletter from "../components/Newsletter"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,8 +28,11 @@ const Layout = ({ children }) => {
 
   return (
     <ParallaxProvider>
+      <Header />
       <main className="">
         {children}
+        <Explore />
+        <Newsletter />
         <Footer />
       </main>
     </ParallaxProvider>

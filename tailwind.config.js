@@ -24,6 +24,10 @@ module.exports = {
           ...colors.yellow,
           "600": "#F55926",
         },
+        red: {
+          ...colors.red,
+          "600": "#FF1E24",
+        },
         yellow: {
           ...colors.yellow,
           "500": "#FFFF00",
