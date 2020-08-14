@@ -13,16 +13,16 @@ const Header = () => {
         />
       </div>
       <div className="flex border-t border-b border-black px-2 text-lg flex text-center">
-        <Link className="flex-grow" to="">
+        <Link className="flex-grow" to="/">
           Menu
         </Link>
-        <Link className="flex-grow" to="">
+        <Link className="flex-grow" to="/">
           Resources
         </Link>
-        <Link className="flex-grow" to="">
+        <Link className="flex-grow" to="/">
           Donate
         </Link>
-        <Link className="flex-grow" to="">
+        <Link className="flex-grow" to="/">
           Shop
         </Link>
       </div>
