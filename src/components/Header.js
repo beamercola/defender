@@ -12,7 +12,7 @@ const Header = () => {
           alt="Defender"
         />
       </div>
-      <div className="flex border-t border-b border-black px-2 text-lg flex text-center">
+      <div className="flex border-t border-b border-black px-2 text-lg text-center">
         <Link className="flex-grow" to="/">
           Menu
         </Link>

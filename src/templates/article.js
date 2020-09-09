@@ -8,10 +8,7 @@ export const ArticleTemplate = data => {
   const {
     data: {
       prismicArticle: {
-        data: {
-          title: { text: title },
-          body: slices,
-        },
+        data: { title, body: slices },
       },
     },
   } = data
@@ -39,9 +36,7 @@ export const ArticleTemplateQuery = graphql`
   query ArticleQuery($uid: String!) {
     prismicArticle(uid: { eq: $uid }) {
       data {
-        title {
-          text
-        }
+        title
         body {
           ... on PrismicArticleBodyContent {
             id

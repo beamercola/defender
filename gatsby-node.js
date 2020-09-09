@@ -3,7 +3,7 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const pages = await graphql(`
+  const articles = await graphql(`
     query {
       allPrismicArticle {
         nodes {
@@ -13,10 +13,30 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  pages.data.allPrismicArticle.nodes.forEach(node => {
+  articles.data.allPrismicArticle.nodes.forEach(node => {
     createPage({
       path: `/${node.uid}`,
       component: path.resolve(`./src/templates/article.js`),
+      context: {
+        uid: node.uid,
+      },
+    })
+  })
+
+  const pages = await graphql(`
+    query {
+      allPrismicPage {
+        nodes {
+          uid
+        }
+      }
+    }
+  `)
+
+  pages.data.allPrismicPage.nodes.forEach(node => {
+    createPage({
+      path: `/${node.uid === "home" ? "" : node.uid}`,
+      component: path.resolve(`./src/templates/page.js`),
       context: {
         uid: node.uid,
       },

@@ -2,6 +2,7 @@ import React from "react"
 import Content from "./Content"
 import Image from "./Image"
 import Blockquote from "./Blockquote"
+import ArticleGrid from "./ArticleGrid"
 
 const Slices = ({ classNames, slices }) => {
   return slices.map(slice => {
@@ -21,6 +22,8 @@ const Slices = ({ classNames, slices }) => {
         )
       case "blockquote":
         return <Blockquote html={slice.primary.content.html} />
+      case "article_grid":
+        return <ArticleGrid items={slice.items} />
       default:
         return null
     }

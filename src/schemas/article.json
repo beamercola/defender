@@ -8,10 +8,25 @@
       }
     },
     "title": {
-      "type": "StructuredText",
+      "type": "Text",
       "config": {
-        "single": "heading1",
-        "label": "Title"
+        "label": "TItle"
+      }
+    },
+    "author": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "customtypes": ["author"],
+        "label": "Author"
+      }
+    },
+    "cover": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Cover"
       }
     },
     "body": {

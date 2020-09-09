@@ -1,0 +1,96 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug"
+      }
+    },
+    "cover": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Cover"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "article_grid": [],
+          "section_header": [],
+          "callout": []
+        },
+        "choices": {
+          "article_grid": {
+            "type": "Slice",
+            "fieldset": "Article Grid",
+            "description": "Link Articles",
+            "icon": "chrome_reader_mode",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "article": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": ["article"],
+                  "label": "Article"
+                }
+              },
+              "bleed": {
+                "type": "Boolean",
+                "config": {
+                  "default_value": false,
+                  "label": "Bleed"
+                }
+              }
+            }
+          },
+          "section_header": {
+            "type": "Slice",
+            "fieldset": "Section Header",
+            "description": "Small full-width text",
+            "icon": "short_text",
+            "display": "list",
+            "non-repeat": {
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "Text"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "callout": {
+            "type": "Slice",
+            "fieldset": "Callout",
+            "description": "Text content",
+            "icon": "text_fields",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Title"
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label": "Content"
+                }
+              }
+            },
+            "repeat": {}
+          }
+        }
+      }
+    }
+  }
+}
