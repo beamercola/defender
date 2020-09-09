@@ -9,11 +9,15 @@ module.exports = {
     fontFamily: {
       gothic: ["cstm_xprmntl_03regular", "serif"],
       serif: ["Times New Roman", "serif"],
+      mono: ["monospace"],
       bureau: ["bureau-grot", "sans-serif"],
       "bureau-wide": ["bureau-grot-wide", "sans-serif"],
       snell: ["snellregular", "serif"],
     },
     extend: {
+      borderColor: {
+        default: "#000",
+      },
       colors: {
         canvas: "#E5E5C3",
         blue: {

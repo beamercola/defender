@@ -21,6 +21,13 @@
         "label": "Author"
       }
     },
+    "teaser": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph, strong, em, hyperlink",
+        "label": "Teaser"
+      }
+    },
     "cover": {
       "type": "Image",
       "config": {

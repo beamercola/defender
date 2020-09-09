@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <ParallaxProvider>
       <Header />
-      <main className="">
+      <main className="overflow-x-hidden">
         {children}
         <Explore />
         <Newsletter />
