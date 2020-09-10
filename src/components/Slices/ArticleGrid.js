@@ -32,9 +32,7 @@ const Cell = ({
 
   return (
     <div className={className}>
-      <span className="bg-yellow-500 px-8 font-mono text-xs leading-none py-px mb-4 inline-block uppercase font-thin">
-        Photo Essay
-      </span>
+      <span className="highlight">Photo Essay</span>
       <img className={`bg-black ${imgClassName}`} src="" />
       <div>
         <Title className={titleClassName}>{article.title}</Title>

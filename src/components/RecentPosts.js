@@ -52,9 +52,7 @@ export default RecentPosts
 const Card = ({ className, title, image }) => (
   <div className={`px-8 ${className}`}>
     <div className="flex justify-end">
-      <span className="bg-yellow-500 px-8 font-mono text-xs leading-none py-px mb-4 inline-block uppercase font-thin">
-        Photo Essay
-      </span>
+      <span className="highlight">Photo Essay</span>
     </div>
     <img className="w-full h-64 bg-black mb-4" />
     <h5 className="text-lg">{title}</h5>

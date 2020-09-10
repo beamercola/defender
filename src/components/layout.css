@@ -30,6 +30,10 @@ article p:last-child {
   @apply mb-0;
 }
 
+.highlight {
+  @apply bg-yellow px-8 font-mono text-xs leading-none py-px mb-4 inline-block uppercase font-thin;
+}
+
 .rotate {
   transform: rotateY(45deg);
   animation: rotateAnimation 2s linear infinite;
