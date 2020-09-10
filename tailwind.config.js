@@ -20,22 +20,11 @@ module.exports = {
       },
       colors: {
         canvas: "#E5E5C3",
-        blue: {
-          ...colors.blue,
-          "600": "#0D0DCC",
-        },
-        orange: {
-          ...colors.yellow,
-          "600": "#F55926",
-        },
-        red: {
-          ...colors.red,
-          "600": "#FF1E24",
-        },
-        yellow: {
-          ...colors.yellow,
-          "500": "#FFFF00",
-        },
+        green: "#009246",
+        blue: "#0D0DCC",
+        orange: "#F55926",
+        red: "#FF1E24",
+        yellow: "#FFFF00",
       },
       spacing: {
         "72": "18rem",

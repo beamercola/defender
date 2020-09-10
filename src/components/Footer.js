@@ -1,7 +1,7 @@
 import React from "react"
 
 const Footer = () => (
-  <footer className="bg-yellow-500">
+  <footer className="bg-yellow">
     <div className="flex justify-between uppercase text-lg p-6">
       <a className="">fight@wearedefender.com</a>
       <div className="">INSTAGRAM / TWITTER</div>

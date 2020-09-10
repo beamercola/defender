@@ -1,5 +1,5 @@
 import React from "react"
-import { ParallaxProvider } from "react-scroll-parallax"
+import { Link } from "gatsby"
 import Footer from "./Footer"
 import Header from "./Header"
 import Explore from "../components/Explore"
@@ -9,16 +9,27 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
-    <ParallaxProvider>
+    <>
       <Header />
       <main className="overflow-x-hidden">
         {children}
         <RecentPosts />
+        <div className="">
+          <Link className="block p-6 leading-none text-yellow text-center text-lg font-black font-bureau-wide uppercase hover:bg:black hover:text-white bg-green">
+            Resources
+          </Link>
+          <Link className="block p-6 leading-none text-yellow text-center text-lg font-black font-bureau-wide uppercase hover:bg:black hover:text-white bg-blue">
+            Contact
+          </Link>
+          <Link className="block p-6 leading-none text-yellow text-center text-lg font-black font-bureau-wide uppercase hover:bg:black hover:text-white bg-orange">
+            Donate
+          </Link>
+        </div>
         <Explore />
         <Newsletter />
         <Footer />
       </main>
-    </ParallaxProvider>
+    </>
   )
 }
 

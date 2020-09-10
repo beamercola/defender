@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { SectionHeader } from "./Slices"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Newsletter = () => {
@@ -17,7 +18,7 @@ const Newsletter = () => {
       </h3>
       <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
         <input
-          className="bg-orange-600 w-full px-4 py-4 mb-4 placeholder-white lg:px-2 lg:py-1 lg:h-8"
+          className="bg-orange w-full px-4 py-4 mb-4 placeholder-white lg:px-2 lg:py-1 lg:h-8"
           type="text"
           onChange={e => setEmail(e.target.value)}
           placeholder="email address"
