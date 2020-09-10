@@ -1,7 +1,9 @@
 import React from "react"
 
-const SectionHeader = ({ children }) => (
-  <div className="h-8 flex items-center font-mono text-xs border-b px-24 -mx-16 bg-white">
+const SectionHeader = ({ className, children }) => (
+  <div
+    className={`h-8 flex items-center font-mono text-xs border-b bg-white ${className}`}
+  >
     {children}
   </div>
 )

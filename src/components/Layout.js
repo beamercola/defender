@@ -4,6 +4,7 @@ import Footer from "./Footer"
 import Header from "./Header"
 import Explore from "../components/Explore"
 import Newsletter from "../components/Newsletter"
+import RecentPosts from "../components/RecentPosts"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       <Header />
       <main className="overflow-x-hidden">
         {children}
+        <RecentPosts />
         <Explore />
         <Newsletter />
         <Footer />

@@ -5,6 +5,8 @@ import Blockquote from "./Blockquote"
 import ArticleGrid from "./ArticleGrid"
 import SectionHeader from "./SectionHeader"
 
+export { default as SectionHeader } from "./SectionHeader"
+
 const Slices = ({ classNames, slices }) => {
   return slices.map(slice => {
     const key = slice.id
@@ -26,7 +28,11 @@ const Slices = ({ classNames, slices }) => {
       case "article_grid":
         return <ArticleGrid items={slice.items} />
       case "section_header":
-        return <SectionHeader>{slice.primary.text}</SectionHeader>
+        return (
+          <SectionHeader className="-mx-8 px-8">
+            {slice.primary.text}
+          </SectionHeader>
+        )
       default:
         return null
     }
