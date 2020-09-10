@@ -14,7 +14,7 @@ const Header = () => {
           />
         </div>
       </header>
-      <div className="sticky top-0">
+      <div className="sticky top-0 z-50">
         <nav className="flex border-t bg-white border-b border-yellow text-yellow px-2 text-lg text-center font-snell">
           <Link className="flex-grow" to="/">
             Menu

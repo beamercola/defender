@@ -93,7 +93,7 @@ const Title = ({ className, children }) => (
 
 const Teaser = ({ className, html }) => (
   <div
-    className={`text-2xl leading-snug mt-2 ${className}`}
+    className={`text-xl leading-snug mt-2 ${className}`}
     dangerouslySetInnerHTML={{
       __html: html,
     }}

@@ -11,7 +11,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="overflow-x-hidden">
+      <main
+        className="overflow-x-hidden bg-white relative border-b"
+        style={{ marginBottom: "50vh" }}
+      >
         {children}
         <RecentPosts />
         <div className="">
@@ -27,8 +30,8 @@ const Layout = ({ children }) => {
         </div>
         <Explore />
         <Newsletter />
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }

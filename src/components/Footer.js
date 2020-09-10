@@ -1,20 +1,29 @@
 import React from "react"
+import DLogo from "../images/defender-d.svg"
 
 const Footer = () => (
-  <footer className="bg-yellow">
-    <div className="flex justify-between uppercase text-lg p-6">
-      <a className="">fight@wearedefender.com</a>
+  <footer
+    className="bg-yellow fixed bottom-0 inset-x-0 flex flex-col justify-between"
+    style={{ height: "50vh", zIndex: -50 }}
+  >
+    <div className="flex justify-between uppercase p-6 tracking-widest">
+      <a className="mailto:fight@wearedefender.com">fight@wearedefender.com</a>
       <div className="">INSTAGRAM / TWITTER</div>
     </div>
-    <div className="flex justify-between uppercase text-lg border-b border-black p-6">
-      <div className="">ABOUT US | &copy; 2020</div>
-      <div className="">PRESENTED BY THE ADACHI FUND</div>
+    <div className="flex items-center justify-center">
+      <img className="w-32" src={DLogo} />
     </div>
-    <p className="font-mono text-sm p-6">
-      EXPLORE MORELorem ipsum dolor sit amet, consectetuer adipisc- ing elit,
-      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-      erat volutpat. Ut wisi enim ad minim
-    </p>
+    <div className="">
+      <div className="flex justify-between uppercase border-b border-black p-6 tracking-widest">
+        <div className="">ABOUT US | &copy; 2020</div>
+        <div className="">PRESENTED BY THE ADACHI FUND</div>
+      </div>
+      <p className="font-mono text-sm p-6 w-1/2">
+        EXPLORE MORELorem ipsum dolor sit amet, consectetuer adipisc- ing elit,
+        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+        erat volutpat. Ut wisi enim ad minim
+      </p>
+    </div>
   </footer>
 )
 
