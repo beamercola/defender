@@ -31,8 +31,6 @@ const Image = ({ align, alt, src, size }) => {
       break
   }
 
-  console.log(classNames)
-
   return (
     <div className={`flex my-12 ${classNames.join(" ")}`}>
       <div className={`${imageClassNames.join(" ")}`}>

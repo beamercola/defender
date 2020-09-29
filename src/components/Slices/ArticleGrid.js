@@ -1,7 +1,6 @@
 import React from "react"
 
 const ArticleGrid = ({ items }) => {
-  console.log(items)
   let grid
   switch (items.length) {
     case 1:

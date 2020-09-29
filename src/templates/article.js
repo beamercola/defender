@@ -1,28 +1,54 @@
-import React from "react"
+import React, { useRef, useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Slices from "../components/Slices"
+const readingTime = require("reading-time")
 
 export const ArticleTemplate = data => {
   const {
     data: {
       prismicArticle: {
-        data: { title, body: slices },
+        data: {
+          title,
+          cover: { url: cover },
+          body: slices,
+        },
       },
     },
   } = data
+  const [readTime, setReadTime] = useState("")
+  const contentHtml = useRef()
 
-  console.log(data)
+  useEffect(() => {
+    setReadTime(readingTime(contentHtml.current.innerHTML).text)
+  }, [])
+
+  const coverContainer = (
+    <div
+      className="h-screen bg-cover bg-center flex items-center justify-center font-bureau-wide text-yellow uppercase text-6xl text-center px-24"
+      style={{ backgroundImage: `url('${cover}')` }}
+    >
+      {title}
+    </div>
+  )
 
   return (
-    <Layout>
+    <Layout cover={coverContainer}>
       <article className="px-12">
-        <div className="flex">
-          <div className="w-1/4">Sidebar</div>
-          <div className="w-3/4">
+        <div className="flex -mx-8 items-stretch">
+          <div className="w-1/4 px-8 flex flex-col">
+            <div className="border-b border-black mb-8 py-3 font-mono flex justify-between mr-4">
+              <div>{readTime}</div>
+              <div className="">FB | TW | EMAIL</div>
+            </div>
+            <div className="border-r border-black flex-grow">Content</div>
+          </div>
+          <div className="w-3/4 px-8 pl-64">
             <h1 className="font-black text-5xl uppercase mb-4">{title}</h1>
-            <Slices slices={slices} />
+            <div ref={contentHtml}>
+              <Slices slices={slices} />
+            </div>
           </div>
         </div>
       </article>
@@ -37,6 +63,9 @@ export const ArticleTemplateQuery = graphql`
     prismicArticle(uid: { eq: $uid }) {
       data {
         title
+        cover {
+          url
+        }
         body {
           ... on PrismicArticleBodyContent {
             id

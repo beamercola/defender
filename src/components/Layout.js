@@ -7,24 +7,25 @@ import Newsletter from "../components/Newsletter"
 import RecentPosts from "../components/RecentPosts"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, cover }) => {
   return (
     <>
       <Header />
       <main
-        className="overflow-x-hidden bg-white relative border-b"
+        className="overflow-x-hidden bg-white border-b"
         style={{ marginBottom: "50vh" }}
       >
+        {cover}
         {children}
         <RecentPosts />
         <div className="">
-          <Link className="block p-6 leading-none text-yellow text-center text-lg font-black font-bureau-wide uppercase hover:bg:black hover:text-white bg-green">
+          <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-green">
             Resources
           </Link>
-          <Link className="block p-6 leading-none text-yellow text-center text-lg font-black font-bureau-wide uppercase hover:bg:black hover:text-white bg-blue">
+          <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-blue">
             Contact
           </Link>
-          <Link className="block p-6 leading-none text-yellow text-center text-lg font-black font-bureau-wide uppercase hover:bg:black hover:text-white bg-orange">
+          <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-orange">
             Donate
           </Link>
         </div>

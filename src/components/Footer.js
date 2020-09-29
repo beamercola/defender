@@ -7,7 +7,7 @@ const Footer = () => (
     style={{ height: "50vh", zIndex: -50 }}
   >
     <div className="flex justify-between uppercase p-6 tracking-widest">
-      <a className="mailto:fight@wearedefender.com">fight@wearedefender.com</a>
+      <a href="mailto:fight@wearedefender.com">fight@wearedefender.com</a>
       <div className="">INSTAGRAM / TWITTER</div>
     </div>
     <div className="flex items-center justify-center">
