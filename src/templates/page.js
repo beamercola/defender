@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import Cover from "../components/Cover"
 import Slices from "../components/Slices"
 
 export const PageTemplate = data => {
@@ -14,7 +15,7 @@ export const PageTemplate = data => {
   } = data
 
   return (
-    <Layout>
+    <Layout cover={<Cover className="bg-red" />}>
       <div className="mx-8 border-l border-r">
         <Slices slices={slices} />
       </div>

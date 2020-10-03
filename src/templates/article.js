@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Slices from "../components/Slices"
+import Cover from "../components/Cover"
 const readingTime = require("reading-time")
 
 export const ArticleTemplate = data => {
@@ -25,26 +26,29 @@ export const ArticleTemplate = data => {
   }, [])
 
   const coverContainer = (
-    <div
-      className="h-screen bg-cover bg-center flex items-center justify-center font-bureau-wide text-yellow uppercase text-6xl text-center px-24"
-      style={{ backgroundImage: `url('${cover}')` }}
+    <Cover
+      className="items-center h-screen justify-center font-black font-bureau-wide text-yellow uppercase text-6xl text-center"
+      image={cover}
     >
       {title}
-    </div>
+    </Cover>
   )
 
   return (
     <Layout cover={coverContainer}>
-      <article className="px-12">
+      <div className="bg-yellow font-mono text-center p-3 border-b">
+        PHOTO ESSAY | DATE | AUTHOR
+      </div>
+      <article className="px-12 relative">
         <div className="flex -mx-8 items-stretch">
-          <div className="w-1/4 px-8 flex flex-col">
+          <div className="w-96 flex-shrink-0 px-8 flex flex-col">
             <div className="border-b border-black mb-8 py-3 font-mono flex justify-between mr-4">
               <div>{readTime}</div>
               <div className="">FB | TW | EMAIL</div>
             </div>
             <div className="border-r border-black flex-grow">Content</div>
           </div>
-          <div className="w-3/4 px-8 pl-64">
+          <div className="flex-grow px-8 pl-32 pt-16">
             <h1 className="font-black text-5xl uppercase mb-4">{title}</h1>
             <div ref={contentHtml}>
               <Slices slices={slices} />

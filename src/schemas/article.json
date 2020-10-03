@@ -21,6 +21,14 @@
         "label": "Author"
       }
     },
+    "category": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "customtypes": ["category"],
+        "label": "Category"
+      }
+    },
     "teaser": {
       "type": "StructuredText",
       "config": {

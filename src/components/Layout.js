@@ -12,7 +12,7 @@ const Layout = ({ children, cover }) => {
     <>
       <Header />
       <main
-        className="overflow-x-hidden bg-white border-b"
+        className="overflow-x-hidden bg-white border-b -mt-32"
         style={{ marginBottom: "50vh" }}
       >
         {cover}

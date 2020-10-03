@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const ArticleGrid = ({ items }) => {
   let grid
@@ -7,7 +8,7 @@ const ArticleGrid = ({ items }) => {
       grid = <Grid1 items={items} />
       break
     case 2:
-      grid = "Hello"
+      grid = <Grid2 items={items} />
       break
     case 3:
       grid = <Grid3 items={items} />
@@ -27,31 +28,51 @@ const Cell = ({
   item,
   bleed,
 }) => {
-  const article = item.article.document.data
+  const {
+    article: {
+      document: { data: article, uid },
+    },
+  } = item
 
   return (
     <div className={className}>
       <span className="highlight">Photo Essay</span>
-      <img className={`bg-black ${imgClassName}`} src="" />
-      <div>
-        <Title className={titleClassName}>{article.title}</Title>
-        <Teaser html={article.teaser.html} />
-      </div>
+      <Link to={`/articles/${uid}`}>
+        <img className={`bg-black ${imgClassName}`} src="" />
+        <div>
+          <Title className={titleClassName}>{article.title}</Title>
+          <Teaser html={article.teaser.html} />
+        </div>
+      </Link>
     </div>
   )
 }
 
-const Grid1 = ({ items, bleed }) => (
-  <div className="flex">
-    <div className="w-4/6 p-32">
-      <img className="w-full bg-black h-64 mb-4" src="" />
+const Grid1 = ({ items, bleed }) => {
+  const {
+    article: {
+      document: { data: article, uid },
+    },
+  } = items[0]
+
+  return (
+    <div className="flex">
+      <div className="w-4/6 p-32">
+        <Link to={`/articles/${uid}`}>
+          <img className="w-full bg-black h-64 mb-4" src="" />
+        </Link>
+      </div>
+      <div className="w-2/6 py-32 pr-12">
+        <Link to={`/articles/${uid}`}>
+          <Title className="text-3xl">
+            {items[0].article.document.data.title}
+          </Title>
+          <Teaser html={article.teaser.html} />
+        </Link>
+      </div>
     </div>
-    <div className="w-2/6 py-32 pr-12">
-      <Title className="text-3xl">{items[0].article.document.data.title}</Title>
-      <Teaser html={items[0].article.document.data.teaser.html} />
-    </div>
-  </div>
-)
+  )
+}
 
 const Grid2 = ({ items }) => <div></div>
 

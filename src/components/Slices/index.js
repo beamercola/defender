@@ -33,6 +33,14 @@ const Slices = ({ classNames, slices }) => {
             {slice.primary.text}
           </SectionHeader>
         )
+      case "callout":
+        return (
+          <div className="absolute left-0 mt-16 w-96 px-16 p-4 -mx-4 bg-red">
+            Callout
+            <br /> <br />
+            Callout
+          </div>
+        )
       default:
         return null
     }

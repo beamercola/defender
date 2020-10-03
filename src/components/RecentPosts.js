@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { SectionHeader } from "./Slices"
 import Glide from "@glidejs/glide"
 import { useState, useEffect } from "react"
@@ -14,6 +14,7 @@ const RecentPosts = () => {
         limit: 10
       ) {
         nodes {
+          uid
           data {
             title
             cover {
@@ -35,11 +36,13 @@ const RecentPosts = () => {
       <div className="flex px-8 -mx-8">
         <Carousel options={{ perView: 4 }}>
           {articles.map(article => (
-            <Card
-              className="py-8"
-              title={article.data.title}
-              image={article.data.cover && article.data.cover.url}
-            />
+            <Link to={`/${article.uid}`}>
+              <Card
+                className="py-8"
+                title={article.data.title}
+                image={article.data.cover && article.data.cover.url}
+              />
+            </Link>
           ))}
         </Carousel>
       </div>

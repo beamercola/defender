@@ -22,6 +22,14 @@ body {
   @apply bg-white;
 }
 
+header {
+  @apply h-32;
+}
+
+.cover {
+  @apply pt-32;
+}
+
 article p {
   @apply mb-8;
 }
