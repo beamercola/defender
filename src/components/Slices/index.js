@@ -7,13 +7,19 @@ import SectionHeader from "./SectionHeader"
 
 export { default as SectionHeader } from "./SectionHeader"
 
-const Slices = ({ classNames, slices }) => {
+const Slices = ({ className = {}, slices }) => {
   return slices.map(slice => {
     const key = slice.id
 
     switch (slice.slice_type) {
       case "content":
-        return <Content html={slice.primary.content.html} key={key} />
+        return (
+          <Content
+            className={className.content}
+            html={slice.primary.content.html}
+            key={key}
+          />
+        )
       case "image":
         return (
           <Image

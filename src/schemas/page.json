@@ -1,5 +1,12 @@
 {
   "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
+      }
+    },
     "uid": {
       "type": "UID",
       "config": {
@@ -21,7 +28,8 @@
         "labels": {
           "article_grid": [],
           "section_header": [],
-          "callout": []
+          "callout": [],
+          "text": []
         },
         "choices": {
           "article_grid": {
@@ -83,6 +91,23 @@
                 "type": "StructuredText",
                 "config": {
                   "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label": "Content"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "content": {
+            "type": "Slice",
+            "fieldset": "Content",
+            "description": "General text",
+            "icon": "text_fields",
+            "display": "list",
+            "non-repeat": {
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
                   "label": "Content"
                 }
               }

@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { SectionHeader } from "./Slices"
-import Glide from "@glidejs/glide"
-import { useState, useEffect } from "react"
+import ArticleCard from "./ArticleCard"
+import Carousel from "./Carousel"
 
 const RecentPosts = () => {
   const {
@@ -37,11 +37,7 @@ const RecentPosts = () => {
         <Carousel options={{ perView: 4 }}>
           {articles.map(article => (
             <Link to={`/${article.uid}`}>
-              <Card
-                className="py-8"
-                title={article.data.title}
-                image={article.data.cover && article.data.cover.url}
-              />
+              <ArticleCard className="py-8 px-8" article={article} />
             </Link>
           ))}
         </Carousel>
@@ -51,36 +47,3 @@ const RecentPosts = () => {
 }
 
 export default RecentPosts
-
-const Card = ({ className, title, image }) => (
-  <div className={`px-8 ${className}`}>
-    <div className="flex justify-end">
-      <span className="highlight">Photo Essay</span>
-    </div>
-    <img className="w-full h-64 bg-black mb-4" />
-    <h5 className="text-lg">{title}</h5>
-  </div>
-)
-
-const Carousel = ({ element = "glide", options, children }) => {
-  const [slider] = useState(new Glide(`.${element}`, options))
-  useEffect(() => {
-    slider.mount()
-    return () => slider.destroy()
-  }, [])
-
-  return (
-    <div className={element}>
-      <div className="glide__track" data-glide-el="track">
-        <ul className="glide__slides">
-          {children.map((slide, index) => {
-            return React.cloneElement(slide, {
-              key: index,
-              className: `${slide.props.className} glide__slide`,
-            })
-          })}
-        </ul>
-      </div>
-    </div>
-  )
-}

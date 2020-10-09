@@ -16,9 +16,9 @@ export const PageTemplate = data => {
 
   return (
     <Layout cover={<Cover className="bg-red" />}>
-      <div className="mx-8 border-l border-r">
-        <Slices slices={slices} />
-      </div>
+      <article className="mx-8 border-l border-r">
+        <Slices className={{ content: "p-8 text-2xl" }} slices={slices} />
+      </article>
     </Layout>
   )
 }
@@ -36,6 +36,16 @@ export const PageTemplateQuery = graphql`
             slice_type
             primary {
               text
+            }
+          }
+
+          ... on PrismicPageBodyContent {
+            id
+            slice_type
+            primary {
+              content {
+                html
+              }
             }
           }
 
