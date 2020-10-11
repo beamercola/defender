@@ -4,6 +4,7 @@ import Image from "./Image"
 import Blockquote from "./Blockquote"
 import ArticleGrid from "./ArticleGrid"
 import SectionHeader from "./SectionHeader"
+import Callout from "./Callout"
 
 export { default as SectionHeader } from "./SectionHeader"
 
@@ -40,13 +41,7 @@ const Slices = ({ className = {}, slices }) => {
           </SectionHeader>
         )
       case "callout":
-        return (
-          <div className="absolute left-0 mt-16 w-96 px-16 p-4 -mx-4 bg-red">
-            Callout
-            <br /> <br />
-            Callout
-          </div>
-        )
+        return <Callout />
       default:
         return null
     }

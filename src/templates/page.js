@@ -16,8 +16,11 @@ export const PageTemplate = data => {
 
   return (
     <Layout cover={<Cover className="bg-red" />}>
-      <article className="mx-8 border-l border-r">
-        <Slices className={{ content: "p-8 text-2xl" }} slices={slices} />
+      <article className="mx-4 md:mx-8 border-l border-r">
+        <Slices
+          className={{ content: "p-4 md:p-8 text-2xl" }}
+          slices={slices}
+        />
       </article>
     </Layout>
   )
