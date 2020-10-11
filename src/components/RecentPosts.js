@@ -3,6 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import { SectionHeader } from "./Slices"
 import ArticleCard from "./ArticleCard"
 import Carousel from "./Carousel"
+import { isBrowser, isMobile } from "react-device-detect"
 
 const RecentPosts = () => {
   const {
@@ -25,6 +26,8 @@ const RecentPosts = () => {
       }
     }
   `)
+  const itemCount = isMobile ? 2 : 4
+
   return (
     <div>
       <SectionHeader className="px-8 border-t">
@@ -34,7 +37,7 @@ const RecentPosts = () => {
         </div>
       </SectionHeader>
       <div className="flex px-8 -mx-8">
-        <Carousel options={{ perView: 4 }}>
+        <Carousel options={{ autoPlay: isMobile, perView: itemCount }}>
           {articles.map(article => (
             <Link to={`/${article.uid}`}>
               <ArticleCard className="py-8 px-8" article={article} />
