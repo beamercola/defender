@@ -74,7 +74,7 @@ const Grid1 = ({ items, bleed }) => {
   )
 }
 
-const Grid2 = ({}) => <div></div>
+const Grid2 = ({ items }) => <div></div>
 
 const Grid3 = ({ items }) => (
   <div className="md:flex md:items-stretch border-b">
