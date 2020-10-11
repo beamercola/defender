@@ -26,6 +26,9 @@ module.exports = {
         red: "#FF1E24",
         yellow: "#FFFF00",
       },
+      height: {
+        "50vh": "50vh",
+      },
       spacing: {
         "72": "18rem",
         "84": "21rem",

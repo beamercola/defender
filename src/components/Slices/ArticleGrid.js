@@ -37,7 +37,7 @@ const Cell = ({
   return (
     <div className={className}>
       <span className="highlight">Photo Essay</span>
-      <Link to={`/articles/${uid}`}>
+      <Link to={`/${uid}`}>
         <img className={`bg-black ${imgClassName}`} src="" />
         <div>
           <Title className={titleClassName}>{article.title}</Title>
@@ -58,12 +58,12 @@ const Grid1 = ({ items, bleed }) => {
   return (
     <div className="md:flex">
       <div className="md:w-4/6 md:p-32">
-        <Link to={`/articles/${uid}`}>
+        <Link to={`/${uid}`}>
           <img className="w-full bg-black h-64 mb-4" src="" />
         </Link>
       </div>
       <div className="md:w-2/6 md:py-32 md:pr-12 px-8 pb-8">
-        <Link to={`/articles/${uid}`}>
+        <Link to={`/${uid}`}>
           <Title className="text-3xl">
             {items[0].article.document.data.title}
           </Title>

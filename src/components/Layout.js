@@ -11,10 +11,7 @@ const Layout = ({ children, cover }) => {
   return (
     <>
       <Header />
-      <main
-        className="overflow-x-hidden bg-white border-b -mt-32"
-        style={{ marginBottom: "50vh" }}
-      >
+      <main className="overflow-x-hidden bg-white border-b -mt-32">
         {cover}
         {children}
         <RecentPosts />

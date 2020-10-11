@@ -26,6 +26,10 @@ header {
   @apply h-32;
 }
 
+main {
+  margin-bottom: 100vh;
+}
+
 .cover {
   @apply pt-32;
 }
@@ -54,6 +58,9 @@ article p:last-child {
 @screen lg {
   .hopeless {
     transform-origin: top right;
+  }
+  main {
+    margin-bottom: 50vh;
   }
 }
 
