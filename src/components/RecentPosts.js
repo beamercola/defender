@@ -1,9 +1,10 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { SectionHeader } from "./Slices"
+import Link from "./Link"
 import ArticleCard from "./ArticleCard"
 import Carousel from "./Carousel"
-import { isBrowser, isMobile } from "react-device-detect"
+import { isMobile } from "react-device-detect"
 
 const RecentPosts = () => {
   const {

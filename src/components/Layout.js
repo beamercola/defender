@@ -1,11 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link from "./Link"
 import Footer from "./Footer"
 import Header from "./Header"
 import Explore from "../components/Explore"
 import Newsletter from "../components/Newsletter"
 import RecentPosts from "../components/RecentPosts"
-import "./layout.css"
 
 const Layout = ({ children, cover }) => {
   return (

@@ -1,4 +1,4 @@
-import { React } from "gatsby"
+import React from "react"
 
 const ArticleCard = ({ className, article }) => {
   return (

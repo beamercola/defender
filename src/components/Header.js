@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
 import React from "react"
+import Link from "./Link"
 import Logo from "../images/logo.svg"
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
             <Link className="flex-grow" to="/">
               Resources
             </Link>
-            <Link className="flex-grow" to="/">
+            <Link className="flex-grow" to="https://wearedefender.wedid.it/">
               Donate
             </Link>
             <Link className="flex-grow" to="/">

@@ -7,6 +7,8 @@ module.exports = {
     author: ``,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
     {
       resolve: "gatsby-source-prismic",
       options: {
@@ -29,7 +31,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,12 +47,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-theme-tailwindcss`,
-      options: {
-        postCssPlugins: [require("autoprefixer")],
-      },
-    },
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {

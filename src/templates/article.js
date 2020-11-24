@@ -36,7 +36,7 @@ export const ArticleTemplate = data => {
 
   return (
     <Layout cover={coverContainer}>
-      <div className="bg-yellow font-mono text-center p-3 border-b">
+      <div className="bg-yellow font-mono text-center p-3 border-t border-b">
         PHOTO ESSAY | DATE | AUTHOR
       </div>
       <article className="px-8 md:px-12 relative">

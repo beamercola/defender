@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link from "./Link"
 import { SectionHeader } from "./Slices"
 
 const Explore = ({}) => {
