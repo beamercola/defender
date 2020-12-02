@@ -28,20 +28,21 @@ const Slices = ({ className = {}, slices }) => {
             alt={slice.primary.image.alt}
             align={slice.primary.align}
             size={slice.primary.size}
+            key={key}
           />
         )
       case "blockquote":
-        return <Blockquote html={slice.primary.content.html} />
+        return <Blockquote html={slice.primary.content.html} key={key} />
       case "article_grid":
-        return <ArticleGrid items={slice.items} />
+        return <ArticleGrid items={slice.items} key={key} />
       case "section_header":
         return (
-          <SectionHeader className="-mx-8 px-8">
+          <SectionHeader className="-mx-8 px-8" key={key}>
             {slice.primary.text}
           </SectionHeader>
         )
       case "callout":
-        return <Callout />
+        return <Callout key={key} />
       default:
         return null
     }

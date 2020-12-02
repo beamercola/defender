@@ -1,6 +1,7 @@
 import React from "react"
 
-const Cover = ({ className, image, children }) => {
+export default ({ className, image, children }) => {
+  if (!image) return null
   return (
     <div
       className={`cover bg-cover bg-center flex ${className}`}
@@ -10,5 +11,3 @@ const Cover = ({ className, image, children }) => {
     </div>
   )
 }
-
-export default Cover

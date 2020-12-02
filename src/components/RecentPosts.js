@@ -39,8 +39,8 @@ const RecentPosts = () => {
       </SectionHeader>
       <div className="flex px-8 -mx-8">
         <Carousel options={{ autoPlay: isMobile, perView: itemCount }}>
-          {articles.map(article => (
-            <Link to={`/${article.uid}`}>
+          {articles.map((article, i) => (
+            <Link to={`/${article.uid}`} key={i}>
               <ArticleCard className="py-8 px-8" article={article} />
             </Link>
           ))}

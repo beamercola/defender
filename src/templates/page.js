@@ -5,17 +5,17 @@ import SEO from "../components/SEO"
 import Cover from "../components/Cover"
 import Slices from "../components/Slices"
 
-export const PageTemplate = data => {
+export default data => {
   const {
     data: {
       prismicPage: {
-        data: { title, body: slices },
+        data: { title, body: slices, image },
       },
     },
   } = data
 
   return (
-    <Layout cover={<Cover className="bg-red" />}>
+    <Layout cover={<Cover className="h-screen" image={image?.url} />}>
       <article className="mx-4 md:mx-8 border-l border-r">
         <Slices
           className={{ content: "p-4 md:p-8 text-2xl" }}
@@ -26,13 +26,14 @@ export const PageTemplate = data => {
   )
 }
 
-export default PageTemplate
-
 export const PageTemplateQuery = graphql`
   query PageQuery($uid: String!) {
     prismicPage(uid: { eq: $uid }) {
       uid
       data {
+        image {
+          url
+        }
         body {
           ... on PrismicPageBodySectionHeader {
             id

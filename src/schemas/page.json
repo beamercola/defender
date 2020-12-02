@@ -13,12 +13,12 @@
         "label": "Slug"
       }
     },
-    "cover": {
+    "image": {
       "type": "Image",
       "config": {
         "constraint": {},
         "thumbnails": [],
-        "label": "Cover"
+        "label": "Image"
       }
     },
     "body": {
@@ -44,7 +44,9 @@
                 "type": "Link",
                 "config": {
                   "select": "document",
-                  "customtypes": ["article"],
+                  "customtypes": [
+                    "article"
+                  ],
                   "label": "Article"
                 }
               },
