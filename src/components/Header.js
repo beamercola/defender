@@ -5,7 +5,7 @@ import Logo from "../images/logo.svg"
 const Header = () => {
   return (
     <>
-      <header className="sticky top-0 inset-x-0 flex flex-col z-50">
+      <header className="sticky top-0 flex flex-col z-50">
         <div className="px-8 flex-grow flex items-center justify-center">
           <Link to="/">
             <img className="h-20" src={Logo} alt="Defender" />
