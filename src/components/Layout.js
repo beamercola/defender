@@ -10,7 +10,7 @@ const Layout = ({ children, cover }) => {
   return (
     <>
       <Header />
-      <main className="bg-white border-b -mt-32">
+      <main className="overflow-x-hidden bg-white border-b -mt-32">
         {cover}
         {children}
         <RecentPosts />
