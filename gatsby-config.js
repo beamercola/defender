@@ -16,6 +16,8 @@ module.exports = {
         accessToken: process.env.PRISMIC_TOKEN,
         schemas: {
           article: require("./src/schemas/article.json"),
+          author: require("./src/schemas/author.json"),
+          category: require("./src/schemas/category.json"),
           page: require("./src/schemas/page.json"),
         },
         shouldDownloadImage: ({ node, key, value }) => {
