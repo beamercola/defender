@@ -42,7 +42,7 @@ const Slices = ({ className = {}, slices }) => {
           </SectionHeader>
         )
       case "callout":
-        return <Callout key={key} />
+        return <Callout html={slice.primary.content.html} key={key} />
       default:
         return null
     }
