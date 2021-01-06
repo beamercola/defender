@@ -1,43 +1,50 @@
 import React from "react"
+import { graphql } from "gatsby"
+const classNames = require("classnames")
 
-const Image = ({ align, alt, src, size }) => {
-  let classNames = []
-  let imageClassNames = []
-
+const sizeClass = (size = "") => {
   switch (size) {
     case "Large":
-      imageClassNames.push("w-10/12")
-      break
+      return "w-10/12"
     case "Medium":
-      imageClassNames.push("w-1/2")
-      break
+      return "w-1/2"
     case "Small":
-      imageClassNames.push("w-1/4")
-      break
+      return "w-1/3 md:w-1/4"
     default:
-      imageClassNames.push("w-full")
-      break
+      return "w-full"
   }
-
-  switch (align) {
-    case "Center":
-      classNames.push("justify-center")
-      break
-    case "Right":
-      classNames.push("justify-end")
-      break
-    default:
-      classNames.push("justify-start")
-      break
-  }
-
-  return (
-    <div className={`flex my-12 ${classNames.join(" ")}`}>
-      <div className={`${imageClassNames.join(" ")}`}>
-        <img src={src} alt={alt} />
-      </div>
-    </div>
-  )
 }
 
-export default Image
+const alignClass = (align = "") => {
+  switch (align) {
+    case "Center":
+      return "justify-center"
+    case "Right":
+      return "justify-end"
+    default:
+      return "justify-start"
+  }
+}
+
+export default ({ align, alt, src, size }) => (
+  <div className={classNames("flex my-12", alignClass(align))}>
+    <div className={sizeClass(size)}>
+      <img src={src} alt={alt} />
+    </div>
+  </div>
+)
+
+export const fragments = graphql`
+  fragment SliceImage on PrismicArticleBodyImage {
+    id
+    slice_type
+    primary {
+      size
+      align
+      image {
+        url
+        alt
+      }
+    }
+  }
+`

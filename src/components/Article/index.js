@@ -1,7 +1,7 @@
 export { default as Meta } from "./Meta"
 export { default as Section } from "./Section"
 
-export const chunkByType = (slices, type) => {
+export const chunkByType = (slices = [], type) => {
   const final = []
   var group = { slices: [] }
   slices.forEach(slice => {

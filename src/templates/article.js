@@ -8,21 +8,25 @@ import { Meta, Section, chunkByType } from "../components/Article"
 
 const readingTime = require("reading-time")
 
-export default data => {
-  const {
-    data: {
-      prismicArticle: {
-        last_publication_date: date,
-        data: {
-          title,
-          cover: { url: cover },
-          author: { document: { data: { name: author } } = {} },
-          category: { document: { data: { title: category } } = {} },
-          body: slices,
-        },
+export default ({
+  data: {
+    prismicArticle: {
+      last_publication_date: date,
+      data: {
+        title,
+        cover: { url: cover },
+        author: { document: authorDocument },
+        category: { document: categoryDocument },
+        body: slices,
       },
     },
-  } = data
+  },
+}) => {
+  const { data: { name: author } = {} } = authorDocument || {}
+  const {
+    data: { title: category },
+  } = categoryDocument || {}
+
   const [readTime, setReadTime] = useState("")
   const contentHtml = useRef()
 
@@ -54,26 +58,17 @@ export default data => {
           </h1>
         </Section>
 
-        {chunks.map(({ callout, slices }, i) => (
-          <Section callout={callout && <Slices slices={[callout]} />}>
+        {chunks?.map(({ callout, slices }, i) => (
+          <Section callout={callout}>
             <Slices slices={slices} />
           </Section>
         ))}
-      </article>
-
-      <article className="px-8 md:px-12 relative">
-        <div className="-mx-8 md:flex md:items-stretch">
-          <div className="md:w-96 flex-shrink-0 px-8 flex flex-col">
-            <div className="border-r border-black flex-grow"></div>
-          </div>
-          <div className="flex-grow px-8 lg:pl-32 pt-16"></div>
-        </div>
       </article>
     </Layout>
   )
 }
 
-export const ArticleTemplateQuery = graphql`
+export const query = graphql`
   query ArticleQuery($uid: String!) {
     prismicArticle(uid: { eq: $uid }) {
       last_publication_date(formatString: "MMM D YYYY")
@@ -106,46 +101,19 @@ export const ArticleTemplateQuery = graphql`
 
         body {
           ... on PrismicArticleBodyContent {
-            id
-            slice_type
-            primary {
-              content {
-                html
-              }
-            }
+            ...SliceContent
           }
 
           ... on PrismicArticleBodyBlockquote {
-            id
-            primary {
-              content {
-                html
-              }
-            }
-            slice_type
+            ...SliceBlockquote
           }
 
           ... on PrismicArticleBodyCallout {
-            id
-            slice_type
-            primary {
-              content {
-                html
-              }
-            }
+            ...SliceCallout
           }
 
           ... on PrismicArticleBodyImage {
-            id
-            slice_type
-            primary {
-              size
-              align
-              image {
-                url
-                alt
-              }
-            }
+            ...SliceImage
           }
         }
       }

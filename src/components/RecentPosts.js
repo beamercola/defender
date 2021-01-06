@@ -30,7 +30,7 @@ const RecentPosts = () => {
   const itemCount = isMobile ? 2 : 4
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t">
         <div className="flex w-full justify-between">
           <h2>MOST RECENT STORIES</h2>

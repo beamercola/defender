@@ -36,6 +36,13 @@ module.exports = {
         "84": "21rem",
         "96": "24rem",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "#000",
+          },
+        },
+      },
     },
   },
   variants: {},

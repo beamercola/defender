@@ -1,10 +1,22 @@
 import React from "react"
+import { graphql } from "gatsby"
+const classNames = require("classnames")
 
-const Content = ({ className, html }) => (
+export default ({ className, html }) => (
   <div
-    className={`prose ${className}`}
+    className={classNames("prose", className)}
     dangerouslySetInnerHTML={{ __html: html }}
   />
 )
 
-export default Content
+export const fragments = graphql`
+  fragment SliceContent on PrismicArticleBodyContent {
+    id
+    slice_type
+    primary {
+      content {
+        html
+      }
+    }
+  }
+`

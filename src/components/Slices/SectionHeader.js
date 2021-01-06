@@ -1,11 +1,14 @@
 import React from "react"
+const classNames = require("classnames")
 
-const SectionHeader = ({ className, children }) => (
+export default ({ className, children }) => (
   <div
-    className={`h-12 md:h-8 flex items-center font-mono md:text-xs border-b bg-white ${className}`}
+    className={classNames(
+      className,
+      "h-12 flex items-center font-mono border-b bg-white",
+      "md:h-8 md:text-xs"
+    )}
   >
     {children}
   </div>
 )
-
-export default SectionHeader
