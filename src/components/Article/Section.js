@@ -8,7 +8,7 @@ export default ({ callout, children, sticky = true }) => {
         {callout && (
           <div
             className={classNames("prose p-4 my-12", { sticky: sticky })}
-            style={{ top: "8rem" }}
+            style={{ top: "10rem" }}
             dangerouslySetInnerHTML={{ __html: callout?.primary?.content.html }}
           />
         )}

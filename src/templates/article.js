@@ -59,7 +59,7 @@ export default ({
         </Section>
 
         {chunks?.map(({ callout, slices }, i) => (
-          <Section callout={callout}>
+          <Section callout={callout} key={i}>
             <Slices slices={slices} />
           </Section>
         ))}
