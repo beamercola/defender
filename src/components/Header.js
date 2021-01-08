@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "./Link"
-import Logo from "../images/logo.svg"
+import { LogoType } from "./SVG"
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
       <header className="sticky top-0 flex flex-col z-50">
         <div className="px-8 flex-grow flex items-center justify-center">
           <Link to="/">
-            <img className="h-20" src={Logo} alt="Defender" />
+            <LogoType className="h-20 text-yellow" />
           </Link>
         </div>
         <div className="z-50">
