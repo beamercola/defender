@@ -4,7 +4,7 @@ import { SectionHeader } from "../components/Slices"
 
 export default () => {
   return (
-    <Layout cover={<div className="h-32" />}>
+    <Layout cover={<div className="h-40" />}>
       <div className="">
         <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
 
@@ -20,7 +20,9 @@ export default () => {
 const Product = () => (
   <div>
     <img className="h-96 w-full bg-black" />
-    <h2 className="font-bureau-wide uppercase text-2xl py-2">Title</h2>
+    <h2 className="font-bureau-wide uppercase text-2xl py-2 font-bold">
+      Title
+    </h2>
     <p>Description</p>
     <p className="">
       Add To Cart:

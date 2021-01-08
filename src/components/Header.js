@@ -13,13 +13,10 @@ export default ({ toggleMenu }) => (
         <button className="flex-grow" onClick={toggleMenu}>
           Menu
         </button>
-        <Link className="flex-grow" to="/">
-          Resources
-        </Link>
         <Link className="flex-grow" to="https://wearedefender.wedid.it/">
           Donate
         </Link>
-        <Link className="flex-grow" to="/">
+        <Link className="flex-grow" to="/shop">
           Shop
         </Link>
       </nav>
