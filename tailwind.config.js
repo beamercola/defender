@@ -28,6 +28,11 @@ module.exports = {
       borderColor: {
         DEFAULT: "#000",
       },
+      colors: {
+        gray: {
+          DEFAULT: "#96AFB5",
+        },
+      },
       height: {
         "50vh": "50vh",
       },

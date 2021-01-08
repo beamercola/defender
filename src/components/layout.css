@@ -30,6 +30,23 @@ main {
   margin-bottom: 100vh;
 }
 
+.menu {
+  @apply duration-300 transition-all;
+  transform: translate3d(10vw, 0, 0);
+}
+
+.menu.open {
+  transform: unset !important;
+}
+
+.menu-bg {
+  @apply bg-opacity-0 pointer-events-none;
+}
+
+.menu-bg.open {
+  @apply bg-opacity-50 pointer-events-auto;
+}
+
 .cover {
   @apply pt-32;
 }

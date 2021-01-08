@@ -1,16 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import Link from "./Link"
 import Footer from "./Footer"
 import Header from "./Header"
 import Explore from "../components/Explore"
 import Newsletter from "../components/Newsletter"
 import RecentPosts from "../components/RecentPosts"
+import Menu from "../components/Menu"
 
 const Layout = ({ children, cover }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggle = () => setMenuOpen(!menuOpen)
+
   return (
     <>
-      <Header />
-      <main className="bg-white border-b -mt-32">
+      <Header toggleMenu={toggle} />
+      <main className="bg-white border-b -mt-40">
         {cover}
         {children}
         <RecentPosts />
@@ -29,6 +34,7 @@ const Layout = ({ children, cover }) => {
         <Newsletter />
       </main>
       <Footer />
+      <Menu toggle={toggle} open={menuOpen} />
     </>
   )
 }
