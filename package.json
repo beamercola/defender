@@ -36,6 +36,7 @@
     "react-sticky-box": "^0.9.3",
     "react-ticker": "^1.2.2",
     "reading-time": "^1.2.0",
+    "swiper": "^6.4.5",
     "tailwindcss": "^2.0.2",
     "yarn": "^1.22.10"
   },

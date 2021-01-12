@@ -1,12 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { isMobile } from "react-device-detect"
+import { Swiper, SwiperSlide } from "swiper/react"
 import { SectionHeader } from "./Slices"
 import Link from "./Link"
 import ArticleCard from "./ArticleCard"
-import Carousel from "./Carousel"
-import { isMobile } from "react-device-detect"
 
 const RecentPosts = () => {
+  const [swiper, setSwiper] = useState(null)
   const {
     allPrismicArticle: { nodes: articles },
   } = useStaticQuery(graphql`
@@ -27,24 +28,46 @@ const RecentPosts = () => {
       }
     }
   `)
-  const itemCount = isMobile ? 2 : 4
 
   return (
     <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t">
         <div className="flex w-full justify-between">
           <h2>MOST RECENT STORIES</h2>
-          <div className="">prev next</div>
+          <div className="">
+            <div className="flex">
+              <button
+                className=""
+                onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
+              >
+                Prev
+              </button>
+              <button
+                className="ml-2"
+                onClick={() => swiper?.slideTo(swiper.activeIndex + 1)}
+              >
+                Next
+              </button>
+            </div>
+          </div>
         </div>
       </SectionHeader>
-      <div className="flex px-8 -mx-8">
-        <Carousel options={{ autoPlay: isMobile, perView: itemCount }}>
+      <div className="p-4">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={isMobile ? 2 : 4}
+          // centeredSlides={true}
+          // loop={true}
+          onSwiper={s => setSwiper(s)}
+        >
           {articles.map((article, i) => (
-            <Link to={`/${article.uid}`} key={i}>
-              <ArticleCard className="py-8 px-8" article={article} />
-            </Link>
+            <SwiperSlide key={i}>
+              <Link className="block" to={`/${article.uid}`}>
+                <ArticleCard className="" article={article} />
+              </Link>
+            </SwiperSlide>
           ))}
-        </Carousel>
+        </Swiper>
       </div>
     </div>
   )

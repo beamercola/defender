@@ -1,15 +1,12 @@
 import React from "react"
+import Highlight from "./Highlight"
 
-const ArticleCard = ({ className, article }) => {
-  return (
-    <div className={`${className}`}>
-      <div className="flex justify-end">
-        <span className="highlight">Photo Essay</span>
-      </div>
-      <img className="w-full h-64 bg-black mb-4" />
-      <h5 className="text-lg">{article.title}</h5>
+export default ({ className, article }) => (
+  <div className={`${className}`}>
+    <div className="flex justify-end">
+      <Highlight>Photo Essay</Highlight>
     </div>
-  )
-}
-
-export default ArticleCard
+    <img className="w-full h-32 md:h-64 bg-black mb-4" />
+    <h5 className="text-lg">{article.title}</h5>
+  </div>
+)

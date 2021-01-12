@@ -8,7 +8,7 @@ export default () => {
       <div className="">
         <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
 
-        <div className="grid grid-cols-2 gap-8 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 p-4 md:p-8">
           <Product />
           <Product />
         </div>
