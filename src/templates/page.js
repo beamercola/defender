@@ -1,11 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { withPreview } from "gatsby-source-prismic"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Cover from "../components/Cover"
 import Slices from "../components/Slices"
 
-export default data => {
+const PageTemplate = data => {
   const {
     data: {
       prismicPage: {
@@ -29,6 +30,8 @@ export default data => {
     </Layout>
   )
 }
+
+export default withPreview(PageTemplate)
 
 export const PageTemplateQuery = graphql`
   query PageQuery($uid: String!) {

@@ -1,5 +1,7 @@
 require("dotenv").config()
 
+const linkResolver = require("./src/utils/linkResolver")
+
 module.exports = {
   siteMetadata: {
     title: `Defender`,
@@ -23,6 +25,7 @@ module.exports = {
         shouldDownloadImage: ({ node, key, value }) => {
           return false
         },
+        linkResolver,
       },
     },
     {

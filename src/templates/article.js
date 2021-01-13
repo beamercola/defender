@@ -46,7 +46,7 @@ export default ({
   )
 
   return (
-    <Layout cover={coverContainer}>
+    <Layout animatedHeader={false} cover={coverContainer}>
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
         {category} | {date} | {author}
       </div>
