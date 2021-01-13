@@ -1,10 +1,14 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Link from "./Link"
 import Ticker from "react-ticker"
 import PageVisibility from "react-page-visibility"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
 
-export default ({ toggleMenu }) => {
+export default ({ animated, toggleMenu }) => {
   const [pageIsVisible, setPageIsVisible] = useState(true)
+  const { scrollY } = useViewportScroll()
+  const scale = useTransform(scrollY, [0, 200], [200, 100])
+  const perc = useTransform(scale, v => `${v}%`)
 
   const handleVisibilityChange = isVisible => {
     setPageIsVisible(isVisible)
@@ -12,12 +16,22 @@ export default ({ toggleMenu }) => {
 
   return (
     <PageVisibility onChange={handleVisibilityChange}>
-      <header className="sticky top-0 z-50 h-40">
-        <div className="p-4 flex-grow flex items-center justify-center duration-1000 transition-all h-32">
-          <Link className="h-full" to="/">
-            <img className="h-full w-auto mx-auto" src="/logotype.svg" />
-          </Link>
-        </div>
+      <motion.header className="fixed inset-x-0 top-0 z-50">
+        <motion.div
+          className="flex-grow flex items-center justify-center"
+          style={{ height: perc }}
+        >
+          <div className="flex h-full items-end p-4">
+            <Link className="h-full" to="/">
+              <img
+                className="mx-auto h-full"
+                src="/logotype.svg"
+                // style={{ height: scale }}
+              />
+            </Link>
+            <p className="text-yellow">Vol 1</p>
+          </div>
+        </motion.div>
         <div className="z-50">
           <nav className="border-t border-b border-yellow text-yellow text-2xl text-center font-snell h-8 w-screen">
             <div className="flex w-screen">
@@ -33,7 +47,7 @@ export default ({ toggleMenu }) => {
             </div>
           </nav>
         </div>
-      </header>
+      </motion.header>
     </PageVisibility>
   )
 }

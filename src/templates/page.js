@@ -15,7 +15,10 @@ export default data => {
   } = data
 
   return (
-    <Layout cover={<Cover className="h-screen" image={image?.url} />}>
+    <Layout
+      animatedHeader={true}
+      cover={<Cover className="h-screen" image={image?.url} />}
+    >
       <SEO title={title} image={image?.url} />
       <article className="mx-4 md:mx-8 border-l border-r">
         <Slices

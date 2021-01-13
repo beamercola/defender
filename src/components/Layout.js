@@ -7,15 +7,15 @@ import Newsletter from "../components/Newsletter"
 import RecentPosts from "../components/RecentPosts"
 import Menu from "../components/Menu"
 
-const Layout = ({ children, cover }) => {
+const Layout = ({ children, cover, animatedHeader }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggle = () => setMenuOpen(!menuOpen)
 
   return (
     <>
-      <Header toggleMenu={toggle} />
-      <main className="bg-white border-b -mt-40">
+      <Header toggleMenu={toggle} animated={animatedHeader} />
+      <main className="bg-white border-b">
         {cover}
         {children}
         <RecentPosts />

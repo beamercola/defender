@@ -4,7 +4,7 @@ import { SectionHeader } from "../components/Slices"
 
 export default () => {
   return (
-    <Layout cover={<div className="h-40" />}>
+    <Layout cover={<div className="h-40 bg-red" />}>
       <div className="">
         <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
 
