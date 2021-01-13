@@ -34,17 +34,26 @@ export default ({ animated, toggleMenu }) => {
         </motion.div>
         <div className="z-50">
           <nav className="border-t border-b border-yellow text-yellow text-2xl text-center font-snell h-8 w-screen">
-            <div className="flex w-screen">
-              <button className="flex-grow" onClick={toggleMenu}>
-                Menu
-              </button>
-              <Link className="flex-grow" to="https://wearedefender.wedid.it/">
-                Donate
-              </Link>
-              <Link className="flex-grow" to="/shop">
-                Shop
-              </Link>
-            </div>
+            {pageIsVisible && (
+              <Ticker>
+                {() => (
+                  <div className="flex w-screen">
+                    <button className="flex-grow" onClick={toggleMenu}>
+                      Menu
+                    </button>
+                    <Link
+                      className="flex-grow"
+                      to="https://wearedefender.wedid.it/"
+                    >
+                      Donate
+                    </Link>
+                    <Link className="flex-grow" to="/shop">
+                      Shop
+                    </Link>
+                  </div>
+                )}
+              </Ticker>
+            )}
           </nav>
         </div>
       </motion.header>
