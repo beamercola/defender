@@ -15,7 +15,7 @@ const Footer = () => (
     <div className="">
       <div className="flex justify-between uppercase border-b border-black p-6 tracking-widest">
         <div className="">ABOUT US | &copy; 2020</div>
-        <div className="">PRESENTED BY THE ADACHI FUND</div>
+        <div className="">PRESENTED BY THE ADACHI PROJECT</div>
       </div>
       <p className="font-mono text-sm p-6 md:w-1/2">
         EXPLORE MORE Lorem ipsum dolor sit amet, consectetuer adipisc- ing elit,
