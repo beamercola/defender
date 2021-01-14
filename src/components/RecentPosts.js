@@ -23,6 +23,16 @@ const RecentPosts = () => {
             cover {
               url
             }
+            category {
+              document {
+                ... on PrismicCategory {
+                  uid
+                  data {
+                    title
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -32,7 +42,7 @@ const RecentPosts = () => {
   return (
     <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t">
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between items-center">
           <h2>MOST RECENT STORIES</h2>
           <div className="">
             <div className="flex">
@@ -40,24 +50,22 @@ const RecentPosts = () => {
                 className=""
                 onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
               >
-                Prev
+                <img className="h-2 rotate-180 transform" src="/arrow.svg" />
               </button>
               <button
                 className="ml-2"
                 onClick={() => swiper?.slideTo(swiper.activeIndex + 1)}
               >
-                Next
+                <img className="h-2" src="/arrow.svg" />
               </button>
             </div>
           </div>
         </div>
       </SectionHeader>
-      <div className="p-4">
+      <div className="p-4 pb-12">
         <Swiper
           spaceBetween={20}
           slidesPerView={isMobile ? 2 : 4}
-          // centeredSlides={true}
-          // loop={true}
           onSwiper={s => setSwiper(s)}
         >
           {articles.map((article, i) => (

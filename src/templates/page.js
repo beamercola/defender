@@ -78,6 +78,16 @@ export const PageTemplateQuery = graphql`
                       teaser {
                         html
                       }
+                      category {
+                        document {
+                          ... on PrismicCategory {
+                            uid
+                            data {
+                              title
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }

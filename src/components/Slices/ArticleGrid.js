@@ -30,9 +30,15 @@ const Cell = ({
 
   return (
     <div className={className}>
-      <Highlight>Photo Essay</Highlight>
+      <Highlight>{article.category?.document.data.title}</Highlight>
       <Link to={`/${uid}`}>
-        <img className={`bg-black ${imgClassName}`} src="" />
+        <img
+          className={classNames(
+            imgClassName,
+            "bg-black object-cover object-center"
+          )}
+          src={article.cover?.url}
+        />
         <div>
           <Title className={titleClassName}>{article.title}</Title>
           <Teaser className={teaserClassName} html={article.teaser.html} />
@@ -53,7 +59,10 @@ const Grid1 = ({ items, bleed }) => {
     <div className="lg:flex">
       <div className="w-full p-8 lg:w-4/6 lg:p-32">
         <Link to={`/${uid}`}>
-          <img className="w-full bg-black h-64 mb-4" src="" />
+          <img
+            className="w-full bg-black h-64 mb-4 object-center object-cover"
+            src={article.cover?.url}
+          />
         </Link>
       </div>
       <div className="lg:w-2/6 lg:py-32 lg:pr-12 px-8 pb-8">
