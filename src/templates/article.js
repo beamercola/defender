@@ -5,6 +5,7 @@ import SEO from "../components/SEO"
 import Slices from "../components/Slices"
 import Cover from "../components/Cover"
 import { Meta, Section, chunkByType } from "../components/Article"
+import ModalVideo from "react-modal-video"
 
 const readingTime = require("reading-time")
 
@@ -28,6 +29,7 @@ export default ({
   } = categoryDocument || {}
 
   const [readTime, setReadTime] = useState("")
+  const [watchingVideo, setWatchingVideo] = useState(false)
   const contentHtml = useRef()
 
   useEffect(() => {
@@ -38,10 +40,20 @@ export default ({
 
   const coverContainer = (
     <Cover
-      className="items-center h-screen justify-center font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center px-8 lg:px-24"
+      className="items-center h-90vh justify-center px-8 lg:px-24"
       image={cover}
     >
-      {title}
+      <div className="text-center">
+        <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
+          {title}
+        </h1>
+        <button
+          className="mt-4 text-lg text-yellow"
+          onClick={() => setWatchingVideo(true)}
+        >
+          Play Video
+        </button>
+      </div>
     </Cover>
   )
 
@@ -75,6 +87,13 @@ export default ({
           </Section>
         ))}
       </article>
+      <ModalVideo
+        channel="vimeo"
+        autoplay
+        isOpen={watchingVideo}
+        videoId="492663943"
+        onClose={() => setWatchingVideo(false)}
+      />
     </Layout>
   )
 }
