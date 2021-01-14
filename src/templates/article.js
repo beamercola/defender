@@ -59,7 +59,18 @@ export default ({
         </Section>
 
         {chunks?.map(({ callout, slices }, i) => (
-          <Section callout={callout} key={i}>
+          <Section
+            callout={
+              <div
+                className={"prose p-4 my-12 sticky"}
+                style={{ top: "10rem" }}
+                dangerouslySetInnerHTML={{
+                  __html: callout?.primary?.content.html,
+                }}
+              />
+            }
+            key={i}
+          >
             <Slices slices={slices} />
           </Section>
         ))}
