@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { SectionHeader } from "./Slices"
 import Link from "./Link"
 import ArticleCard from "./ArticleCard"
+import {Fade} from "../hooks/animation";
 
 const RecentPosts = () => {
   const [swiper, setSwiper] = useState(null)
@@ -71,7 +72,9 @@ const RecentPosts = () => {
           {articles.map((article, i) => (
             <SwiperSlide key={i}>
               <Link className="block" to={`/${article.uid}`}>
-                <ArticleCard className="" article={article} />
+               <Fade>
+                 <ArticleCard className="" article={article} />
+               </Fade>
               </Link>
             </SwiperSlide>
           ))}

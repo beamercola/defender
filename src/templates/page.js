@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Cover from "../components/Cover"
 import Slices from "../components/Slices"
+import { Border } from "../hooks/animation"
 
 const PageTemplate = data => {
   const {
@@ -21,12 +22,22 @@ const PageTemplate = data => {
       cover={<Cover className="h-screen" image={image?.url} />}
     >
       <SEO title={title} image={image?.url} />
-      <article className="mx-4 md:mx-8 border-l border-r">
-        <Slices
-          className={{ content: "p-4 md:p-8 text-2xl" }}
-          slices={slices}
-        />
-      </article>
+      {/* border-l border-r */}
+      <Border
+        left
+        right
+        partialVisibility
+        leftMargin={30}
+        rightMargin={30}
+        topMargin={30}
+      >
+        <article className="mx-4 md:mx-8">
+          <Slices
+            className={{ content: "p-4 md:p-8 text-2xl" }}
+            slices={slices}
+          />
+        </article>
+      </Border>
     </Layout>
   )
 }
