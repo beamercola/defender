@@ -66,7 +66,7 @@ final transition
 
 #### partialVisibility
 
-when component is half visible default value is true
+when component is half visible default value is false
 
 #### leftMargin
 
