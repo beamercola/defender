@@ -24,11 +24,11 @@ transition get all properties of the framer.motion transition
 
 #### initial
 
-initial transition
+initial animation
 
 #### animate
 
-final transition
+final animation
 
 #### partialVisibility
 
@@ -58,11 +58,11 @@ transition get all properties of the framer.motion transition
 
 #### initial
 
-initial transition
+initial animation
 
 #### animate
 
-final transition
+final animation
 
 #### partialVisibility
 
