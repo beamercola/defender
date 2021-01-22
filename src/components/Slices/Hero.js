@@ -6,7 +6,7 @@ import ReactHover, { Trigger, Hover } from "react-hover"
 
 export default ({ slice: { primary: cover } }) => {
   return (
-    <div>
+    <div className="-mx-8">
       <ReactHover options={{ followCursor: true, shiftX: 20, shiftY: 20 }}>
         <Trigger type="trigger">
           <Link to={`/${cover.link?.uid}`}>

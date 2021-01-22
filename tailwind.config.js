@@ -23,6 +23,7 @@ module.exports = {
       bureau: ["bureau-grot", "sans-serif"],
       "bureau-wide": ["bureau-grot-wide", "sans-serif"],
       snell: ["snellregular", "serif"],
+      sans: ["franklin-gothic-atf", "sans-serif"],
     },
     extend: {
       borderColor: {
@@ -47,6 +48,20 @@ module.exports = {
         DEFAULT: {
           css: {
             color: "#000",
+            fontFamily: "franklin-gothic-atf",
+            h1: {
+              fontWeight: 900,
+            },
+            h2: {
+              fontWeight: 800,
+            },
+            h4: {
+              fontWeight: 900,
+              fontSize: 12,
+            },
+            h5: {
+              fontFamily: "monospace",
+            },
           },
         },
       },

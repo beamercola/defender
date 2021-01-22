@@ -30,7 +30,7 @@ export default ({ toggle, open }) => {
     >
       <div
         className={classNames(
-          "menu bg-white w-5/6 md:w-1/3 flex flex-col cursor-auto",
+          "menu bg-white w-5/6 md:w-1/3 flex flex-col cursor-auto border-r",
           "duration-300 transition-all",
           { open: open }
         )}

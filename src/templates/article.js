@@ -65,8 +65,8 @@ export default ({
           <Section
             callout={
               <div
-                className={"prose p-4 my-12 sticky"}
-                style={{ top: "10rem" }}
+                className={"prose p-4 sticky font-mono py-4"}
+                style={{ top: "4rem" }}
                 dangerouslySetInnerHTML={{
                   __html: callout?.primary?.content.html,
                 }}
@@ -74,7 +74,9 @@ export default ({
             }
             key={i}
           >
-            <Slices slices={slices} />
+            <div className="py-4">
+              <Slices slices={slices} />
+            </div>
           </Section>
         ))}
       </article>

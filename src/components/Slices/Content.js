@@ -4,7 +4,7 @@ const classNames = require("classnames")
 
 export default ({ className, html }) => (
   <div
-    className={classNames("prose", className)}
+    className={classNames("prose prose-lg", className)}
     dangerouslySetInnerHTML={{ __html: html }}
   />
 )
