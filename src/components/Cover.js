@@ -9,7 +9,9 @@ export default ({ className, image, children }) => {
       style={{ backgroundImage: `url('${image}')` }}
     >
       <div
-        className={classNames("cover flex items-center absolute inset-0 z-10")}
+        className={classNames(
+          "flex flex-col items-center justify-center absolute inset-0 z-10 pt-32"
+        )}
       >
         {children}
       </div>

@@ -47,10 +47,6 @@ main {
   @apply bg-opacity-50 pointer-events-auto;
 }
 
-.cover {
-  @apply pt-32;
-}
-
 .highlight {
   @apply bg-yellow px-8 font-mono text-xs leading-none py-px mb-4 inline-block uppercase font-thin;
 }

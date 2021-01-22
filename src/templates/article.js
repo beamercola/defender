@@ -40,21 +40,16 @@ export default ({
 
   return (
     <Layout animatedHeader={false}>
-      <Cover
-        className="items-center h-90vh justify-center px-8 lg:px-24"
-        image={cover}
-      >
-        <div className="text-center">
-          <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
-            {title}
-          </h1>
-          <button
-            className="mt-4 text-lg text-yellow"
-            onClick={() => setWatchingVideo(true)}
-          >
-            Play Video
-          </button>
-        </div>
+      <Cover className="h-90vh px-8 lg:px-24" image={cover}>
+        <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
+          {title}
+        </h1>
+        <button
+          className="mt-4 text-lg text-yellow"
+          onClick={() => setWatchingVideo(true)}
+        >
+          Play Video
+        </button>
       </Cover>
 
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
