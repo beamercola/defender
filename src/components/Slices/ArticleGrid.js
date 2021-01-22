@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import Highlight from "../Highlight"
+import Fade from "react-reveal/Fade"
+
 const classNames = require("classnames")
 
 export default ({ items }) => {
@@ -85,45 +87,47 @@ const Grid1 = ({ items }) => {
 const Grid2 = ({ items }) => <div></div>
 
 const Grid3 = ({ items }) => (
-  <div
-    className={classNames(
-      "border-b",
-      "md:grid md:grid-rows-3 md:grid-cols-2",
-      "lg:grid-cols-3"
-    )}
-  >
-    <Cell
+  <Fade bottom cascade>
+    <div
       className={classNames(
-        "border-b p-8",
-        "md:row-span-3 md:col-span-2",
-        "lg:border-r lg:py-12 lg:px-32 lg:border-b-0"
+        "border-b",
+        "md:grid md:grid-rows-3 md:grid-cols-2",
+        "lg:grid-cols-3"
       )}
-      item={items[0]}
-      imgClassName="w-full mb-4 h-64"
-      titleClassName="text-2xl"
-      teaserClassName="md:text-lg"
-    />
+    >
+      <Cell
+        className={classNames(
+          "border-b p-8",
+          "md:row-span-3 md:col-span-2",
+          "lg:border-r lg:py-12 lg:px-32 lg:border-b-0"
+        )}
+        item={items[0]}
+        imgClassName="w-full mb-4 h-64"
+        titleClassName="text-2xl"
+        teaserClassName="md:text-lg"
+      />
 
-    <Cell
-      className={classNames(
-        "border-b px-6 py-12",
-        "md:col-span-1 md:row-span-2 md:border-r",
-        "lg:border-r-0"
-      )}
-      item={items[1]}
-      imgClassName="w-2/3 h-64 mb-4 hidden md:block"
-      titleClassName="text-xl md:text-2xl"
-      teaserClassName="text-sm md:text-base"
-    />
+      <Cell
+        className={classNames(
+          "border-b px-6 py-12",
+          "md:col-span-1 md:row-span-2 md:border-r",
+          "lg:border-r-0"
+        )}
+        item={items[1]}
+        imgClassName="w-2/3 h-64 mb-4 hidden md:block"
+        titleClassName="text-xl md:text-2xl"
+        teaserClassName="text-sm md:text-base"
+      />
 
-    <Cell
-      className="md:col-span-1 px-6 py-12"
-      item={items[2]}
-      imgClassName="hidden"
-      titleClassName="text-xl md:text-2xl"
-      teaserClassName="text-sm md:text-base"
-    />
-  </div>
+      <Cell
+        className="md:col-span-1 px-6 py-12"
+        item={items[2]}
+        imgClassName="hidden"
+        titleClassName="text-xl md:text-2xl"
+        teaserClassName="text-sm md:text-base"
+      />
+    </div>
+  </Fade>
 )
 
 const Title = ({ className, children }) => (

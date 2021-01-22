@@ -43,7 +43,7 @@ export default ({
           {title}
         </h1>
         <button
-          className="mt-4 text-lg text-yellow"
+          className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block"
           onClick={() => setWatchingVideo(true)}
         >
           Play Video

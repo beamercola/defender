@@ -32,6 +32,7 @@
     "react-image-appear": "^1.2.23",
     "react-modal-video": "^1.2.6",
     "react-page-visibility": "^6.3.0",
+    "react-reveal": "^1.2.2",
     "react-scroll-parallax": "^2.3.3",
     "react-spring": "^8.0.27",
     "react-sticky-box": "^0.9.3",

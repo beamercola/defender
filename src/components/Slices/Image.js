@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Fade from "react-reveal/Fade"
 const classNames = require("classnames")
 
 const sizeClass = (size = "") => {
@@ -27,11 +28,13 @@ const alignClass = (align = "") => {
 }
 
 export default ({ align, alt, src, size }) => (
-  <div className={classNames("flex my-12", alignClass(align))}>
-    <div className={sizeClass(size)}>
-      <img src={src} alt={alt} />
+  <Fade bottom>
+    <div className={classNames("flex my-12", alignClass(align))}>
+      <div className={sizeClass(size)}>
+        <img src={src} alt={alt} />
+      </div>
     </div>
-  </div>
+  </Fade>
 )
 
 export const fragments = graphql`
