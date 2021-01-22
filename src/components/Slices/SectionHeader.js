@@ -1,12 +1,21 @@
 import React from "react"
 const classNames = require("classnames")
 
-export default ({ className, children, size }) => (
+const sizeClass = size => {
+  switch (size) {
+    case "xs":
+      return "py-2 md:text-sm"
+    case "xl":
+      return "py-4 md:text-2xl font-bureau-wide uppercase text-center font-bold"
+  }
+}
+
+export default ({ className, children, size = "xs" }) => (
   <div
     className={classNames(
       className,
-      "flex justify-between items-center font-mono border-b bg-white",
-      { "h-12 md:text-xs": !size }
+      "font-mono border-b bg-white",
+      sizeClass(size)
     )}
   >
     {children}

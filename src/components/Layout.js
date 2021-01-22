@@ -19,9 +19,9 @@ const Layout = ({ children, animatedHeader }) => {
         {children}
         <RecentPosts />
         <div className="border-t">
-          <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-green">
+          {/* <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-green">
             Resources
-          </Link>
+          </Link> */}
           <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-blue">
             Contact
           </Link>
