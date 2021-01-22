@@ -42,6 +42,10 @@ export const PageTemplateQuery = graphql`
           ... on PrismicPageBodyHero {
             ...HeroSlice
           }
+
+          ... on PrismicPageBodyTitle {
+            ...TitleSlice
+          }
           ... on PrismicPageBodySectionHeader {
             id
             slice_type

@@ -6,6 +6,7 @@ import ArticleGrid from "./ArticleGrid"
 import SectionHeader from "./SectionHeader"
 import Callout from "./Callout"
 import Hero from "./Hero"
+import Title from "./Title"
 
 export { default as SectionHeader } from "./SectionHeader"
 
@@ -16,6 +17,9 @@ const Slices = ({ className = {}, slices }) => {
     switch (slice.slice_type) {
       case "hero":
         return <Hero slice={slice} key={key} />
+
+      case "title":
+        return <Title slice={slice} key={key} />
 
       case "content":
         return (

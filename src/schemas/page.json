@@ -82,7 +82,7 @@
               "title": {
                 "type": "StructuredText",
                 "config": {
-                  "single": "heading1",
+                  "single": "heading1, heading6",
                   "label": "Title"
                 }
               }
