@@ -7,7 +7,11 @@ const Explore = ({}) => {
     <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t">EXPLORE MORE</SectionHeader>
       <div className="p-4 md:flex justify-end p-6 border-black -mx-4">
-        <Box className="md:w-1/4 leading-tight px-4 mb-8" title="About Us">
+        <Box
+          className="md:w-1/4 leading-tight px-4 mb-8"
+          title="About Us"
+          to="/about"
+        >
           <p className="text-sm md:text-base">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -15,7 +19,11 @@ const Explore = ({}) => {
             magna aliquam erat volutpat. Ut wisi enim ad
           </p>
         </Box>
-        <Box className="md:w-1/4 leading-tight px-4" title="Shop">
+        <Box
+          className="md:w-1/4 leading-tight px-4"
+          title="Shop"
+          to="https://shopify.com"
+        >
           <p className="text-sm md:text-base">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -37,7 +45,7 @@ const Box = ({ className, title, children, to }) => (
     </h4>
     {children}
     <Link className="block mt-2" to={to}>
-      Arrow
+      <img className="h-2" src="/arrow.svg" />
     </Link>
   </div>
 )
