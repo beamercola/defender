@@ -90,7 +90,7 @@ const Grid3 = ({ items }) => (
   <Fade bottom cascade>
     <div
       className={classNames(
-        "border-b",
+        "border-",
         "md:grid md:grid-rows-3 md:grid-cols-2",
         "lg:grid-cols-3"
       )}
