@@ -2,34 +2,37 @@ import React, { useEffect, useState } from "react"
 import Link from "./Link"
 import Ticker from "react-ticker"
 import PageVisibility from "react-page-visibility"
-import { motion, useViewportScroll, useTransform } from "framer-motion"
+import StickyBox from "react-sticky-box"
+const classNames = require("classnames")
 
 export default ({ animated = false, toggleMenu }) => {
   const [pageIsVisible, setPageIsVisible] = useState(true)
-  const { scrollY } = useViewportScroll()
-  const scale = useTransform(scrollY, [0, 200], [200, 100])
-  const perc = useTransform(scale, v => `${v}%`)
+  const [stuck, setStuck] = useState(false)
 
   const handleVisibilityChange = isVisible => {
     setPageIsVisible(isVisible)
   }
 
   return (
-    <PageVisibility onChange={handleVisibilityChange}>
-      <header className="fixed inset-x-0 top-0 z-50">
-        <motion.div
-          className="flex-grow flex items-center justify-center"
-          style={{ height: animated ? perc : "100%" }}
+    <>
+      <header className="bg-red">
+        <Link className="h-full" to="/">
+          <img className="mx-auto h-full" src="/logotype.svg" />
+        </Link>
+      </header>
+
+      <StickyBox
+        className="z-50"
+        offsetTop={0}
+        onChangeMode={(o, n) => console.log(o, n)}
+      >
+        <nav
+          className={classNames(
+            "border-t border-b border-yellow text-yellow text-2xl text-center font-snell w-screen py-1",
+            stuck ? "bg-black" : "bg-red"
+          )}
         >
-          <div className="flex h-full items-end p-4">
-            <Link className="h-full" to="/">
-              <img className="mx-auto h-full" src="/logotype.svg" />
-            </Link>
-            <p className="text-yellow">Vol 1</p>
-          </div>
-        </motion.div>
-        <div className="z-50">
-          <nav className="border-t border-b border-yellow text-yellow text-2xl text-center font-snell h-8 w-screen">
+          <PageVisibility onChange={handleVisibilityChange}>
             {pageIsVisible && (
               <Ticker direction="toRight" offset="100%">
                 {() => (
@@ -50,9 +53,9 @@ export default ({ animated = false, toggleMenu }) => {
                 )}
               </Ticker>
             )}
-          </nav>
-        </div>
-      </header>
-    </PageVisibility>
+          </PageVisibility>
+        </nav>
+      </StickyBox>
+    </>
   )
 }

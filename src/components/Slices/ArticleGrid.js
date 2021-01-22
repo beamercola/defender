@@ -48,12 +48,17 @@ const Cell = ({
   )
 }
 
-const Grid1 = ({ items, bleed }) => {
+const Grid1 = ({ items }) => {
   const {
+    bleed,
     article: {
       document: { data: article, uid },
     },
   } = items[0]
+
+  if (bleed) {
+    return <Bleed article={article} uid={uid} />
+  }
 
   return (
     <div className="lg:flex">
@@ -102,7 +107,7 @@ const Grid3 = ({ items }) => (
     <Cell
       className={classNames(
         "border-b px-6 py-12",
-        "md:col-span-1 md:row-span-2 md:border-b-0 md:border-r",
+        "md:col-span-1 md:row-span-2 md:border-r",
         "lg:border-r-0"
       )}
       item={items[1]}
@@ -136,4 +141,16 @@ const Teaser = ({ className, html }) => (
       __html: html,
     }}
   />
+)
+
+const Bleed = ({ article, uid }) => (
+  <Link
+    className="block h-80vh pt-12"
+    to={`/${uid}`}
+    style={{
+      backgroundImage: `url(${article.cover?.url})`,
+    }}
+  >
+    <Highlight>{article.category?.document.data.title}</Highlight>
+  </Link>
 )

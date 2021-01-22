@@ -11648,6 +11648,13 @@ react-hot-loader@^4.12.21:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
+react-hover@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-hover/-/react-hover-2.0.0.tgz#b17ccbe56388700c5cc8bba3a144c370854c97ab"
+  integrity sha512-3fb7OsDCwR4CWBp+1gpy5LezyQnlCV5LxIk3FM+9RcO7ckMh+27rPHrPkld7jfBPO/ZTvNANkhZU9IFynSn+ZQ==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-image-appear@^1.2.23:
   version "1.2.23"
   resolved "https://registry.yarnpkg.com/react-image-appear/-/react-image-appear-1.2.23.tgz#4a8d17eda91f84ce3dca1e5a571dabb436b6616f"

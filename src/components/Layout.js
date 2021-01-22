@@ -7,7 +7,7 @@ import Newsletter from "../components/Newsletter"
 import RecentPosts from "../components/RecentPosts"
 import Menu from "../components/Menu"
 
-const Layout = ({ children, cover, animatedHeader }) => {
+const Layout = ({ children, animatedHeader }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggle = () => setMenuOpen(!menuOpen)
@@ -16,10 +16,9 @@ const Layout = ({ children, cover, animatedHeader }) => {
     <>
       <Header toggleMenu={toggle} animated={animatedHeader} />
       <main className="bg-white border-b">
-        {cover}
         {children}
         <RecentPosts />
-        <div className="">
+        <div className="border-t">
           <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-green">
             Resources
           </Link>

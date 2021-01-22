@@ -29,9 +29,66 @@
           "article_grid": [],
           "section_header": [],
           "callout": [],
-          "text": []
+          "text": [],
+          "title": [],
+          "hero": []
         },
         "choices": {
+          "hero": {
+            "type": "Slice",
+            "fieldset": "Hero",
+            "description": "Huge image",
+            "icon": "image",
+            "display": "list",
+            "non-repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, strong, em",
+                  "label": "Text"
+                }
+              },
+              "video": {
+                "type": "Embed",
+                "config": {
+                  "label": "Video",
+                  "placeholder": "Ambient Video"
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "title": {
+            "type": "Slice",
+            "fieldset": "Title",
+            "description": "Big Text",
+            "icon": "text_fields",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Title"
+                }
+              }
+            },
+            "repeat": {}
+          },
           "article_grid": {
             "type": "Slice",
             "fieldset": "Article Grid",
@@ -44,9 +101,7 @@
                 "type": "Link",
                 "config": {
                   "select": "document",
-                  "customtypes": [
-                    "article"
-                  ],
+                  "customtypes": ["article"],
                   "label": "Article"
                 }
               },

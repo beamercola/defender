@@ -24,9 +24,7 @@ export default ({
   },
 }) => {
   const { data: { name: author } = {} } = authorDocument || {}
-  const {
-    data: { title: category },
-  } = categoryDocument || {}
+  const { data: { title: category } = {} } = categoryDocument || {}
 
   const [readTime, setReadTime] = useState("")
   const [watchingVideo, setWatchingVideo] = useState(false)

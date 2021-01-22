@@ -42,27 +42,23 @@ const RecentPosts = () => {
   return (
     <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t">
-        <div className="flex w-full justify-between items-center">
-          <h2>MOST RECENT STORIES</h2>
-          <div className="">
-            <div className="flex">
-              <button
-                className=""
-                onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
-              >
-                <img className="h-2 rotate-180 transform" src="/arrow.svg" />
-              </button>
-              <button
-                className="ml-2"
-                onClick={() => swiper?.slideTo(swiper.activeIndex + 1)}
-              >
-                <img className="h-2" src="/arrow.svg" />
-              </button>
-            </div>
-          </div>
+        <h1 className="flex items-center">MOST RECENT STORIES</h1>
+        <div className="flex">
+          <button
+            className=""
+            onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
+          >
+            <img className="h-2 rotate-180 transform" src="/arrow.svg" />
+          </button>
+          <button
+            className="ml-2"
+            onClick={() => swiper?.slideTo(swiper.activeIndex + 1)}
+          >
+            <img className="h-2" src="/arrow.svg" />
+          </button>
         </div>
       </SectionHeader>
-      <div className="p-4 pb-12">
+      <div className="pb-12 p-8">
         <Swiper
           spaceBetween={20}
           slidesPerView={isMobile ? 2 : 4}

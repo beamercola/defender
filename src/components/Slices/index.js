@@ -5,6 +5,7 @@ import Blockquote from "./Blockquote"
 import ArticleGrid from "./ArticleGrid"
 import SectionHeader from "./SectionHeader"
 import Callout from "./Callout"
+import Hero from "./Hero"
 
 export { default as SectionHeader } from "./SectionHeader"
 
@@ -13,6 +14,9 @@ const Slices = ({ className = {}, slices }) => {
     const key = slice.id
 
     switch (slice.slice_type) {
+      case "hero":
+        return <Hero slice={slice} key={key} />
+
       case "content":
         return (
           <Content

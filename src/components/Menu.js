@@ -37,14 +37,15 @@ export default ({ toggle, open }) => {
         onClick={e => e.stopPropagation()}
         style={{ transform: "translate3d(-100vw, 0, 0)" }}
       >
-        <div className="bg-yellow px-12 py-4">
+        <div className="bg-yellow border-b px-12 py-4">
           <img className="h-32" src="/defender-d.svg" />
         </div>
         {primary.map((link, i) => (
           <Link
             className={classNames(
               link.className,
-              "text-yellow font-bureau-wide text-2xl py-4 px-6 md:px-12 font-bold uppercase border-b"
+              "text-yellow font-bureau-wide text-2xl py-4 px-6 md:px-12 font-bold uppercase border-b",
+              "hover:text-white hover:bg-black"
             )}
             to={link.to}
             key={i}
@@ -54,7 +55,7 @@ export default ({ toggle, open }) => {
         ))}
         {secondary.map((link, i) => (
           <Link
-            className="py-3 px-6 md:px-12 font-snell text-2xl border-b"
+            className="py-3 px-6 md:px-12 font-snell text-2xl border-b hover:bg-black hover:text-white"
             to={link.to}
             key={i}
           >
