@@ -19,7 +19,7 @@ export default ({ animated = false, toggleMenu }) => {
         <Link className="h-full" to="/">
           <img className="mx-auto h-full" src="/logotype.svg" />
         </Link>
-        <p className="absolute top-3 right-3 text-yellow text-lg">Vol 0</p>
+        <p className="absolute top-3 right-3 text-yellow text-lg">Vol 00</p>
       </header>
 
       <StickyBox
