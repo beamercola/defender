@@ -11,7 +11,7 @@ export default ({ className, article }) => {
         className="w-full h-32 md:h-64 bg-black mb-1 object-cover"
         src={article.data.cover?.url}
       />
-      <h5 className="text-xl">{article.data.title}</h5>
+      <h5 className="text-xl group-hover:text-red">{article.data.title}</h5>
     </div>
   )
 }

@@ -44,7 +44,7 @@ const Box = ({ className, title, children, to }) => (
       {title}
     </h4>
     {children}
-    <Link className="block mt-2" to={to}>
+    <Link className="block mt-8" to={to}>
       <img className="h-2" src="/arrow.svg" />
     </Link>
   </div>

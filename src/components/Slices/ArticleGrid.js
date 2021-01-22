@@ -31,7 +31,7 @@ const Cell = ({
   } = item
 
   return (
-    <div className={className}>
+    <div className={classNames(className, "group")}>
       <Highlight>{article.category?.document.data.title}</Highlight>
       <Link to={`/${uid}`}>
         <img
@@ -42,7 +42,9 @@ const Cell = ({
           src={article.cover?.url}
         />
         <div>
-          <Title className={titleClassName}>{article.title}</Title>
+          <Title className={classNames(titleClassName, "group-hover:text-red")}>
+            {article.title}
+          </Title>
           <Teaser className={teaserClassName} html={article.teaser.html} />
         </div>
       </Link>
@@ -63,7 +65,7 @@ const Grid1 = ({ items }) => {
   }
 
   return (
-    <div className="lg:flex">
+    <div className="lg:flex group">
       <div className="w-full p-8 lg:w-4/6 lg:p-32">
         <Link to={`/${uid}`}>
           <img
@@ -73,7 +75,7 @@ const Grid1 = ({ items }) => {
         </Link>
       </div>
       <div className="lg:w-2/6 lg:py-32 lg:pr-12 px-8 pb-8">
-        <Link to={`/${uid}`}>
+        <Link className="group-hover:text-red" to={`/${uid}`}>
           <Title className="text-3xl">
             {items[0].article.document.data.title}
           </Title>

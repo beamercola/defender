@@ -66,7 +66,7 @@ const RecentPosts = () => {
         >
           {articles.map((article, i) => (
             <SwiperSlide key={i}>
-              <Link className="block" to={`/${article.uid}`}>
+              <Link className="block group" to={`/${article.uid}`}>
                 <ArticleCard className="" article={article} />
               </Link>
             </SwiperSlide>
