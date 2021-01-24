@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal"
 
 const classNames = require("classnames")
 
-export const ArticleGrid = ({ items }) => {
+const gridSelector = items => {
   switch (items.length) {
     default:
       return <Grid1 items={items} />
@@ -15,6 +15,10 @@ export const ArticleGrid = ({ items }) => {
       return <Grid3 items={items} />
   }
 }
+
+export const ArticleGrid = ({ items }) => (
+  <div className="container">{gridSelector(items)}</div>
+)
 
 export default ArticleGrid
 
@@ -95,7 +99,7 @@ const Grid2 = ({ items }) => <div></div>
 const Grid3 = ({ items }) => (
   <div className="gap-px bg-black md:grid md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3">
     <div className="p-8 bg-white md:row-span-3 md:col-span-2 lg:py-12 lg:px-32">
-      <Fade direction="up" triggerOnce>
+      <Fade direction="up" triggerOnce duration={500}>
         <Cell
           item={items[0]}
           imgClassName="w-full mb-4 h-64"
@@ -106,7 +110,7 @@ const Grid3 = ({ items }) => (
     </div>
 
     <div className="md:col-span-1 md:row-span-2 bg-white px-6 py-12">
-      <Fade direction="up" triggerOnce delay={500}>
+      <Fade direction="up" triggerOnce duration={500} delay={500}>
         <Cell
           item={items[1]}
           imgClassName="w-2/3 h-64 mb-4 hidden md:block"
@@ -117,7 +121,7 @@ const Grid3 = ({ items }) => (
     </div>
 
     <div className="bg-white px-6 py-12 md:col-span-1">
-      <Fade direction="up" triggerOnce>
+      <Fade direction="up" triggerOnce duration={500}>
         <Cell
           item={items[2]}
           imgClassName="hidden"

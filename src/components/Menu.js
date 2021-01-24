@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "./Link"
+import { Fade } from "react-awesome-reveal"
 const classNames = require("classnames")
 
 const primary = [
@@ -44,18 +45,18 @@ const Menu = ({ toggle, open }) => {
           <Link
             className={classNames(
               link.className,
-              "text-yellow font-bureau-wide text-2xl py-4 px-6 md:px-12 font-bold uppercase border-b",
+              "block text-yellow font-bureau-wide text-2xl py-4 px-6 md:px-12 font-bold uppercase border-b",
               "hover:text-white hover:bg-black"
             )}
             to={link.to}
             key={i}
           >
-            {link.label}
+            <Fade delay={i * 100}>{link.label}</Fade>
           </Link>
         ))}
         {secondary.map((link, i) => (
           <Link
-            className="py-3 px-6 md:px-12 font-snell text-2xl border-b hover:bg-black hover:text-white"
+            className="block py-3 px-6 md:px-12 font-snell text-2xl border-b hover:bg-black hover:text-white"
             to={link.to}
             key={i}
           >

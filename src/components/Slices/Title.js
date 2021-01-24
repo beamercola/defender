@@ -16,7 +16,7 @@ const Title = ({ slice }) => {
 
   return (
     <SectionHeader
-      className="-mx-8 px-8 border-t border-b"
+      className="px-8 border-t border-b"
       size={sizeFromPrismic(size)}
     >
       {slice.primary?.title.text}

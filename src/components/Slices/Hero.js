@@ -5,30 +5,27 @@ import Link from "../Link"
 import ReactHover, { Trigger, Hover } from "react-hover"
 import { Fade } from "react-awesome-reveal"
 
-export const Hero = ({ slice: { primary: cover } }) => {
-  return (
-    <div className="-mx-8">
-      <Fade>
-        <ReactHover options={{ followCursor: true, shiftX: 20, shiftY: 20 }}>
-          <Trigger type="trigger">
-            <Link to={`/${cover.link?.uid}`}>
-              <Cover
-                className="h-80vh border-b"
-                image={cover.image.url}
-              ></Cover>
-            </Link>
-          </Trigger>
-          <Hover type="hover">
-            <div
-              className="bg-yellow p-2 w-72 font-mono text-sm"
-              dangerouslySetInnerHTML={{ __html: cover?.content?.html }}
-            />
-          </Hover>
-        </ReactHover>
-      </Fade>
-    </div>
-  )
-}
+export const Hero = ({ slice: { primary: cover } }) => (
+  <Fade>
+    <ReactHover options={{ followCursor: true, shiftX: 20, shiftY: 20 }}>
+      <Trigger type="trigger">
+        <Link to={cover.link?.uid && `/${cover.link?.uid}`}>
+          <Cover
+            className="h-80vh border-b border-t"
+            image={cover.image.url}
+          ></Cover>
+        </Link>
+      </Trigger>
+      <Hover type="hover">
+        <div
+          className="bg-yellow p-2 w-72 font-mono text-sm"
+          dangerouslySetInnerHTML={{ __html: cover?.content?.html }}
+        />
+      </Hover>
+    </ReactHover>
+  </Fade>
+)
+
 export default Hero
 
 export const fragments = graphql`

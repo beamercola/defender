@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import { graphql } from "gatsby"
+import { Fade } from "react-awesome-reveal"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Slices from "../components/Slices"
@@ -39,19 +40,23 @@ const Article = ({
 
   return (
     <Layout animatedHeader={false}>
-      <Cover className="h-90vh px-8 lg:px-24" image={cover}>
-        <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
-          {title}
-        </h1>
-        {video && (
-          <button
-            className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block"
-            onClick={() => setWatchingVideo(true)}
-          >
-            Play Video
-          </button>
-        )}
-      </Cover>
+      <Fade>
+        <Cover className="h-90vh" image={cover}>
+          {/* <Fade cascade> */}
+          <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
+            {title}
+          </h1>
+          {video && (
+            <button
+              className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block font-sans"
+              onClick={() => setWatchingVideo(true)}
+            >
+              Play Video
+            </button>
+          )}
+          {/* </Fade> */}
+        </Cover>
+      </Fade>
 
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
         {category} | {date} | {author}

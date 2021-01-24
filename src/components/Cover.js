@@ -10,7 +10,7 @@ const Cover = ({ className, image, children }) => {
     >
       <div
         className={classNames(
-          "flex flex-col items-center justify-center absolute inset-0 z-10 pt-32"
+          "flex flex-col items-center justify-center absolute inset-0 z-10 pt-32 px-8 lg:px-12"
         )}
       >
         {children}

@@ -18,7 +18,10 @@ const PageTemplate = data => {
     <Layout animatedHeader={true}>
       <SEO title={title || ""} image={image?.url} />
       <article>
-        <Slices slices={slices} />
+        <Slices
+          slices={slices}
+          className={{ content: "container p-4 md:p-8" }}
+        />
       </article>
     </Layout>
   )

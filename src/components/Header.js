@@ -25,7 +25,7 @@ export const Header = ({ animated = false, toggleMenu }) => {
       <StickyBox
         className="z-50"
         offsetTop={0}
-        onChangeMode={(o, n) => console.log(o, n)}
+        // onChangeMode={(o, n) => console.log(o, n)}
       >
         <nav
           className={classNames(

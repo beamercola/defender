@@ -45,7 +45,7 @@ const Slices = ({ className = {}, slices }) => {
         return <ArticleGrid items={slice.items} key={key} />
       case "section_header":
         return (
-          <SectionHeader className="-mx-8 px-8" key={key}>
+          <SectionHeader className="px-8" key={key}>
             {slice.primary.text}
           </SectionHeader>
         )

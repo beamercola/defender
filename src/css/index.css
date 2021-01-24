@@ -23,6 +23,10 @@ body {
   @apply bg-white;
 }
 
+.container {
+  @apply mx-4 md:mx-8 border-r border-l;
+}
+
 main {
   margin-bottom: 100vh;
 }

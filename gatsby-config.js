@@ -50,8 +50,6 @@ module.exports = {
         path: `${__dirname}/src/fonts`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
