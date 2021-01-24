@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { isMobile } from "react-device-detect"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { Fade } from "react-awesome-reveal"
 import { SectionHeader } from "./Slices"
 import Link from "./Link"
 import ArticleCard from "./ArticleCard"
@@ -66,9 +67,11 @@ const RecentPosts = () => {
         >
           {articles.map((article, i) => (
             <SwiperSlide key={i}>
-              <Link className="block group" to={`/${article.uid}`}>
-                <ArticleCard className="" article={article} />
-              </Link>
+              <Fade delay={i * 100}>
+                <Link className="block group" to={`/${article.uid}`}>
+                  <ArticleCard className="" article={article} />
+                </Link>
+              </Fade>
             </SwiperSlide>
           ))}
         </Swiper>

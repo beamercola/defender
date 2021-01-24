@@ -6,8 +6,10 @@ export default ({
   to,
   activeClassName,
   partiallyActive,
-  ...other
+  ...props
 }) => {
+  if (!to) return <div {...props}>{children}</div>
+
   const internal = /^\/(?!\/)/.test(to)
   if (internal) {
     return (
@@ -15,14 +17,14 @@ export default ({
         to={to}
         activeClassName={activeClassName}
         partiallyActive={partiallyActive}
-        {...other}
+        {...props}
       >
         {children}
       </GatsbyLink>
     )
   }
   return (
-    <a href={to} {...other}>
+    <a href={to} {...props}>
       {children}
     </a>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
 const classNames = require("classnames")
 
 const sizeClass = (size = "") => {
@@ -28,7 +28,7 @@ const alignClass = (align = "") => {
 }
 
 export default ({ align, alt, src, size }) => (
-  <Fade bottom>
+  <Fade direction="up">
     <div className={classNames("flex my-12", alignClass(align))}>
       <div className={sizeClass(size)}>
         <img src={src} alt={alt} />

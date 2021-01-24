@@ -3,26 +3,33 @@ import { graphql } from "gatsby"
 import Cover from "../Cover"
 import Link from "../Link"
 import ReactHover, { Trigger, Hover } from "react-hover"
+import { Fade } from "react-awesome-reveal"
 
-export default ({ slice: { primary: cover } }) => {
+export const Hero = ({ slice: { primary: cover } }) => {
   return (
     <div className="-mx-8">
-      <ReactHover options={{ followCursor: true, shiftX: 20, shiftY: 20 }}>
-        <Trigger type="trigger">
-          <Link to={`/${cover.link?.uid}`}>
-            <Cover className="h-80vh border-b" image={cover.image.url}></Cover>
-          </Link>
-        </Trigger>
-        <Hover type="hover">
-          <div
-            className="bg-yellow p-2 w-72 font-mono text-sm"
-            dangerouslySetInnerHTML={{ __html: cover?.content?.html }}
-          />
-        </Hover>
-      </ReactHover>
+      <Fade>
+        <ReactHover options={{ followCursor: true, shiftX: 20, shiftY: 20 }}>
+          <Trigger type="trigger">
+            <Link to={`/${cover.link?.uid}`}>
+              <Cover
+                className="h-80vh border-b"
+                image={cover.image.url}
+              ></Cover>
+            </Link>
+          </Trigger>
+          <Hover type="hover">
+            <div
+              className="bg-yellow p-2 w-72 font-mono text-sm"
+              dangerouslySetInnerHTML={{ __html: cover?.content?.html }}
+            />
+          </Hover>
+        </ReactHover>
+      </Fade>
     </div>
   )
 }
+export default Hero
 
 export const fragments = graphql`
   fragment HeroSlice on PrismicPageBodyHero {
