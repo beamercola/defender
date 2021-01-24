@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { SectionHeader } from "./Slices"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Newsletter = () => {

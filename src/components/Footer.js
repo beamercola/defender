@@ -10,7 +10,7 @@ const Footer = () => (
       <div className="">INSTAGRAM / TWITTER</div>
     </div>
     <div className="flex items-center justify-center">
-      <img className="w-32" src="/defender-d.svg" />
+      <img className="w-32" src="/defender-d.svg" alt="Defender" />
     </div>
     <div className="">
       <div className="flex justify-between uppercase border-b border-black p-6 tracking-widest">

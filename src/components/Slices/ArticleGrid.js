@@ -42,6 +42,7 @@ const Cell = ({
             "bg-black object-cover object-center"
           )}
           src={article.cover?.url}
+          alt={article.cover?.alt || ""}
         />
         <div>
           <Title className={classNames(titleClassName, "group-hover:text-red")}>
@@ -73,6 +74,7 @@ const Grid1 = ({ items }) => {
           <img
             className="w-full bg-black h-64 mb-4 object-center object-cover"
             src={article.cover?.url}
+            alt={article.cover?.alt || ""}
           />
         </Link>
       </div>

@@ -1,9 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { withPreview } from "gatsby-source-prismic"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
-import Cover from "../components/Cover"
 import Slices from "../components/Slices"
 
 const PageTemplate = data => {
@@ -18,11 +17,8 @@ const PageTemplate = data => {
   return (
     <Layout animatedHeader={true}>
       <SEO title={title || ""} image={image?.url} />
-      <article className="mx-4 md:mx-8 border-l border-r">
-        <Slices
-          className={{ content: "p-4 md:p-8 text-2xl" }}
-          slices={slices}
-        />
+      <article>
+        <Slices slices={slices} />
       </article>
     </Layout>
   )
@@ -42,7 +38,6 @@ export const PageTemplateQuery = graphql`
           ... on PrismicPageBodyHero {
             ...HeroSlice
           }
-
           ... on PrismicPageBodyTitle {
             ...TitleSlice
           }
@@ -78,6 +73,7 @@ export const PageTemplateQuery = graphql`
                       title
                       cover {
                         url
+                        alt
                       }
                       teaser {
                         html

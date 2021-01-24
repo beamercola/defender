@@ -6,12 +6,12 @@ const sizeFromPrismic = size => {
   switch (size) {
     case "heading1":
       return "xl"
-    case "heading6":
+    default:
       return "xs"
   }
 }
 
-export default ({ slice }) => {
+const Title = ({ slice }) => {
   const size = slice.primary?.title?.raw[0]?.type
 
   return (
@@ -23,6 +23,8 @@ export default ({ slice }) => {
     </SectionHeader>
   )
 }
+
+export default Title
 
 export const fragments = graphql`
   fragment TitleSlice on PrismicPageBodyTitle {

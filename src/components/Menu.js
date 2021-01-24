@@ -19,7 +19,7 @@ const secondary = [
   { label: "Contact", to: "/contact" },
 ]
 
-export default ({ toggle, open }) => {
+const Menu = ({ toggle, open }) => {
   return (
     <div
       className={classNames(
@@ -38,7 +38,7 @@ export default ({ toggle, open }) => {
         style={{ transform: "translate3d(-100vw, 0, 0)" }}
       >
         <div className="bg-yellow border-b px-12 py-4">
-          <img className="h-32" src="/defender-d.svg" />
+          <img className="h-32" src="/defender-d.svg" alt="Defender" />
         </div>
         {primary.map((link, i) => (
           <Link
@@ -66,3 +66,5 @@ export default ({ toggle, open }) => {
     </div>
   )
 }
+
+export default Menu

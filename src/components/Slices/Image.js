@@ -27,7 +27,7 @@ const alignClass = (align = "") => {
   }
 }
 
-export default ({ align, alt, src, size }) => (
+const Image = ({ align, alt, src, size }) => (
   <Fade direction="up">
     <div className={classNames("flex my-12", alignClass(align))}>
       <div className={sizeClass(size)}>
@@ -36,6 +36,8 @@ export default ({ align, alt, src, size }) => (
     </div>
   </Fade>
 )
+
+export default Image
 
 export const fragments = graphql`
   fragment SliceImage on PrismicArticleBodyImage {

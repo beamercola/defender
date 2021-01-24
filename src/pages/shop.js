@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { SectionHeader } from "../components/Slices"
 
-export default () => {
+const Shop = () => {
   return (
     <Layout cover={<div className="h-40 bg-red" />}>
       <div className="">
@@ -17,9 +17,11 @@ export default () => {
   )
 }
 
+export default Shop
+
 const Product = () => (
   <div>
-    <img className="h-96 w-full bg-black" />
+    <img className="h-96 w-full bg-black" alt="" />
     <h2 className="font-bureau-wide uppercase text-2xl py-2 font-bold">
       Title
     </h2>

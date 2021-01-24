@@ -3,14 +3,14 @@ const classNames = require("classnames")
 
 const sizeClass = size => {
   switch (size) {
-    case "xs":
+    default:
       return "py-2 md:text-sm"
     case "xl":
       return "py-4 md:text-2xl font-bureau-wide uppercase text-center font-bold"
   }
 }
 
-export default ({ className, children, size = "xs" }) => (
+const SectionHeader = ({ className, children, size = "xs" }) => (
   <div
     className={classNames(
       className,
@@ -21,3 +21,5 @@ export default ({ className, children, size = "xs" }) => (
     {children}
   </div>
 )
+
+export default SectionHeader

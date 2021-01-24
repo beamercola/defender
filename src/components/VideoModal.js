@@ -2,7 +2,7 @@ import React from "react"
 import Modal from "react-modal"
 import ReactPlayer from "react-player/vimeo"
 
-export default ({ isOpen, url, close }) => (
+const VideoModal = ({ isOpen, url, close }) => (
   <Modal
     className="modal block bg-black w-full"
     overlayClassName=""
@@ -17,3 +17,5 @@ export default ({ isOpen, url, close }) => (
     </div>
   </Modal>
 )
+
+export default VideoModal

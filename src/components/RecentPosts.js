@@ -23,6 +23,7 @@ const RecentPosts = () => {
             title
             cover {
               url
+              alt
             }
             category {
               document {
@@ -49,13 +50,17 @@ const RecentPosts = () => {
             className=""
             onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
           >
-            <img className="h-2 rotate-180 transform" src="/arrow.svg" />
+            <img
+              className="h-2 rotate-180 transform"
+              src="/arrow.svg"
+              alt="Left Arrow"
+            />
           </button>
           <button
             className="ml-2"
             onClick={() => swiper?.slideTo(swiper.activeIndex + 1)}
           >
-            <img className="h-2" src="/arrow.svg" />
+            <img className="h-2" src="/arrow.svg" alt="Right Arrow" />
           </button>
         </div>
       </SectionHeader>

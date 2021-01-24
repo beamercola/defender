@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import Link from "./Link"
 import Ticker from "react-ticker"
 import PageVisibility from "react-page-visibility"
 import StickyBox from "react-sticky-box"
 const classNames = require("classnames")
 
-export default ({ animated = false, toggleMenu }) => {
+export const Header = ({ animated = false, toggleMenu }) => {
   const [pageIsVisible, setPageIsVisible] = useState(true)
   const [stuck, setStuck] = useState(false)
 
@@ -17,7 +17,7 @@ export default ({ animated = false, toggleMenu }) => {
     <>
       <header className="bg-red relative">
         <Link className="h-full" to="/">
-          <img className="mx-auto h-full" src="/logotype.svg" />
+          <img className="mx-auto h-full" src="/logotype.svg" alt="Defender" />
         </Link>
         <p className="absolute top-3 right-3 text-yellow text-lg">VOLUME 00</p>
       </header>
@@ -60,3 +60,5 @@ export default ({ animated = false, toggleMenu }) => {
     </>
   )
 }
+
+export default Header

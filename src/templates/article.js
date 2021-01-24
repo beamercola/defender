@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Slices from "../components/Slices"
@@ -9,7 +9,7 @@ import VideoModal from "../components/VideoModal"
 
 const readingTime = require("reading-time")
 
-export default ({
+const Article = ({
   data: {
     prismicArticle: {
       last_publication_date: date,
@@ -91,6 +91,8 @@ export default ({
     </Layout>
   )
 }
+
+export default Article
 
 export const query = graphql`
   query ArticleQuery($uid: String!) {

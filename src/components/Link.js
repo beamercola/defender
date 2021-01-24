@@ -1,17 +1,12 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 
-export default ({
-  children,
-  to,
-  activeClassName,
-  partiallyActive,
-  ...props
-}) => {
+const Link = ({ children, to, activeClassName, partiallyActive, ...props }) => {
+  // If there's no path just make it a div
   if (!to) return <div {...props}>{children}</div>
 
-  const internal = /^\/(?!\/)/.test(to)
-  if (internal) {
+  // Check for /relative path
+  if (/^\/(?!\/)/.test(to)) {
     return (
       <GatsbyLink
         to={to}
@@ -23,9 +18,13 @@ export default ({
       </GatsbyLink>
     )
   }
+
+  // Fallback
   return (
     <a href={to} {...props}>
       {children}
     </a>
   )
 }
+
+export default Link

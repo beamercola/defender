@@ -1,7 +1,7 @@
 import React from "react"
 const classNames = require("classnames")
 
-export default ({ className, image, children }) => {
+const Cover = ({ className, image, children }) => {
   if (!image) return null
   return (
     <div
@@ -19,3 +19,5 @@ export default ({ className, image, children }) => {
     </div>
   )
 }
+
+export default Cover
