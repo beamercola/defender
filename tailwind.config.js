@@ -49,6 +49,10 @@ module.exports = {
           css: {
             color: "#000",
             fontFamily: "franklin-gothic-atf",
+            a: {
+              color: "black",
+              textDecoration: "underline",
+            },
             h1: {
               fontWeight: 900,
             },
@@ -68,5 +72,8 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+  ],
 }

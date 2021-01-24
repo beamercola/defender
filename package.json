@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
     "add": "^2.0.6",
@@ -30,8 +31,9 @@
     "react-helmet": "^6.0.0",
     "react-hover": "^2.0.0",
     "react-image-appear": "^1.2.23",
-    "react-modal-video": "^1.2.6",
+    "react-modal": "^3.12.1",
     "react-page-visibility": "^6.3.0",
+    "react-player": "^2.8.1",
     "react-reveal": "^1.2.2",
     "react-scroll-parallax": "^2.3.3",
     "react-spring": "^8.0.27",

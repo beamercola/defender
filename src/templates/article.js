@@ -5,7 +5,7 @@ import SEO from "../components/SEO"
 import Slices from "../components/Slices"
 import Cover from "../components/Cover"
 import { Meta, Section, chunkByType } from "../components/Article"
-import ModalVideo from "react-modal-video"
+import VideoModal from "../components/VideoModal"
 
 const readingTime = require("reading-time")
 
@@ -15,6 +15,7 @@ export default ({
       last_publication_date: date,
       data: {
         title,
+        video,
         cover: { url: cover },
         author: { document: authorDocument },
         category: { document: categoryDocument },
@@ -42,12 +43,14 @@ export default ({
         <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
           {title}
         </h1>
-        <button
-          className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block"
-          onClick={() => setWatchingVideo(true)}
-        >
-          Play Video
-        </button>
+        {video && (
+          <button
+            className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block"
+            onClick={() => setWatchingVideo(true)}
+          >
+            Play Video
+          </button>
+        )}
       </Cover>
 
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
@@ -80,12 +83,10 @@ export default ({
           </Section>
         ))}
       </article>
-      <ModalVideo
-        channel="vimeo"
-        autoplay
+      <VideoModal
         isOpen={watchingVideo}
-        videoId="492663943"
-        onClose={() => setWatchingVideo(false)}
+        url={video.embed_url}
+        close={() => setWatchingVideo(false)}
       />
     </Layout>
   )
@@ -99,6 +100,9 @@ export const query = graphql`
         title
         cover {
           url
+        }
+        video {
+          embed_url
         }
 
         author {

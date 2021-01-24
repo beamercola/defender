@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./modal.css";
 
 @font-face {
   font-family: "cstm_xprmntl_03regular";
@@ -50,14 +51,6 @@ main {
 
 .hopeless {
   transform-origin: top center;
-}
-
-.modal-video {
-  @apply bg-orange bg-opacity-90 !important;
-}
-
-.modal-video-close-btn {
-  @apply hidden !important;
 }
 
 @screen lg {

@@ -1,0 +1,17 @@
+.modal {
+}
+
+.ReactModal__Overlay {
+  @apply flex bg-yellow bg-opacity-80 fixed inset-0 z-50 !important;
+  @apply items-center justify-center px-12;
+  @apply transition-all duration-1000;
+  opacity: 0;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  @apply opacity-0;
+}
