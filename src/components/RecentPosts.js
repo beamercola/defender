@@ -45,7 +45,7 @@ const RecentPosts = () => {
     <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t flex justify-between items-center">
         <h1 className="flex items-center">MOST RECENT STORIES</h1>
-        <div className="flex">
+        <div className="md:flex hidden">
           <button
             className=""
             onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
@@ -64,10 +64,13 @@ const RecentPosts = () => {
           </button>
         </div>
       </SectionHeader>
-      <div className="pb-12 p-8">
+      <div className="p-4 md:pb-12 md:p-8">
         <Swiper
+          breakpoints={{ 800: { slidesPerView: 4, centeredSlides: false } }}
           spaceBetween={20}
-          slidesPerView={isMobile ? 2 : 4}
+          slidesPerView={1}
+          centeredSlides={true}
+          // slidesPerView={isMobile ? 2 : 4}
           onSwiper={s => setSwiper(s)}
         >
           {articles.map((article, i) => (

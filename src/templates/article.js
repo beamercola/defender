@@ -38,6 +38,8 @@ const Article = ({
 
   const chunks = chunkByType(slices, "callout")
 
+  console.log(video)
+
   return (
     <Layout animatedHeader={false}>
       <Fade>
@@ -46,7 +48,7 @@ const Article = ({
           <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
             {title}
           </h1>
-          {video && (
+          {video?.embed_url && (
             <button
               className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block font-sans"
               onClick={() => setWatchingVideo(true)}
@@ -62,7 +64,7 @@ const Article = ({
         {category} | {date} | {author}
       </div>
 
-      <article className="mb-24" ref={contentHtml}>
+      <article ref={contentHtml}>
         <Section callout={<Meta readTime={readTime} />} sticky={false}>
           <h1 className="font-black text-3xl md:text-5xl uppercase my-16">
             {title}

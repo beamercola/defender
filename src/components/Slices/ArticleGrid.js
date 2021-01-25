@@ -109,11 +109,11 @@ const Grid3 = ({ items }) => (
       </Fade>
     </div>
 
-    <div className="md:col-span-1 md:row-span-2 bg-white px-6 py-12">
+    <div className="md:col-span-1 md:row-span-2 bg-white p-6 pt-12">
       <Fade direction="up" triggerOnce duration={500} delay={500}>
         <Cell
           item={items[1]}
-          imgClassName="w-2/3 h-64 mb-4 hidden md:block"
+          imgClassName="md:w-2/3 md:h-64 mb-4"
           titleClassName="text-xl md:text-2xl"
           teaserClassName="text-sm md:text-base"
         />

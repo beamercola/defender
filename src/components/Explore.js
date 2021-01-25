@@ -4,7 +4,9 @@ import { SectionHeader } from "./Slices"
 
 const Explore = () => (
   <div className="overflow-hidden">
-    <SectionHeader className="px-8 border-t">EXPLORE MORE</SectionHeader>
+    <SectionHeader className="px-4 md:px-8 border-t">
+      EXPLORE MORE
+    </SectionHeader>
     <div className="p-4 md:flex justify-end p-6 border-black -mx-4">
       <Box
         className="md:w-1/4 leading-tight px-4 mb-8"

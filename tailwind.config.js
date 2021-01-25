@@ -2,10 +2,8 @@ const { colors } = require("tailwindcss/defaultTheme")
 
 module.exports = {
   purge: ["./src/**/*.js"],
+  corePlugins: { container: false },
   theme: {
-    container: {
-      center: true,
-    },
     colors: {
       black: "#000",
       canvas: "#E5E5C3",

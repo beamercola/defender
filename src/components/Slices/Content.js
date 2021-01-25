@@ -1,13 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Fade } from "react-awesome-reveal"
 const classNames = require("classnames")
 
 const Content = ({ className, html }) => (
   <div className={className}>
-    <div
-      className="prose prose-lg"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+    <Fade>
+      <div
+        className="prose prose-lg"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </Fade>
   </div>
 )
 
