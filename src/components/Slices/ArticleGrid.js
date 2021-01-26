@@ -97,7 +97,10 @@ const Grid1 = ({ items }) => {
 const Grid2 = ({ items }) => <div></div>
 
 const Grid3 = ({ items }) => (
-  <div className="gap-px bg-black md:grid md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3">
+  <div
+    className="bg-black md:grid md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3"
+    style={{ gap: "2px" }}
+  >
     <div className="p-4 md:p-8 bg-white md:row-span-3 md:col-span-2 lg:py-12 lg:px-32">
       <Fade direction="up" triggerOnce duration={500}>
         <Cell

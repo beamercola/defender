@@ -20,7 +20,7 @@ const PageTemplate = data => {
       <article>
         <Slices
           slices={slices}
-          className={{ content: "container p-4 md:p-8" }}
+          className={{ content: "container p-4 md:p-8", hero: "border-b-0" }}
         />
       </article>
     </Layout>

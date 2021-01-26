@@ -27,6 +27,9 @@ module.exports = {
       borderColor: {
         DEFAULT: "#000",
       },
+      borderWidth: {
+        DEFAULT: "2px",
+      },
       colors: {
         gray: {
           DEFAULT: "#96AFB5",

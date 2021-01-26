@@ -16,7 +16,7 @@ const Slices = ({ className = {}, slices }) => {
 
     switch (slice.slice_type) {
       case "hero":
-        return <Hero slice={slice} key={key} />
+        return <Hero className={className.hero} slice={slice} key={key} />
 
       case "title":
         return <Title slice={slice} key={key} />

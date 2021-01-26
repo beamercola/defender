@@ -40,9 +40,12 @@ export default Explore
 
 const Box = ({ className, title, children, to }) => (
   <div className={className}>
-    <h4 className="uppercase font-black font-bureau-wide text-lg mb-2">
+    <Link
+      className="block uppercase font-black font-bureau-wide text-lg mb-2 hover:text-red"
+      to={to}
+    >
       {title}
-    </h4>
+    </Link>
     {children}
     <Link className="block mt-8" to={to}>
       <img className="h-2" src="/arrow.svg" alt="View" />

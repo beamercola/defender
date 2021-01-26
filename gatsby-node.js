@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   categories.data.allPrismicCategory.nodes.forEach(node => {
     createPage({
-      path: `/category/${node.uid}`,
+      path: `/${node.uid}`,
       component: path.resolve("./src/templates/Category.js"),
       context: {
         uid: node.uid,
