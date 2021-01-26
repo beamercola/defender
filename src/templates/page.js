@@ -20,7 +20,10 @@ const PageTemplate = data => {
       <article>
         <Slices
           slices={slices}
-          className={{ content: "container p-4 md:p-8", hero: "border-b-0" }}
+          className={{
+            content: "container lg:py-12 lg:px-32",
+            hero: "border-b-0",
+          }}
         />
       </article>
     </Layout>
@@ -70,28 +73,7 @@ export const PageTemplateQuery = graphql`
               article {
                 document {
                   ... on PrismicArticle {
-                    id
-                    uid
-                    data {
-                      title
-                      cover {
-                        url
-                        alt
-                      }
-                      teaser {
-                        html
-                      }
-                      category {
-                        document {
-                          ... on PrismicCategory {
-                            uid
-                            data {
-                              title
-                            }
-                          }
-                        }
-                      }
-                    }
+                    ...ArticleBase
                   }
                 }
               }

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import ArticleCard from "../components/ArticleCard"
+import Card from "../components/Article/Card"
 import Link from "../components/Link"
 
 const Category = ({
@@ -15,7 +15,7 @@ const Category = ({
         <div className="grid grid-cols-2 gap-4 md:gap-8">
           {articles.map((article, i) => (
             <Link className="block" to={`/${article.uid}`} key={i}>
-              <ArticleCard article={article} />
+              <Card article={article} />
             </Link>
           ))}
         </div>

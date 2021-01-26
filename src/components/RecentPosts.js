@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { isMobile } from "react-device-detect"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Fade } from "react-awesome-reveal"
 import { SectionHeader } from "./Slices"
 import Link from "./Link"
-import ArticleCard from "./ArticleCard"
+import Card from "./Article/Card"
 
 const RecentPosts = () => {
   const [swiper, setSwiper] = useState(null)
@@ -18,24 +17,7 @@ const RecentPosts = () => {
         limit: 10
       ) {
         nodes {
-          uid
-          data {
-            title
-            cover {
-              url
-              alt
-            }
-            category {
-              document {
-                ... on PrismicCategory {
-                  uid
-                  data {
-                    title
-                  }
-                }
-              }
-            }
-          }
+          ...ArticleBase
         }
       }
     }
@@ -66,19 +48,23 @@ const RecentPosts = () => {
       </SectionHeader>
       <div className="p-4 md:pb-12 md:p-8">
         <Swiper
-          breakpoints={{ 800: { slidesPerView: 4, centeredSlides: false } }}
-          spaceBetween={20}
-          slidesPerView={1}
-          centeredSlides={true}
-          // slidesPerView={isMobile ? 2 : 4}
+          breakpoints={{ 800: { slidesPerView: 4, spaceBetween: 24 } }}
+          spaceBetween={16}
+          slidesPerView={2}
           onSwiper={s => setSwiper(s)}
         >
           {articles.map((article, i) => (
             <SwiperSlide key={i}>
-              <Fade delay={i * 100}>
-                <Link className="block group" to={`/${article.uid}`}>
-                  <ArticleCard className="" article={article} />
-                </Link>
+              <Fade delay={i * 100} triggerOnce={true}>
+                <Card
+                  article={article}
+                  to={`/${article.uid}`}
+                  styles={{
+                    category: "mb-2 lg:mb-4",
+                    image: "w-full h-32 md:h-64 mb-2",
+                    title: "text-xs md:text-lg uppercase",
+                  }}
+                />
               </Fade>
             </SwiperSlide>
           ))}

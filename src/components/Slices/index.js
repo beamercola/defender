@@ -42,7 +42,13 @@ const Slices = ({ className = {}, slices }) => {
       case "blockquote":
         return <Blockquote html={slice.primary.content.html} key={key} />
       case "article_grid":
-        return <ArticleGrid items={slice.items} key={key} />
+        console.log(slice.items)
+        return (
+          <ArticleGrid
+            articles={slice.items.map(i => i.article.document)}
+            key={key}
+          />
+        )
       case "section_header":
         return (
           <SectionHeader className="px-8" key={key}>
