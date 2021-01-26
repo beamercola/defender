@@ -3,6 +3,25 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
+  const categories = await graphql(`
+    query {
+      allPrismicCategory {
+        nodes {
+          uid
+        }
+      }
+    }
+  `)
+  categories.data.allPrismicCategory.nodes.forEach(node => {
+    createPage({
+      path: `/category/${node.uid}`,
+      component: path.resolve("./src/templates/Category.js"),
+      context: {
+        uid: node.uid,
+      },
+    })
+  })
+
   const articles = await graphql(`
     query {
       allPrismicArticle {

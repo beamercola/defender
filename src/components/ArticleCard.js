@@ -1,5 +1,6 @@
 import React from "react"
 import Highlight from "./Highlight"
+import { graphql } from "gatsby"
 
 const ArticleCard = ({ className, article }) => {
   return (

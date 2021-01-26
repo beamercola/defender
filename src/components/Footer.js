@@ -9,7 +9,21 @@ const Footer = () => (
     <div className="md:flex justify-between uppercase p-6 tracking-widest">
       <a href="mailto:rise@wearedefender.com">rise@wearedefender.com</a>
       <div className="">
-        <a href="">INSTAGRAM</a> / <a href="">TWITTER</a>
+        <a
+          href="https://instagram.com/wearedefender"
+          target="_blank"
+          rel="noreferrer"
+        >
+          INSTAGRAM
+        </a>
+        {" / "}
+        <a
+          href="https://twitter.com/wearedefender"
+          target="_blank"
+          rel="noreferrer"
+        >
+          TWITTER
+        </a>
       </div>
     </div>
     <div className="flex items-center justify-center">

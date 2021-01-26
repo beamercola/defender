@@ -5,7 +5,7 @@ import PageVisibility from "react-page-visibility"
 import StickyBox from "react-sticky-box"
 const classNames = require("classnames")
 
-export const Header = ({ animated = false, toggleMenu }) => {
+const Header = ({ animated = false, toggleMenu }) => {
   const [pageIsVisible, setPageIsVisible] = useState(true)
   const [stuck, setStuck] = useState(false)
 

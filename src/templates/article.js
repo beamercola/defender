@@ -14,6 +14,7 @@ const Article = ({
   data: {
     prismicArticle: {
       last_publication_date: date,
+      uid,
       data: {
         title,
         video,
@@ -38,8 +39,6 @@ const Article = ({
 
   const chunks = chunkByType(slices, "callout")
 
-  console.log(video)
-
   return (
     <Layout animatedHeader={false}>
       <Fade>
@@ -59,13 +58,14 @@ const Article = ({
           {/* </Fade> */}
         </Cover>
       </Fade>
-
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
         {category} | {date} | {author}
       </div>
-
       <article ref={contentHtml}>
-        <Section callout={<Meta readTime={readTime} />} sticky={false}>
+        <Section
+          callout={<Meta readTime={readTime} title={title} />}
+          sticky={false}
+        >
           <h1 className="font-black text-3xl md:text-5xl uppercase my-16">
             {title}
           </h1>
@@ -105,6 +105,7 @@ export const query = graphql`
   query ArticleQuery($uid: String!) {
     prismicArticle(uid: { eq: $uid }) {
       last_publication_date(formatString: "MMM D YYYY")
+      uid
       data {
         title
         cover {
