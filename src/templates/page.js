@@ -21,7 +21,7 @@ const PageTemplate = data => {
         <Slices
           slices={slices}
           className={{
-            content: "container lg:py-12 lg:px-32",
+            content: "container px-4 py-8 lg:py-12 lg:px-32",
             hero: "border-b-0",
           }}
         />

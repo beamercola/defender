@@ -4,10 +4,10 @@ import { Fade } from "react-awesome-reveal"
 const classNames = require("classnames")
 
 const Content = ({ className, html }) => (
-  <div className={className}>
+  <div className={classNames(className, "overflow-hidden")}>
     <Fade>
       <div
-        className="prose prose-lg"
+        className="prose md:prose-lg"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Fade>
