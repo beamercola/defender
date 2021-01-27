@@ -9,7 +9,7 @@ const primary = [
   { label: "Films", to: "/films", className: "bg-gray" },
   {
     label: "Photo Essays",
-    to: "/articles/photo-essays",
+    to: "/photo-essays",
     className: "bg-blue",
   },
   { label: "Donate", to: "", className: "bg-green" },

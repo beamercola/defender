@@ -43,7 +43,6 @@ const Grid1 = ({ items }) => {
 const Grid2 = ({ items }) => <div></div>
 
 const Grid3 = ({ articles }) => {
-  console.log(articles)
   return (
     <div
       className="bg-black md:grid md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3"
@@ -55,7 +54,6 @@ const Grid3 = ({ articles }) => {
             article={articles[0]}
             showTeaser={true}
             styles={{
-              categoryWrapper: "justify-end",
               category: "mb-2 lg:mb-4",
               image: "mb-4",
               title: titleClass,
@@ -72,7 +70,7 @@ const Grid3 = ({ articles }) => {
             styles={{
               categoryWrapper: "justify-start",
               category: "mb-2 lg:mb-4",
-              image: "mb-4 h-64 w-2/3",
+              image: "mb-4 h-64 w-full md:w-2/3",
               title: titleClass,
             }}
           />
@@ -85,7 +83,6 @@ const Grid3 = ({ articles }) => {
             article={articles[2]}
             showTeaser={true}
             styles={{
-              categoryWrapper: "justify-start",
               category: "mb-2 lg:mb-4",
               image: "hidden",
               title: titleClass,
