@@ -19,15 +19,30 @@ const Layout = ({ children, animatedHeader }) => {
         {children}
         <RecentPosts />
         <div className="border-t">
-          {/* <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-green">
-            Resources
-          </Link> */}
-          <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-blue">
+          <a
+            className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-green"
+            href="https://instagram.com/wearedefender"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-blue"
+            href="mailto:rise@wearedefender.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             Contact
-          </Link>
-          <Link className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-orange">
+          </a>
+          <a
+            className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-orange"
+            href="https://wearedefender.wedid.it"
+            target="_blank"
+            rel="noreferrer"
+          >
             Donate
-          </Link>
+          </a>
         </div>
         <Explore />
         <Newsletter />

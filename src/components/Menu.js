@@ -12,7 +12,11 @@ const primary = [
     to: "/photo-essays",
     className: "bg-blue",
   },
-  { label: "Donate", to: "", className: "bg-green" },
+  {
+    label: "Donate",
+    to: "https://wearedefender.wedid.it",
+    className: "bg-green",
+  },
 ]
 
 const secondary = [

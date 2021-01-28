@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  @apply mx-4 md:mx-8 border-r border-l;
+  @apply mx-3 md:mx-8 border-r border-l;
 }
 
 main {

@@ -44,11 +44,8 @@ const Grid2 = ({ items }) => <div></div>
 
 const Grid3 = ({ articles }) => {
   return (
-    <div
-      className="bg-black md:grid md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3"
-      style={{ gap: "2px" }}
-    >
-      <div className="p-4 md:p-8 bg-white md:row-span-3 md:col-span-2 lg:py-12 lg:px-32">
+    <div className="bg-black grid md:grid-cols-3" style={{ gap: "2px" }}>
+      <div className="bg-white p-3 md:p-8 md:col-span-2 lg:py-12 lg:px-32">
         <Fade direction="up" triggerOnce duration={500}>
           <Card
             article={articles[0]}
@@ -62,33 +59,34 @@ const Grid3 = ({ articles }) => {
         </Fade>
       </div>
 
-      <div className="md:col-span-1 md:row-span-2 bg-white p-6 pt-12">
-        <Fade direction="up" triggerOnce duration={500} delay={500}>
-          <Card
-            article={articles[1]}
-            showTeaser={true}
-            styles={{
-              categoryWrapper: "justify-start",
-              category: "mb-2 lg:mb-4",
-              image: "mb-4 h-64 w-full md:w-2/3",
-              title: titleClass,
-            }}
-          />
-        </Fade>
-      </div>
-
-      <div className="bg-white px-6 py-12 md:col-span-1 md:row-span-1">
-        <Fade direction="up" triggerOnce duration={500}>
-          <Card
-            article={articles[2]}
-            showTeaser={true}
-            styles={{
-              category: "mb-2 lg:mb-4",
-              image: "hidden",
-              title: titleClass,
-            }}
-          />
-        </Fade>
+      <div className="bg-white">
+        <div className="p-3 md:p-6 md:pt-12 border-b">
+          <Fade direction="up" triggerOnce duration={500} delay={500}>
+            <Card
+              article={articles[1]}
+              showTeaser={true}
+              styles={{
+                categoryWrapper: "justify-start",
+                category: "mb-2 lg:mb-4",
+                image: "mb-4 h-64 w-full md:w-2/3",
+                title: titleClass,
+              }}
+            />
+          </Fade>
+        </div>
+        <div className="p-3 md:p-6 md:pt-12">
+          <Fade direction="up" triggerOnce duration={500}>
+            <Card
+              article={articles[2]}
+              showTeaser={true}
+              styles={{
+                category: "mb-2 lg:mb-4",
+                image: "hidden",
+                title: titleClass,
+              }}
+            />
+          </Fade>
+        </div>
       </div>
     </div>
   )
