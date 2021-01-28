@@ -106,8 +106,7 @@ const Article = ({
 
 export default Article
 
-const ArticleTitle = () => {
-  const children = "44 Years Later: A Story About Paul Redd"
+const ArticleTitle = ({ children }) => {
   const bigClass =
     "font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center"
   const smallClass =
