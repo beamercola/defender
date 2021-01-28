@@ -10,7 +10,15 @@
     "title": {
       "type": "Text",
       "config": {
-        "label": "TItle"
+        "label": "Title",
+        "placeholder": "44 Years"
+      }
+    },
+    "teaser": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph, strong, em, hyperlink",
+        "label": "Teaser"
       }
     },
     "author": {
@@ -35,13 +43,6 @@
         "label": "Date"
       }
     },
-    "teaser": {
-      "type": "StructuredText",
-      "config": {
-        "single": "paragraph, strong, em, hyperlink",
-        "label": "Teaser"
-      }
-    },
     "cover": {
       "type": "Image",
       "config": {
@@ -54,6 +55,13 @@
       "type": "Embed",
       "config": {
         "label": "Video"
+      }
+    },
+    "video_bg": {
+      "type": "Link",
+      "config": {
+        "select": "media",
+        "label": "Ambient Video"
       }
     },
     "body": {

@@ -18,6 +18,7 @@ const Article = ({
       data: {
         title,
         video,
+        teaser,
         cover: { url: cover },
         author: { document: authorDocument },
         category: { document: categoryDocument },
@@ -44,9 +45,11 @@ const Article = ({
       <Fade>
         <Cover className="h-90vh" image={cover}>
           {/* <Fade cascade> */}
-          <h1 className="font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center">
-            {title}
-          </h1>
+          <ArticleTitle>{title}</ArticleTitle>
+          <div
+            className="text-yellow font-mono max-w-lg text-center leading-tight pt-2"
+            dangerouslySetInnerHTML={{ __html: teaser.html }}
+          />
           {video?.embed_url && (
             <button
               className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block font-sans"
@@ -58,9 +61,11 @@ const Article = ({
           {/* </Fade> */}
         </Cover>
       </Fade>
+
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
         {category} | {date} | {author}
       </div>
+
       <article ref={contentHtml}>
         <Section
           callout={<Meta readTime={readTime} title={title} />}
@@ -101,6 +106,26 @@ const Article = ({
 
 export default Article
 
+const ArticleTitle = () => {
+  const children = "44 Years Later: A Story About Paul Redd"
+  const bigClass =
+    "font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center"
+  const smallClass =
+    "font-black font-bureau-wide text-yellow uppercase text-xl mt-2"
+
+  if (children.includes(":")) {
+    const split = children.split(":")
+    return (
+      <>
+        <h1 className={bigClass}>{split[0]}</h1>
+        <h2 className={smallClass}>{split.slice(1)}</h2>
+      </>
+    )
+  }
+
+  return <h1 className={bigClass}>{children}</h1>
+}
+
 export const query = graphql`
   query ArticleQuery($uid: String!) {
     prismicArticle(uid: { eq: $uid }) {
@@ -113,6 +138,9 @@ export const query = graphql`
         }
         video {
           embed_url
+        }
+        teaser {
+          html
         }
 
         author {
