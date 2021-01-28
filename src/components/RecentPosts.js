@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "./Animations"
 import { SectionHeader } from "./Slices"
 import Link from "./Link"
 import Card from "./Article/Card"

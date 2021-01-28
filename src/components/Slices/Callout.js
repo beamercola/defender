@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "../Animations"
 
 const Callout = ({ html }) => (
   <div className="lg:sticky lg:left-0 mt-16 lg:w-96 lg:px-16 p-4 lg:-mx-4">

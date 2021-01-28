@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "../Animations"
 const classNames = require("classnames")
 
 const sizeClass = (size = "") => {

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Highlight from "../Highlight"
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "../Animations"
 import Card from "../Article/Card"
 
 const classNames = require("classnames")
