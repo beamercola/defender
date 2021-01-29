@@ -44,11 +44,15 @@ const Article = ({
   return (
     <Layout animatedHeader={false}>
       <Fade>
-        <Cover className="h-90vh" image={cover} video={video_bg?.url}>
+        <Cover
+          className="h-90vh text-center"
+          image={cover}
+          video={video_bg?.url}
+        >
           {/* <Fade cascade> */}
           <ArticleTitle>{title}</ArticleTitle>
           <div
-            className="text-yellow font-mono max-w-lg text-center leading-tight pt-2"
+            className="text-yellow font-mono max-w-lg leading-tight pt-2"
             dangerouslySetInnerHTML={{ __html: teaser.html }}
           />
           {video?.embed_url && (
@@ -109,7 +113,7 @@ export default Article
 
 const ArticleTitle = ({ children }) => {
   const bigClass =
-    "font-black font-bureau-wide text-yellow uppercase text-2xl lg:text-6xl text-center"
+    "font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-6xl"
   const smallClass =
     "font-black font-bureau-wide text-yellow uppercase text-xl mt-2"
 
