@@ -19,6 +19,7 @@ const Article = ({
         title,
         video,
         teaser,
+        video_bg,
         cover: { url: cover },
         author: { document: authorDocument },
         category: { document: categoryDocument },
@@ -43,7 +44,7 @@ const Article = ({
   return (
     <Layout animatedHeader={false}>
       <Fade>
-        <Cover className="h-90vh" image={cover}>
+        <Cover className="h-90vh" image={cover} video={video_bg?.url}>
           {/* <Fade cascade> */}
           <ArticleTitle>{title}</ArticleTitle>
           <div
@@ -137,6 +138,9 @@ export const query = graphql`
         }
         video {
           embed_url
+        }
+        video_bg {
+          url
         }
         teaser {
           html
