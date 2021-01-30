@@ -113,9 +113,9 @@ export default Article
 
 const ArticleTitle = ({ children }) => {
   const bigClass =
-    "font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-6xl"
+    "font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-7xl"
   const smallClass =
-    "font-black font-bureau-wide text-yellow uppercase text-xl mt-2"
+    "font-black font-bureau-wide text-yellow uppercase text-2xl mt-2"
 
   if (children.includes(":")) {
     const split = children.split(":")
