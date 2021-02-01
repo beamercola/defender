@@ -10,6 +10,13 @@ const IndexPage = () => (
       <h1 className="font-bureau mt-12 text-2xl uppercase flex-shrink-0">
         Coming Soon
       </h1>
+      <a
+        href="https://www.instagram.com/wearedefender/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        @wearedefender
+      </a>
     </div>
   </Layout>
 )
