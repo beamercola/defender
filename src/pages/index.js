@@ -6,9 +6,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="fixed inset-0 flex flex-col items-center justify-center">
-        <img src="/defender-d.svg" className="w-64" />
-        <h1 className="font-bureau mt-12 text-2xl uppercase">Coming Soon</h1>
+      <div className="fixed inset-0 flex flex-col items-center">
+        <img src="/defender-d.svg" className="" style={{ height: "80%" }} />
+        <h1 className="font-bureau mt-12 text-2xl uppercase flex-shrink-0">
+          Coming Soon
+        </h1>
       </div>
     </Layout>
   )
