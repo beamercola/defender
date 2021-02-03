@@ -8,8 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { ParallaxProvider } from "react-scroll-parallax"
-import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -23,14 +21,7 @@ const Layout = ({ children }) => {
     }
   `)
 
-  return (
-    <ParallaxProvider>
-      <main className="relative max-w-5xl px-8 mx-auto">
-        {children}
-        <Footer />
-      </main>
-    </ParallaxProvider>
-  )
+  return <main className="mx-auto">{children}</main>
 }
 
 Layout.propTypes = {

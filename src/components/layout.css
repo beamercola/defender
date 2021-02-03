@@ -19,8 +19,7 @@
 }
 
 body {
-  @apply bg-contain bg-repeat-y;
-  background-image: linear-gradient(#b87d6b, #cccccc);
+  @apply bg-yellow-500;
 }
 
 article p {
