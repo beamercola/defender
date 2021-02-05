@@ -17,6 +17,7 @@ const Category = ({
             <Link className="block" to={`/${article.uid}`} key={i}>
               <Card
                 article={article}
+                to={`/${article.uid}`}
                 styles={{
                   category: "mb-2 lg:mb-4",
                   image: "w-full h-32 md:h-64 mb-2",
