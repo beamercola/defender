@@ -37,7 +37,7 @@ const Layout = ({ children, animatedHeader }) => {
           </a>
           <a
             className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-orange"
-            href="https://wearedefender.wedid.it"
+            href="https://adachiproject.wedidit.com"
             target="_blank"
             rel="noreferrer"
           >
