@@ -4,7 +4,7 @@ import Link from "../Link"
 
 const classNames = require("classnames")
 
-const Card = ({ className, to, article, styles = {}, showTeaser = false }) => {
+const Card = ({ className, article, styles = {}, showTeaser = false }) => {
   return (
     <div className={classNames(className, "group")}>
       <div className={classNames(styles.categoryWrapper, "flex")}>
