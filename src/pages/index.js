@@ -5,13 +5,11 @@ import SEO from "../components/SEO"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="fixed inset-0 flex flex-col items-center">
-      <img className="h-24 mb-8" src="/logo.svg" alt="Defender" />
-      <img
-        src="/defender_gif.gif"
-        className="mb-12"
-        style={{ height: "50%" }}
-        alt=""
+    <div className="fixed inset-0 h-screen w-screen flex flex-col items-center p-4">
+      <img className="h-24 mb-8" src="/logotype.svg" alt="Defender" />
+      <div
+        className="flex-grow relative bg-contain bg-center bg-no-repeat w-full"
+        style={{ backgroundImage: "url(/defender_gif.gif)" }}
       />
       <p className="mb-4 max-w-sm text-center">
         An art and media project about the work of the{" "}
