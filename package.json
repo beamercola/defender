@@ -11,6 +11,7 @@
     "@tailwindcss/typography": "^0.3.1",
     "@tippyjs/react": "^4.2.0",
     "classnames": "^2.2.6",
+    "framer-motion": "^3.3.0",
     "gatsby": "2.27.2",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^2.11.0",

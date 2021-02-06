@@ -1,11 +1,11 @@
 import React, { useState } from "react"
-import Link from "./Link"
 import Footer from "./Footer"
 import Header from "./Header"
 import Explore from "../components/Explore"
 import Newsletter from "../components/Newsletter"
 import RecentPosts from "../components/RecentPosts"
 import Menu from "../components/Menu"
+import ScrollToTop from "./ScrollToTop"
 
 const Layout = ({ children, animatedHeader }) => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -49,6 +49,7 @@ const Layout = ({ children, animatedHeader }) => {
       </main>
       <Footer />
       <Menu toggle={toggle} open={menuOpen} />
+      <ScrollToTop />
     </>
   )
 }

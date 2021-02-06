@@ -36,11 +36,13 @@ const Footer = () => (
         </div>
         <div className="">PRESENTED BY THE ADACHI PROJECT</div>
       </div>
-      <p className="font-mono text-sm p-6 md:w-1/2">
-        DEFENDER IS AN URGENT JOURNALISTIC FILM, ART, AND MEDIA PROJECT ABOUT
-        THE WORK OF THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER. IT IS
-        CREATED TO BRING REFORM TO THE INEQUITIES OF THE CRIMINAL LEGAL SYSTEM
-      </p>
+      <div className="flex justify-end">
+        <p className="font-mono text-sm p-6 w-2/3 md:w-1/2">
+          DEFENDER IS AN URGENT JOURNALISTIC FILM, ART, AND MEDIA PROJECT ABOUT
+          THE WORK OF THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER. IT IS
+          CREATED TO BRING REFORM TO THE INEQUITIES OF THE CRIMINAL LEGAL SYSTEM
+        </p>
+      </div>
     </div>
   </footer>
 )
