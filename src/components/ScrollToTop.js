@@ -7,7 +7,7 @@ const ScrollToTop = () => {
 
   return (
     <button
-      className="w-12 h-12 md:w-16 md:h-16 fixed left-6 bottom-6"
+      className="w-12 h-12 md:w-20 md:h-20 fixed left-6 bottom-6"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <motion.img
