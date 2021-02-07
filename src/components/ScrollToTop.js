@@ -7,10 +7,11 @@ const ScrollToTop = () => {
 
   return (
     <button
-      className="w-12 h-12 md:w-20 md:h-20 fixed left-6 bottom-6"
+      className="fixed left-4 bottom-4"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <motion.img
+        className="object-contain w-12 h-12 md:w-24 md:h-24"
         src="/frominjusticewerise.png"
         alt="Back to top"
         style={{ rotate: rotate, zIndex: 111111 }}

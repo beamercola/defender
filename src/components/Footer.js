@@ -36,7 +36,7 @@ const Footer = () => (
         </div>
         <div className="">PRESENTED BY THE ADACHI PROJECT</div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end md:h-32">
         <p className="font-mono text-sm p-6 w-2/3 md:w-1/2">
           DEFENDER IS AN URGENT JOURNALISTIC FILM, ART, AND MEDIA PROJECT ABOUT
           THE WORK OF THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER. IT IS
