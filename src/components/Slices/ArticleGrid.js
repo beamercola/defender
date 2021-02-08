@@ -26,6 +26,8 @@ const ArticleGrid = ({ articles }) => (
 export default ArticleGrid
 
 const Grid1 = ({ items }) => {
+  if (!items || items.length <= 0) return null
+
   const {
     bleed,
     article: {
