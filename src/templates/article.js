@@ -68,7 +68,7 @@ const Article = ({
       </Fade>
 
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
-        {category} | {date} | {author}
+        {category} | {date} | Article by {author}
       </div>
 
       <article ref={contentHtml}>
