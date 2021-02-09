@@ -41,6 +41,9 @@ const Header = ({ animated = false, toggleMenu }) => {
                     <button className="flex-grow" onClick={toggleMenu}>
                       Menu
                     </button>
+                    <Link className="flex-grow" to="/about">
+                      About Us
+                    </Link>
                     <a
                       className="flex-grow"
                       to="https://adachiproject.wedidit.com"

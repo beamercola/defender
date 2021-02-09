@@ -48,7 +48,7 @@ const Grid3 = ({ articles }) => {
   return (
     <div className="bg-black grid md:grid-cols-3" style={{ gap: "2px" }}>
       <div className="bg-white p-3 md:p-8 md:col-span-2 lg:py-12 lg:px-32">
-        <Fade direction="up" triggerOnce duration={500}>
+        <Fade direction="up" triggerOnce duration={500} delay={100}>
           <Card
             article={articles[0]}
             showTeaser={true}
@@ -63,7 +63,7 @@ const Grid3 = ({ articles }) => {
 
       <div className="bg-white">
         <div className="p-3 md:p-6 md:pt-12 border-b">
-          <Fade direction="up" triggerOnce duration={500} delay={500}>
+          <Fade direction="up" triggerOnce duration={500} delay={200}>
             <Card
               article={articles[1]}
               showTeaser={true}
@@ -77,7 +77,7 @@ const Grid3 = ({ articles }) => {
           </Fade>
         </div>
         <div className="p-3 md:p-6 md:pt-12">
-          <Fade direction="up" triggerOnce duration={500}>
+          <Fade direction="up" triggerOnce duration={500} delay={300}>
             <Card
               article={articles[2]}
               showTeaser={true}

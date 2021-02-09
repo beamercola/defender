@@ -68,7 +68,7 @@ const Article = ({
       </Fade>
 
       <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
-        {category} | {date} | {author}
+        {category} | {date} | Article by {author}
       </div>
 
       <article ref={contentHtml}>
@@ -85,7 +85,7 @@ const Article = ({
           <Section
             callout={
               <div
-                className={"prose p-4 sticky font-mono py-4"}
+                className={"prose-lg p-4 sticky font-mono py-4"}
                 style={{ top: "4rem" }}
                 dangerouslySetInnerHTML={{
                   __html: callout?.primary?.content.html,
@@ -93,6 +93,7 @@ const Article = ({
               />
             }
             key={i}
+            last={i === chunks?.length - 1}
           >
             <div className="py-4">
               <Slices slices={slices} />
