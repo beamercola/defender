@@ -93,6 +93,7 @@ const Article = ({
               />
             }
             key={i}
+            last={i === chunks?.length - 1}
           >
             <div className="py-4">
               <Slices slices={slices} />
