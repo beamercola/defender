@@ -7,7 +7,7 @@ const Content = ({ className, html }) => (
   <div className={classNames(className, "overflow-hidden")}>
     <Fade>
       <div
-        className="prose md:prose-lg"
+        className="prose-lg md:prose-xl"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Fade>

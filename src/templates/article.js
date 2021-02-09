@@ -85,7 +85,7 @@ const Article = ({
           <Section
             callout={
               <div
-                className={"prose p-4 sticky font-mono py-4"}
+                className={"prose-lg p-4 sticky font-mono py-4"}
                 style={{ top: "4rem" }}
                 dangerouslySetInnerHTML={{
                   __html: callout?.primary?.content.html,
