@@ -57,6 +57,10 @@ main {
   transform-origin: top center;
 }
 
+h5 {
+  font-family: Courier, monospace;
+}
+
 @screen lg {
   .hopeless {
     transform-origin: top right;
