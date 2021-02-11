@@ -51,9 +51,19 @@ const Article = ({
           video={video_bg?.url}
         >
           {/* <Fade cascade> */}
-          <ArticleTitle title={title} subtitle={subtitle} />
+
+          <h1 className="font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-8xl">
+            {title}
+          </h1>
+
+          {subtitle.text && (
+            <h2 className="font-black font-bureau-wide text-yellow uppercase text-2xl mt-2">
+              {subtitle.text}
+            </h2>
+          )}
+
           <div
-            className="text-yellow font-mono max-w-lg leading-tight pt-2"
+            className="text-yellow max-w-lg leading-tight pt-2"
             dangerouslySetInnerHTML={{ __html: teaser.html }}
           />
           {video?.embed_url && (
@@ -112,24 +122,6 @@ const Article = ({
 }
 
 export default Article
-
-const ArticleTitle = ({ title, subtitle }) => {
-  const bigClass =
-    "font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-7xl"
-  const smallClass =
-    "font-black font-bureau-wide text-yellow uppercase text-2xl mt-2"
-
-  if (subtitle.text) {
-    return (
-      <>
-        <h1 className={bigClass}>{title}</h1>
-        <h2 className={smallClass}>{subtitle.text}</h2>
-      </>
-    )
-  }
-
-  return <h1 className={bigClass}>{title}</h1>
-}
 
 export const query = graphql`
   query ArticleQuery($uid: String!) {

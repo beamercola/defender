@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Card from "../components/Article/Card"
-import Link from "../components/Link"
 
 const Category = ({
   data: {

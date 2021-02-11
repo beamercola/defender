@@ -14,6 +14,6 @@ const customAnimation = keyframes`
   }
 `
 
-export const Fade = ({ children }) => (
-  <AwesomeFade keyframes={customAnimation}>{children}</AwesomeFade>
+export const Fade = props => (
+  <AwesomeFade keyframes={customAnimation} {...props} />
 )
