@@ -71,7 +71,7 @@ const Article = ({
               className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block font-sans"
               onClick={() => setWatchingVideo(true)}
             >
-              Play Video
+              Play Film
             </button>
           )}
           {/* </Fade> */}

@@ -21,6 +21,8 @@ const primary = [
 const secondary = [
   { label: "Shop", to: "/shop" },
   { label: "Contact", to: "/contact" },
+  { label: "Instagram", to: "https://instagram.com/wearedefender" },
+  { label: "Twitter", to: "https://twitter.com/wearedefender" },
 ]
 
 const Menu = ({ toggle, open }) => {

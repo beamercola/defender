@@ -34,13 +34,14 @@ const Footer = () => (
         <div className="">
           <Link to="/about">ABOUT US</Link> | &copy; 2020
         </div>
-        <div className="">PRESENTED BY THE ADACHI PROJECT</div>
+        <a href="https://adachiproject.com">PRESENTED BY THE ADACHI PROJECT</a>
       </div>
       <div className="flex justify-end md:h-32">
-        <p className="font-mono text-sm p-6 w-2/3 md:w-1/2">
-          DEFENDER IS AN URGENT JOURNALISTIC FILM, ART, AND MEDIA PROJECT ABOUT
-          THE WORK OF THE SAN FRANCISCO OFFICE OF THE PUBLIC DEFENDER. IT IS
-          CREATED TO BRING REFORM TO THE INEQUITIES OF THE CRIMINAL LEGAL SYSTEM
+        <p className="font-mono uppercase text-sm p-6 w-2/3 md:w-1/2">
+          Defender is created by The Adachi Project, a partnership between the
+          San Francisco Public Defender’s Office, Even/Odd, and Compound,
+          honoring the legacy of the late San Francisco Public Defender, Jeff
+          Adachi.
         </p>
       </div>
     </div>

@@ -22,7 +22,14 @@ const Hero = ({ slice: { primary: cover } }) => (
     <div className="">
       <Fade>
         <Link to={cover.link?.uid && `/${cover.link?.uid}`}>
-          <Cover className="h-80vh border-b border-t" image={cover.image.url} />
+          <Cover className="h-80vh border-b border-t" image={cover.image.url}>
+            <Fade>
+              <h1 className="font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-5xl text-center">
+                An art+media project in collaboration with the San Francisco
+                Public Defender's office.
+              </h1>
+            </Fade>
+          </Cover>
         </Link>
       </Fade>
     </div>

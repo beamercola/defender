@@ -8,9 +8,11 @@ const Shop = () => {
       <div className="">
         <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 p-4 md:p-8">
-          <Product />
-          <Product />
+        <div
+          className="flex items-center justify-center"
+          style={{ height: "50vh" }}
+        >
+          <h1>Coming Soon</h1>
         </div>
       </div>
     </Layout>
