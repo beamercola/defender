@@ -6,10 +6,9 @@ const classNames = require("classnames")
 const primary = [
   { label: "Home", to: "/", className: "bg-red" },
   { label: "About Us", to: "/about", className: "bg-orange" },
-  { label: "Films", to: "/films", className: "bg-gray" },
   {
-    label: "Photo Essays",
-    to: "/photo-essays",
+    label: "All Stories",
+    to: "/stories",
     className: "bg-blue",
   },
   {
