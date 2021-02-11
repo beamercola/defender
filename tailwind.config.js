@@ -65,7 +65,7 @@ module.exports = {
               fontSize: 12,
             },
             h5: {
-              // fontFamily: "monospace",
+              fontFamily: "monospace",
             },
           },
         },
