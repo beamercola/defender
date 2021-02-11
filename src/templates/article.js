@@ -17,6 +17,7 @@ const Article = ({
       uid,
       data: {
         title,
+        subtitle,
         video,
         teaser,
         video_bg,
@@ -50,7 +51,7 @@ const Article = ({
           video={video_bg?.url}
         >
           {/* <Fade cascade> */}
-          <ArticleTitle>{title}</ArticleTitle>
+          <ArticleTitle title={title} subtitle={subtitle} />
           <div
             className="text-yellow font-mono max-w-lg leading-tight pt-2"
             dangerouslySetInnerHTML={{ __html: teaser.html }}
@@ -112,23 +113,22 @@ const Article = ({
 
 export default Article
 
-const ArticleTitle = ({ children }) => {
+const ArticleTitle = ({ title, subtitle }) => {
   const bigClass =
     "font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-7xl"
   const smallClass =
     "font-black font-bureau-wide text-yellow uppercase text-2xl mt-2"
 
-  if (children.includes(":")) {
-    const split = children.split(":")
+  if (subtitle.text) {
     return (
       <>
-        <h1 className={bigClass}>{split[0]}</h1>
-        <h2 className={smallClass}>{split.slice(1)}</h2>
+        <h1 className={bigClass}>{title}</h1>
+        <h2 className={smallClass}>{subtitle.text}</h2>
       </>
     )
   }
 
-  return <h1 className={bigClass}>{children}</h1>
+  return <h1 className={bigClass}>{title}</h1>
 }
 
 export const query = graphql`
@@ -138,6 +138,9 @@ export const query = graphql`
       uid
       data {
         title
+        subtitle {
+          text
+        }
         cover {
           url
         }

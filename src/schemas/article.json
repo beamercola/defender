@@ -14,6 +14,14 @@
         "placeholder": "44 Years"
       }
     },
+    "subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Subtitle",
+        "placeholder": "subtitle"
+      }
+    },
     "teaser": {
       "type": "StructuredText",
       "config": {
@@ -25,7 +33,9 @@
       "type": "Link",
       "config": {
         "select": "document",
-        "customtypes": ["author"],
+        "customtypes": [
+          "author"
+        ],
         "label": "Author"
       }
     },
@@ -33,7 +43,9 @@
       "type": "Link",
       "config": {
         "select": "document",
-        "customtypes": ["category"],
+        "customtypes": [
+          "category"
+        ],
         "label": "Category"
       }
     },
@@ -103,7 +115,12 @@
               "size": {
                 "type": "Select",
                 "config": {
-                  "options": ["Full", "Large", "Medium", "Small"],
+                  "options": [
+                    "Full",
+                    "Large",
+                    "Medium",
+                    "Small"
+                  ],
                   "default_value": "Full",
                   "label": "Size"
                 }
@@ -111,7 +128,11 @@
               "align": {
                 "type": "Select",
                 "config": {
-                  "options": ["Left", "Center", "Right"],
+                  "options": [
+                    "Left",
+                    "Center",
+                    "Right"
+                  ],
                   "label": "Align"
                 }
               },
