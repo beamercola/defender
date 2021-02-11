@@ -10,7 +10,7 @@ const sizeClass = (size = "") => {
     case "Medium":
       return "w-1/2"
     case "Small":
-      return "w-1/3 md:w-1/4"
+      return "w-2/5 xl:w-1/3"
     default:
       return "w-full"
   }
