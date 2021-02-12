@@ -13,7 +13,7 @@ const primary = [
   },
   {
     label: "Donate",
-    to: "https://adachiproject.wedidit.com",
+    to: "https://adachiproject.wedid.it",
     className: "bg-green",
   },
 ]
