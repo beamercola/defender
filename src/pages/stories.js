@@ -29,7 +29,7 @@ export default Articles
 
 export const query = graphql`
   query AllArticlesQuery {
-    allPrismicArticle {
+    allPrismicArticle(filter: { data: { category: { slug: { ne: null } } } }) {
       nodes {
         uid
         data {
