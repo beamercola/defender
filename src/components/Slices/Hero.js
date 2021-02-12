@@ -11,14 +11,14 @@ const Hero = ({ slice: { primary: cover } }) => (
     render={attrs => (
       <div
         className="bg-yellow p-2 w-72 font-mono text-sm"
-        dangerouslySetInnerHTML={{ __html: cover?.image?.alt }}
+        dangerouslySetInnerHTML={{ __html: cover?.cursor_text?.html }}
         {...attrs}
       />
     )}
     plugins={[followCursor]}
     followCursor={true}
     placement="bottom-start"
-    disabled={!cover?.image?.alt?.length > 0}
+    disabled={!cover?.cursor_text?.html?.length > 0}
   >
     <div className="">
       <Fade>
@@ -53,6 +53,9 @@ export const fragments = graphql`
       }
       content: text {
         text
+      }
+      cursor_text {
+        html
       }
       video {
         url

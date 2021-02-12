@@ -5,9 +5,8 @@ import PageVisibility from "react-page-visibility"
 import StickyBox from "react-sticky-box"
 const classNames = require("classnames")
 
-const Header = ({ animated = false, toggleMenu }) => {
+const Header = ({ toggleMenu }) => {
   const [pageIsVisible, setPageIsVisible] = useState(true)
-  const [stuck, setStuck] = useState(false)
 
   const handleVisibilityChange = isVisible => {
     setPageIsVisible(isVisible)
@@ -16,16 +15,13 @@ const Header = ({ animated = false, toggleMenu }) => {
   return (
     <>
       <header className="bg-red relative">
-        <div
-          className={classNames(
-            "text-yellow text-3xl text-center  w-screen py-1 justify-end flex relative",
-            stuck ? "bg-black" : "bg-red"
-          )}
-        >
-          <p className="flex-grow text-center font-snell">
+        <div className="md:grid grid-cols-3 md:-mb-4">
+          <p className="text-center font-snell text-yellow text-2xl md:text-3xl md:col-start-2">
             From Injustice We Rise
           </p>
-          <p className="text-yellow text-lg absolute right-3">VOLUME 00</p>
+          <p className="text-yellow text-lg text-center md:text-right px-3">
+            VOLUME 00
+          </p>
         </div>
         <Link className="h-full" to="/">
           <img className="mx-auto h-full" src="/logotype.svg" alt="Defender" />
@@ -37,12 +33,7 @@ const Header = ({ animated = false, toggleMenu }) => {
         offsetTop={0}
         // onChangeMode={(o, n) => console.log(o, n)}
       >
-        <nav
-          className={classNames(
-            "border-t border-b border-yellow text-yellow text-2xl text-center font-snell w-screen py-1",
-            stuck ? "bg-black" : "bg-red"
-          )}
-        >
+        <nav className="border-t border-b border-yellow text-yellow text-2xl text-center font-snell w-screen py-1 bg-red">
           <PageVisibility onChange={handleVisibilityChange}>
             {pageIsVisible && (
               <Ticker direction="toRight" offset="100%">

@@ -56,17 +56,24 @@
                   "label": "Text"
                 }
               },
-              "video": {
-                "type": "Embed",
+              "cursor_text": {
+                "type": "StructuredText",
                 "config": {
-                  "label": "Video",
-                  "placeholder": "Ambient Video"
+                  "single": "strong, em",
+                  "label": "Cursor Text"
                 }
               },
               "link": {
                 "type": "Link",
                 "config": {
                   "label": "Link"
+                }
+              },
+              "video": {
+                "type": "Link",
+                "config": {
+                  "select": "media",
+                  "label": "Video"
                 }
               }
             },
