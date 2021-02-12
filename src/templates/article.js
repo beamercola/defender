@@ -63,7 +63,7 @@ const Article = ({
           )}
 
           <div
-            className="text-yellow max-w-lg leading-tight pt-2"
+            className="text-yellow max-w-lg leading-tight pt-2 uppercase"
             dangerouslySetInnerHTML={{ __html: teaser.html }}
           />
           {video?.embed_url && (
