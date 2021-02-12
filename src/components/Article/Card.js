@@ -20,7 +20,9 @@ const Card = ({ className, article, styles = {}, showTeaser = false }) => {
           src={article.data.cover?.url}
           alt={article.data.cover?.alt || ""}
         />
-        <h5 className={classNames(styles.title, "group-hover:text-red")}>
+        <h5
+          className={classNames(styles.title, "group-hover:text-red uppercase")}
+        >
           {article.data.title}
         </h5>
         {showTeaser && (
