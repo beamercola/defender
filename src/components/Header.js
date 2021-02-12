@@ -42,7 +42,7 @@ const Header = ({ animated = false, toggleMenu }) => {
                       Menu
                     </button>
                     <Link className="flex-grow" to="/about">
-                      About Us
+                      About
                     </Link>
                     <a
                       className="flex-grow"
