@@ -55,6 +55,8 @@ const Menu = ({ toggle, open }) => {
             )}
             to={link.to}
             key={i}
+            target={link.to.includes("https") && "_blank"}
+            rel="noreferrer"
           >
             <Fade delay={i * 100}>{link.label}</Fade>
           </Link>
@@ -64,6 +66,8 @@ const Menu = ({ toggle, open }) => {
             className="block py-3 px-6 md:px-12 font-snell text-2xl border-b hover:bg-black hover:text-white"
             to={link.to}
             key={i}
+            target={link.to.includes("https") && "_blank"}
+            rel="noreferrer"
           >
             {link.label}
           </Link>

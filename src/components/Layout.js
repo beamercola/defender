@@ -16,7 +16,7 @@ const Layout = ({ children, animatedHeader }) => {
   return (
     <>
       <Header toggleMenu={toggle} animated={animatedHeader} />
-      <main className="bg-white border-b">
+      <main className="bg-white border-b overflow-x-hidden">
         {children}
         <RecentPosts />
         <div className="border-t">
