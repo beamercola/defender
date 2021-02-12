@@ -17,7 +17,7 @@ const Title = ({ slice }) => {
 
   return (
     <div className="border-t w-full border-b">
-      <Ticker direction="toRight" offset="100%">
+      <Ticker direction="toLeft">
         {() => (
           <div className="flex w-screen">
             <SectionHeader
