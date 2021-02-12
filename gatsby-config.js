@@ -20,6 +20,7 @@ module.exports = {
           article: require("./src/schemas/article.json"),
           author: require("./src/schemas/author.json"),
           category: require("./src/schemas/category.json"),
+          layout: require("./src/schemas/layout.json"),
           page: require("./src/schemas/page.json"),
         },
         shouldDownloadImage: ({ node, key, value }) => {

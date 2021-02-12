@@ -56,7 +56,7 @@ const Header = ({ animated = false, toggleMenu }) => {
                     </Link>
                     <a
                       className="flex-grow"
-                      to="https://adachiproject.wedidit.com"
+                      to="https://adachiproject.wedid.it"
                       target="_blank"
                       rel="noreferrer"
                     >

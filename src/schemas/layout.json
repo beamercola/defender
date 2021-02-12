@@ -1,0 +1,39 @@
+{
+  "Main": {
+    "footer_text": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "strong, em, hyperlink",
+        "label": "Footer Text"
+      }
+    },
+    "explore": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading3",
+              "label": "Title"
+            }
+          },
+          "paragraph": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Paragraph"
+            }
+          },
+          "path": {
+            "type": "Text",
+            "config": {
+              "label": "Path"
+            }
+          }
+        },
+        "label": "Explore"
+      }
+    }
+  }
+}
