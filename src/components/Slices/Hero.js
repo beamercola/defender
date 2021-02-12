@@ -11,22 +11,26 @@ const Hero = ({ slice: { primary: cover } }) => (
     render={attrs => (
       <div
         className="bg-yellow p-2 w-72 font-mono text-sm"
-        dangerouslySetInnerHTML={{ __html: cover?.content?.html }}
+        dangerouslySetInnerHTML={{ __html: cover?.image?.alt }}
         {...attrs}
       />
     )}
     plugins={[followCursor]}
     followCursor={true}
     placement="bottom-start"
+    disabled={!cover?.image?.alt?.length > 0}
   >
     <div className="">
       <Fade>
         <Link to={cover.link?.uid && `/${cover.link?.uid}`}>
-          <Cover className="h-80vh border-b border-t" image={cover.image.url}>
+          <Cover
+            className="h-80vh border-b border-t"
+            image={cover.image.url}
+            video={cover.video?.url}
+          >
             <Fade>
               <h1 className="font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-5xl text-center">
-                An art+media project in collaboration with the San Francisco
-                Public Defender's office.
+                {cover?.content?.text}
               </h1>
             </Fade>
           </Cover>
@@ -44,10 +48,11 @@ export const fragments = graphql`
     slice_type
     primary {
       image {
+        alt
         url(imgixParams: { w: 1200 })
       }
       content: text {
-        html
+        text
       }
       video {
         url
