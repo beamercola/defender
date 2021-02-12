@@ -34,7 +34,7 @@ const Layout = ({ children, animatedHeader }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Contact
+            rise@wearedefender.com
           </a>
           <a
             className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-orange"
