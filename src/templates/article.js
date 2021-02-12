@@ -42,6 +42,16 @@ const Article = ({
 
   const chunks = chunkByType(slices, "callout")
 
+  let articleMeta = category ? (
+    <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
+      {category} | {date} | Article by {author}
+    </div>
+  ) : (
+    <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
+      From Injustice We Rise
+    </div>
+  )
+
   return (
     <Layout animatedHeader={false}>
       <Fade>
@@ -78,9 +88,7 @@ const Article = ({
         </Cover>
       </Fade>
 
-      <div className="bg-yellow font-mono text-center p-3 border-t border-b uppercase">
-        {category} | {date} | Article by {author}
-      </div>
+      {articleMeta}
 
       <article ref={contentHtml}>
         <Section

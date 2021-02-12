@@ -15,6 +15,7 @@ const RecentPosts = () => {
       allPrismicArticle(
         sort: { fields: last_publication_date, order: DESC }
         limit: 10
+        filter: { data: { category: { slug: { ne: null } } } }
       ) {
         nodes {
           ...ArticleBase
