@@ -13,6 +13,7 @@ const Footer = () => (
           href="https://instagram.com/wearedefender"
           target="_blank"
           rel="noreferrer"
+          className="text-red"
         >
           INSTAGRAM
         </a>
