@@ -20,16 +20,8 @@ const Layout = ({ children, animatedHeader }) => {
         {children}
         <RecentPosts />
         <div className="border-t">
-          <Link
-            className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-red"
-            to="/about"
-            target="_blank"
-            rel="noreferrer"
-          >
-            About
-          </Link>
           <a
-            className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-green"
+            className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white  bg-red"
             href="https://instagram.com/wearedefender"
             target="_blank"
             rel="noreferrer"
@@ -42,7 +34,7 @@ const Layout = ({ children, animatedHeader }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Contact
+            rise@wearedefender.com
           </a>
           <a
             className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-orange"

@@ -34,7 +34,9 @@ const Footer = () => (
         <div className="">
           <Link to="/about">ABOUT US</Link> | &copy; 2020
         </div>
-        <a href="https://adachiproject.com">PRESENTED BY THE ADACHI PROJECT</a>
+        <a href="https://adachiproject.com" target="_blank">
+          PRESENTED BY THE ADACHI PROJECT
+        </a>
       </div>
       <div className="flex justify-end md:h-32">
         <p className="font-mono uppercase text-sm p-6 w-2/3 md:w-1/2">

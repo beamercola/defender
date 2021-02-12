@@ -16,10 +16,20 @@ const Header = ({ animated = false, toggleMenu }) => {
   return (
     <>
       <header className="bg-red relative">
+        <div
+          className={classNames(
+            "text-yellow text-3xl text-center  w-screen py-1 justify-end flex relative",
+            stuck ? "bg-black" : "bg-red"
+          )}
+        >
+          <p className="flex-grow text-center font-snell">
+            From Injustice We Rise
+          </p>
+          <p className="text-yellow text-lg absolute right-3">VOLUME 00</p>
+        </div>
         <Link className="h-full" to="/">
           <img className="mx-auto h-full" src="/logotype.svg" alt="Defender" />
         </Link>
-        <p className="absolute top-3 right-3 text-yellow text-lg">VOLUME 00</p>
       </header>
 
       <StickyBox
@@ -42,7 +52,7 @@ const Header = ({ animated = false, toggleMenu }) => {
                       Menu
                     </button>
                     <Link className="flex-grow" to="/about">
-                      About Us
+                      About
                     </Link>
                     <a
                       className="flex-grow"
