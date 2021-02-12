@@ -12,7 +12,7 @@ const Shop = () => {
           className="flex items-center justify-center"
           style={{ height: "50vh" }}
         >
-          <h1>Coming Soon</h1>
+          <h1 className="font-snell text-7xl">Coming Soon</h1>
         </div>
       </div>
     </Layout>
