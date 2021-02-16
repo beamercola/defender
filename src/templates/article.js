@@ -62,9 +62,11 @@ const Article = ({
         >
           {/* <Fade cascade> */}
 
-          <h1 className="font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-8xl">
-            {title}
-          </h1>
+          {title !== "About" && (
+            <h1 className="font-black font-bureau-wide text-yellow uppercase text-4xl lg:text-8xl">
+              {title}
+            </h1>
+          )}
 
           {subtitle.text && (
             <h2 className="font-black font-bureau-wide text-yellow uppercase text-2xl mt-2">

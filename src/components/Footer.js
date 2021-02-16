@@ -61,23 +61,23 @@ const Footer = () => {
               dangerouslySetInnerHTML={{ __html: page?.footer_text?.html }}
             />
             <div className="font-mono uppercase text-sm mt-2">
-              Branding and design by{" "}
+              Site by{" "}
               <a
                 className="underline"
-                href="https://houseofgul.com"
+                href="https://aligodil.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                house of gül
-              </a>
-              . Web development by{" "}
+                Ali Godil
+              </a>{" "}
+              Developed by{" "}
               <a
                 className="underline"
                 href="https://dingo.rodeo"
                 target="_blank"
                 rel="noreferrer"
               >
-                dingo.rodeo
+                Beamer Wilkins
               </a>
             </div>
           </div>
