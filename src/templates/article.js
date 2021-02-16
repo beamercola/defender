@@ -54,6 +54,7 @@ const Article = ({
 
   return (
     <Layout animatedHeader={false}>
+      <SEO title={title} image={cover} />
       <Fade>
         <Cover
           className="h-90vh text-center"
