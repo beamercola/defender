@@ -18,7 +18,7 @@ const VideoModal = ({ isOpen, url, close }) => (
       onClick={close}
       aria-label="Close"
     >
-      <X className="text-red" size={32} />
+      <X className="text-red" size={48} />
     </button>
     <div className="aspect-w-16 aspect-h-9">
       <ReactPlayer
