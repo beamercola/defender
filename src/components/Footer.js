@@ -61,7 +61,7 @@ const Footer = () => {
               dangerouslySetInnerHTML={{ __html: page?.footer_text?.html }}
             />
             <div className="font-mono uppercase text-sm mt-2">
-              Site by{" "}
+              Design by{" "}
               <a
                 className="underline"
                 href="https://aligodil.com"
