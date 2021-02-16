@@ -56,6 +56,7 @@ module.exports = {
             },
             h1: {
               fontWeight: 900,
+              overflowWrap: "break-word",
             },
             h2: {
               fontWeight: 800,

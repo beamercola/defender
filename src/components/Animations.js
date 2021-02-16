@@ -5,7 +5,7 @@ import { keyframes } from "@emotion/react"
 const customAnimation = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 30px, 0);
   }
 
   to {

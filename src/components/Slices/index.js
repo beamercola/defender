@@ -42,7 +42,6 @@ const Slices = ({ className = {}, slices }) => {
       case "blockquote":
         return <Blockquote html={slice.primary.content.html} key={key} />
       case "article_grid":
-        console.log(slice.items)
         return (
           <ArticleGrid
             articles={slice.items.map(i => i.article.document)}

@@ -8,7 +8,10 @@ const Card = ({ className, article, styles = {}, showTeaser = false }) => {
   return (
     <div className={classNames(className, "group")}>
       <div className={classNames(styles.categoryWrapper, "flex")}>
-        <Link to={`/${article.data.category?.document?.uid}`}>
+        <Link
+          className="inline-block leading-none -mt-1"
+          to={`/${article.data.category?.document?.uid}`}
+        >
           <Highlight className={styles.category}>
             {article.data.category?.document?.data?.title}
           </Highlight>

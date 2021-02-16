@@ -25,21 +25,34 @@ const ArticleGrid = ({ articles }) => (
 
 export default ArticleGrid
 
-const Grid1 = ({ items }) => {
-  if (!items || items.length <= 0) return null
+const Grid1 = ({ articles: [article] }) => {
+  if (!article) return null
 
-  const {
-    bleed,
-    article: {
-      document: { data: article, uid },
-    },
-  } = items[0]
-
-  if (bleed) {
-    return <Bleed article={article} uid={uid} />
+  if (article.bleed) {
+    return <Bleed article={article} />
   }
 
-  return <div className="lg:flex group"></div>
+  return (
+    <div className="grid md:grid-cols-2 border-t md:py-12 lg:px-32">
+      <div className="bg-white p-3 md:p-8">
+        <Card
+          article={article}
+          styles={{ category: "hidden", title: "hidden" }}
+        />
+      </div>
+      <div className="bg-white p-3 md:p-8">
+        <Card
+          article={article}
+          styles={{
+            category: "mb-2 lg:mb-4 mt-0",
+            image: "hidden",
+            title: titleClass,
+          }}
+          showTeaser
+        />
+      </div>
+    </div>
+  )
 }
 
 const Grid2 = ({ items }) => <div></div>
@@ -51,7 +64,7 @@ const Grid3 = ({ articles }) => {
         <Fade direction="up" triggerOnce duration={500} delay={100}>
           <Card
             article={articles[0]}
-            showTeaser={true}
+            showTeaser
             styles={{
               category: "mb-2 lg:mb-4",
               image: "mb-4",
