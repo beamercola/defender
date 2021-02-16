@@ -3,7 +3,7 @@
 
 .ReactModal__Overlay {
   @apply flex bg-yellow bg-opacity-80 fixed inset-0 z-50 !important;
-  @apply items-center justify-center px-12;
+  @apply items-center justify-center px-24;
   @apply transition-all duration-1000;
   opacity: 0;
 }
