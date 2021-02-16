@@ -20,7 +20,7 @@ const Header = ({ toggleMenu }) => {
             &ldquo;From Injustice We Rise&rdquo;
           </p>
           <p className="text-yellow text-lg text-center md:text-right px-3">
-            VOLUME 00
+            VOL. 00
           </p>
         </div>
         <Link className="h-full" to="/">

@@ -27,7 +27,7 @@ const RecentPosts = () => {
   return (
     <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t flex justify-between items-center">
-        <h1 className="flex items-center">MOST RECENT STORIES</h1>
+        <h1 className="flex items-center">MORE STORIES</h1>
         <div className="md:flex hidden">
           <button
             className=""
