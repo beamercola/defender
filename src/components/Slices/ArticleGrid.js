@@ -60,14 +60,14 @@ const Grid2 = ({ items }) => <div></div>
 const Grid3 = ({ articles }) => {
   return (
     <div className="bg-black grid md:grid-cols-3" style={{ gap: "2px" }}>
-      <div className="bg-white p-3 md:p-8 md:col-span-2 lg:py-12 lg:px-32">
+      <div className="bg-white p-3 md:p-8 md:col-span-2 lg:py-12 lg:px-12 xl:px-32">
         <Fade direction="up" triggerOnce duration={500} delay={100}>
           <Card
             article={articles[0]}
             showTeaser
             styles={{
               category: "mb-2 lg:mb-4",
-              image: "mb-4",
+              image: "mb-4 md:h-96 lg:h-128",
               title: titleClass,
             }}
           />
@@ -83,7 +83,7 @@ const Grid3 = ({ articles }) => {
               styles={{
                 categoryWrapper: "justify-start",
                 category: "mb-2 lg:mb-4",
-                image: "mb-4 h-64 w-full md:w-2/3",
+                image: "mb-4 md:h-48 lg:h-52 w-full lg:w-2/3",
                 title: titleClass,
               }}
             />
@@ -96,7 +96,7 @@ const Grid3 = ({ articles }) => {
               showTeaser={true}
               styles={{
                 category: "mb-2 lg:mb-4",
-                image: "hidden",
+                image: "mb-4 md:h-48 lg:h-52 w-full lg:w-2/3",
                 title: titleClass,
               }}
             />

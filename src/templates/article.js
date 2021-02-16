@@ -55,7 +55,7 @@ const Article = ({
   return (
     <Layout animatedHeader={false}>
       <SEO
-        title={page.seo_title?.text}
+        title={page.seo_title?.text || title}
         image={page.seo_image?.url}
         description={page.seo_description}
       />
