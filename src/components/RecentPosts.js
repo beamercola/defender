@@ -28,24 +28,26 @@ const RecentPosts = () => {
     <div className="overflow-hidden">
       <SectionHeader className="px-8 border-t flex justify-between items-center">
         <h1 className="flex items-center">MORE STORIES</h1>
-        <div className="md:flex hidden">
-          <button
-            className=""
-            onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
-          >
-            <img
-              className="h-2 rotate-180 transform"
-              src="/arrow.svg"
-              alt="Left Arrow"
-            />
-          </button>
-          <button
-            className="ml-2"
-            onClick={() => swiper?.slideTo(swiper.activeIndex + 1)}
-          >
-            <img className="h-2" src="/arrow.svg" alt="Right Arrow" />
-          </button>
-        </div>
+        {articles.length > 4 && (
+          <div className="md:flex hidden">
+            <button
+              className=""
+              onClick={() => swiper?.slideTo(swiper.activeIndex - 1)}
+            >
+              <img
+                className="h-2 rotate-180 transform"
+                src="/arrow.svg"
+                alt="Left Arrow"
+              />
+            </button>
+            <button
+              className="ml-2"
+              onClick={() => swiper?.slideTo(swiper.activeIndex + 1)}
+            >
+              <img className="h-2" src="/arrow.svg" alt="Right Arrow" />
+            </button>
+          </div>
+        )}
       </SectionHeader>
       <div className="p-4 md:pb-12 md:p-8">
         <Swiper
