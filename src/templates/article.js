@@ -21,10 +21,10 @@ const Article = ({
         video,
         teaser,
         video_bg,
-        cover: { url: cover },
         author: { document: authorDocument },
         category: { document: categoryDocument },
         body: slices,
+        ...page
       },
     },
   },
@@ -54,11 +54,15 @@ const Article = ({
 
   return (
     <Layout animatedHeader={false}>
-      <SEO title={title} image={cover} />
+      <SEO
+        title={page.seo_title?.text}
+        image={page.seo_image?.url}
+        description={page.seo_description}
+      />
       <Fade>
         <Cover
           className="h-90vh text-center"
-          image={cover}
+          image={page.cover?.url}
           video={video_bg?.url}
         >
           {/* <Fade cascade> */}
@@ -156,6 +160,15 @@ export const query = graphql`
         }
         teaser {
           html
+          text
+        }
+
+        seo_title {
+          text
+        }
+        seo_description
+        seo_image {
+          url(imgixParams: { w: 1200 })
         }
 
         author {

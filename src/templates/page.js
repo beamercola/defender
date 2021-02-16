@@ -9,14 +9,18 @@ const PageTemplate = data => {
   const {
     data: {
       prismicPage: {
-        data: { title, body: slices, image },
+        data: { title, body: slices, image, ...page },
       },
     },
   } = data
 
   return (
     <Layout animatedHeader={true}>
-      <SEO title={title || ""} image={image?.url} />
+      <SEO
+        title={page.seo_title?.text}
+        image={page.seo_image?.url}
+        description={page.seo_description}
+      />
       <article>
         <Slices
           slices={slices}
@@ -38,7 +42,15 @@ export const PageTemplateQuery = graphql`
       uid
       data {
         image {
+          alt
           url
+        }
+        seo_title {
+          text
+        }
+        seo_description
+        seo_image {
+          url(imgixParams: { w: 1200 })
         }
         body {
           ... on PrismicPageBodyHero {
