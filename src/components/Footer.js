@@ -48,17 +48,39 @@ const Footer = () => {
       <div className="">
         <div className="md:flex justify-between uppercase border-b border-black p-6 tracking-widest">
           <div className="">
-            <Link to="/about">ABOUT US</Link> | &copy; 2020
+            <Link to="/about">ABOUT US</Link> | &copy; 2021
           </div>
           <a href="https://adachiproject.com" target="_blank">
             PRESENTED BY THE ADACHI PROJECT
           </a>
         </div>
         <div className="flex justify-end md:h-32">
-          <div
-            className="font-mono uppercase text-sm p-6 w-2/3 md:w-1/2"
-            dangerouslySetInnerHTML={{ __html: page?.footer_text?.html }}
-          />
+          <div className="p-6 w-2/3 md:w-1/2">
+            <div
+              className="font-mono uppercase text-sm"
+              dangerouslySetInnerHTML={{ __html: page?.footer_text?.html }}
+            />
+            <div className="font-mono uppercase text-sm mt-2">
+              Branding and design by{" "}
+              <a
+                className="underline"
+                href="https://houseofgul.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                house of gül
+              </a>
+              . Web development by{" "}
+              <a
+                className="underline"
+                href="https://dingo.rodeo"
+                target="_blank"
+                rel="noreferrer"
+              >
+                dingo.rodeo
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

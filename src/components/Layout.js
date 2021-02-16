@@ -8,7 +8,7 @@ import Menu from "../components/Menu"
 import Link from "../components/Link"
 import ScrollToTop from "./ScrollToTop"
 
-const Layout = ({ children, animatedHeader }) => {
+const Layout = ({ children, animatedHeader, includeRecent = true }) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggle = () => setMenuOpen(!menuOpen)
@@ -18,7 +18,7 @@ const Layout = ({ children, animatedHeader }) => {
       <Header toggleMenu={toggle} animated={animatedHeader} />
       <main className="bg-white border-b overflow-x-hidden">
         {children}
-        <RecentPosts />
+        {includeRecent && <RecentPosts />}
         <div className="border-t">
           <a
             className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white  bg-red"
@@ -45,7 +45,7 @@ const Layout = ({ children, animatedHeader }) => {
             Donate
           </a>
         </div>
-        <Explore />
+        {/* <Explore /> */}
         <Newsletter />
       </main>
       <Footer />

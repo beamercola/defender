@@ -17,7 +17,7 @@ const Header = ({ toggleMenu }) => {
       <header className="bg-red relative">
         <div className="flex flex-col-reverse md:grid grid-cols-3 md:-mb-4">
           <p className="text-center font-snell text-yellow text-2xl md:text-3xl md:col-start-2">
-            From Injustice We Rise
+            &ldquo;From Injustice We Rise&rdquo;
           </p>
           <p className="text-yellow text-lg text-center md:text-right px-3">
             VOLUME 00

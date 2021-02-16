@@ -16,10 +16,10 @@ const primary = [
     to: "https://adachiproject.wedid.it",
     className: "bg-green",
   },
+  { label: "Shop", to: "/shop", className: "bg-gray" },
 ]
 
 const secondary = [
-  { label: "Shop", to: "/shop" },
   { label: "Email", to: "mailto:rise@wearedefender.com" },
   { label: "Instagram", to: "https://instagram.com/wearedefender" },
   { label: "Twitter", to: "https://twitter.com/_wearedefender" },

@@ -7,7 +7,7 @@ const Articles = ({
     allPrismicArticle: { nodes: articles },
   },
 }) => (
-  <Layout>
+  <Layout includeRecent={false}>
     <div className="p-4 md:p-8">
       <div className="grid grid-cols-4 gap-4 md:gap-8">
         {articles.map((article, i) => (
