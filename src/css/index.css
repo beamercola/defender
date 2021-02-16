@@ -57,6 +57,10 @@ main {
   transform-origin: top center;
 }
 
+.player.object-cover video {
+  object-fit: cover;
+}
+
 @screen lg {
   .hopeless {
     transform-origin: top right;

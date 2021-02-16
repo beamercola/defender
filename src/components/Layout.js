@@ -16,7 +16,7 @@ const Layout = ({ children, animatedHeader, includeRecent = true }) => {
   return (
     <>
       <Header toggleMenu={toggle} animated={animatedHeader} />
-      <main className="bg-white border-b overflow-x-hidden">
+      <main className="bg-white border-b">
         {children}
         {includeRecent && <RecentPosts />}
         <div className="border-t">

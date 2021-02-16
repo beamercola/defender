@@ -4,7 +4,7 @@ import classNames from "classnames"
 const Section = ({ callout, children, last }) => (
   <div className="md:flex md:items-stretch">
     <div className="md:w-80 flex-shrink-0">
-      <Fade className="sticky top-24" triggerOnce>
+      <Fade className="sticky top-12" triggerOnce>
         {callout}
       </Fade>
     </div>

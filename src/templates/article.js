@@ -78,6 +78,7 @@ const Article = ({
             className="text-yellow max-w-lg leading-tight pt-2 uppercase"
             dangerouslySetInnerHTML={{ __html: teaser.html }}
           />
+
           {video?.embed_url && (
             <button
               className="mt-8 text-lg text-yellow uppercase bg-red py-4 px-8 rounded-full inline-block font-sans"
@@ -93,30 +94,30 @@ const Article = ({
       {articleMeta}
 
       <article ref={contentHtml}>
-        <Section
-          callout={<Meta readTime={readTime} title={title} />}
-          sticky={false}
-        >
-          <h1 className="font-black text-3xl md:text-5xl uppercase my-16">
-            {title}
-          </h1>
-        </Section>
-
         {chunks?.map(({ callout, slices }, i) => (
           <Section
             callout={
-              <div
-                className="prose p-4 sticky font-mono"
-                style={{ top: "4rem" }}
-                dangerouslySetInnerHTML={{
-                  __html: callout?.primary?.content.html,
-                }}
-              />
+              i === 0 ? (
+                <Meta readTime={readTime} title={title} />
+              ) : (
+                <div
+                  className="prose p-4 sticky font-mono"
+                  style={{ top: "4rem" }}
+                  dangerouslySetInnerHTML={{
+                    __html: callout?.primary?.content.html,
+                  }}
+                />
+              )
             }
             key={i}
             last={i === chunks?.length - 1}
           >
             <div className="py-4">
+              {i === 0 && (
+                <h1 className="font-black text-3xl md:text-5xl uppercase my-16">
+                  {title}
+                </h1>
+              )}
               <Slices slices={slices} />
             </div>
           </Section>
