@@ -9,7 +9,7 @@ const Articles = ({
 }) => (
   <Layout includeRecent={false}>
     <div className="p-4 md:p-8">
-      <div className="grid grid-cols-4 gap-4 md:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
         {articles.map((article, i) => (
           <Card
             article={article}

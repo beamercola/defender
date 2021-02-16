@@ -5,6 +5,7 @@ import { followCursor } from "tippy.js/headless"
 import { Fade } from "react-awesome-reveal"
 import Cover from "../Cover"
 import Link from "../Link"
+
 const Hero = ({ slice: { primary: cover } }) => {
   return (
     <Tippy
