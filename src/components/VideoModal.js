@@ -14,14 +14,20 @@ const VideoModal = ({ isOpen, url, close }) => (
     closeTimeoutMS={1000}
   >
     <button
-      className="absolute top-8 right-8"
+      className="absolute top-4 right-4"
       onClick={close}
       aria-label="Close"
     >
-      <X className="text-red" size={48} />
+      <X className="text-red" size={32} />
     </button>
     <div className="aspect-w-16 aspect-h-9">
-      <ReactPlayer controls={true} width="100%" height="100%" url={url} />
+      <ReactPlayer
+        controls
+        width="100%"
+        height="100%"
+        url={url}
+        playing={true}
+      />
     </div>
   </Modal>
 )

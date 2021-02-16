@@ -7,9 +7,9 @@ const ScrollToTop = () => {
 
   return (
     <button
-      className="fixed left-4 bottom-4"
+      className="fixed left-4 bottom-4 z-40"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      style={{ zIndex: 111111 }}
+      // style={{ zIndex: 40 }}
     >
       <motion.img
         className="object-contain w-12 h-12 md:w-24 md:h-24"
