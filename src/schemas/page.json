@@ -75,6 +75,14 @@
                   "select": "media",
                   "label": "Video"
                 }
+              },
+              "overlay": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Overlay"
+                }
               }
             },
             "repeat": {}
