@@ -7,9 +7,11 @@ module.exports = {
     title: `Defender`,
     description: ``,
     author: ``,
+    siteUrl: "https://wearedefender.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-postcss`,
     {
       resolve: "gatsby-source-prismic",
