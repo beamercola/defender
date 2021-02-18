@@ -8,7 +8,7 @@ export const ArticleBase = graphql`
         text
       }
       cover {
-        url
+        url(imgixParams: { w: 1200 })
         alt
       }
       teaser {

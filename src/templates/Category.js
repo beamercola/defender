@@ -34,25 +34,7 @@ export const query = graphql`
   query ArticleCategoryQuery($uid: String!) {
     allPrismicArticle(filter: { data: { category: { uid: { eq: $uid } } } }) {
       nodes {
-        uid
-        data {
-          title
-          cover {
-            url(imgixParams: { w: 1000 })
-          }
-          teaser {
-            text
-          }
-          category {
-            document {
-              ... on PrismicCategory {
-                data {
-                  title
-                }
-              }
-            }
-          }
-        }
+        ...ArticleBase
       }
     }
   }
