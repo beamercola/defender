@@ -1,7 +1,7 @@
+@import "./modal.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./modal.css";
 
 @font-face {
   font-family: "cstm_xprmntl_03regular";
