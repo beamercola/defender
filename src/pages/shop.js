@@ -21,18 +21,18 @@ const Shop = () => {
 
 export default Shop
 
-const Product = () => (
-  <div>
-    <img className="h-96 w-full bg-black" alt="" />
-    <h2 className="font-bureau-wide uppercase text-2xl py-2 font-bold">
-      Title
-    </h2>
-    <p>Description</p>
-    <p className="">
-      Add To Cart:
-      {["Small", "Medium", "Large"].map((size, i) => (
-        <button className="pl-4 underline">{size}</button>
-      ))}
-    </p>
-  </div>
-)
+// const Product = () => (
+//   <div>
+//     <img className="h-96 w-full bg-black" alt="" />
+//     <h2 className="font-bureau-wide uppercase text-2xl py-2 font-bold">
+//       Title
+//     </h2>
+//     <p>Description</p>
+//     <p className="">
+//       Add To Cart:
+//       {["Small", "Medium", "Large"].map((size, i) => (
+//         <button className="pl-4 underline">{size}</button>
+//       ))}
+//     </p>
+//   </div>
+// )
