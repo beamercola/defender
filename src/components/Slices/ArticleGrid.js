@@ -4,7 +4,6 @@ import Highlight from "../Highlight"
 import { Fade } from "../Animations"
 import Card from "../Article/Card"
 
-const classNames = require("classnames")
 const titleClass =
   "font-bureau-wide font-black leading-tight uppercase text-2xl mb-4"
 

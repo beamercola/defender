@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import Footer from "./Footer"
 import Header from "./Header"
-import Explore from "../components/Explore"
 import Newsletter from "../components/Newsletter"
 import RecentPosts from "../components/RecentPosts"
 import Menu from "../components/Menu"
-import Link from "../components/Link"
 import ScrollToTop from "./ScrollToTop"
+// import Explore from "../components/Explore"
+// import Link from "../components/Link"
 
 const Layout = ({ children, animatedHeader, includeRecent = true }) => {
   const [menuOpen, setMenuOpen] = useState(false)

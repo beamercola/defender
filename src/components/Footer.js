@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="">
             <Link to="/about">ABOUT US</Link> | &copy; 2021
           </div>
-          <a href="https://adachiproject.com" target="_blank">
+          <a href="https://adachiproject.com" target="_blank" rel="noreferrer">
             PRESENTED BY THE ADACHI PROJECT
           </a>
         </div>

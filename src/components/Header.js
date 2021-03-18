@@ -3,7 +3,6 @@ import Link from "./Link"
 import Ticker from "react-ticker"
 import PageVisibility from "react-page-visibility"
 import StickyBox from "react-sticky-box"
-const classNames = require("classnames")
 
 const Header = ({ toggleMenu }) => {
   const [pageIsVisible, setPageIsVisible] = useState(true)

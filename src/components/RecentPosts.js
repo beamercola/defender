@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Fade } from "./Animations"
 import { SectionHeader } from "./Slices"
-import Link from "./Link"
 import Card from "./Article/Card"
 
 const RecentPosts = () => {
