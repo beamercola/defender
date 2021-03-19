@@ -41,10 +41,10 @@ module.exports = {
         "90vh": "90vh",
       },
       spacing: {
-        "72": "18rem",
-        "84": "21rem",
-        "96": "24rem",
-        "128": "32rem",
+        72: "18rem",
+        84: "21rem",
+        96: "24rem",
+        128: "32rem",
       },
       typography: {
         DEFAULT: {
@@ -74,7 +74,13 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      cursor: ["disabled"],
+      opacity: ["disabled"],
+      textDecoration: ["disabled"],
+    },
+  },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/typography"),

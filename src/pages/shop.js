@@ -55,6 +55,7 @@ export const query = graphql`
         variants {
           title
           storefrontId
+          availableForSale
         }
       }
     }
