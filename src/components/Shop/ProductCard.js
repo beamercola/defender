@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
         {product.variants.map((variant, i) => (
           <button
             className="pr-4 underline disabled:opacity-25 disabled:line-through disabled:cursor-not-allowed"
-            disabled={variant.availableForSale}
+            disabled={!variant.availableForSale}
             onClick={() => handleAddToCart(variant.storefrontId)}
             key={i}
           >
