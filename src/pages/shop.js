@@ -14,15 +14,15 @@ const Shop = ({
     <Layout cover={<div className="h-40 bg-red" />}>
       <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
 
-      <div className="flex">
-        <div className="w-3/4 p-4 md:p-8">
+      <div className="md:flex">
+        <div className="md:w-3/4 p-4 md:p-8">
           <div className="grid grid-cols-2 gap-8">
             {products.map((product, i) => (
               <ProductCard product={product} key={i} />
             ))}
           </div>
         </div>
-        <div className="w-1/4 p-4 md:p-8 pl-0 md:pl-0">
+        <div className="md:w-1/4 p-4 md:p-8 md:pl-0">
           <Cart />
         </div>
       </div>

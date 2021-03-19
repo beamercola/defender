@@ -9,20 +9,6 @@ const ProductCard = ({ product }) => {
     addItemToCart(id, 1)
   }
 
-  const formatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
-  })
-
-  console.log(product.priceRangeV2.minVariantPrice.amount)
-  console.log(
-    product.priceRangeV2.minVariantPrice.amount.toLocaleString("en-US", {
-      style: "currency",
-      currency: "USD",
-    })
-  )
-
   return (
     <div>
       <GatsbyImage
@@ -30,7 +16,7 @@ const ProductCard = ({ product }) => {
         image={product.featuredImage.gatsbyImageData}
         alt={product.featuredImage.altText || ""}
       />
-      <h2 className="font-bureau-wide uppercase text-2xl font-bold">
+      <h2 className="font-bureau-wide uppercase text-lg md:text-2xl font-bold">
         {product.title}
       </h2>
 
@@ -49,7 +35,7 @@ const ProductCard = ({ product }) => {
         Add To Cart:
         {product.variants.map((variant, i) => (
           <button
-            className="pl-4 underline disabled:opacity-25 disabled:line-through disabled:cursor-not-allowed"
+            className="pr-4 underline disabled:opacity-25 disabled:line-through disabled:cursor-not-allowed"
             disabled={variant.availableForSale}
             onClick={() => handleAddToCart(variant.storefrontId)}
             key={i}
