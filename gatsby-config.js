@@ -32,6 +32,22 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-shopify-experimental",
+      options: {
+        apiKey: process.env.SHOPIFY_ADMIN_API_KEY,
+        password: process.env.SHOPIFY_ADMIN_PASSWORD,
+        storeUrl: `${process.env.SHOPIFY_STORE_NAME}.myshopify.com`,
+      },
+    },
+    {
+      resolve: "gatsby-theme-shopify-manager",
+      options: {
+        shopName: process.env.SHOPIFY_STORE_NAME,
+        accessToken: process.env.SHOPIFY_STOREFRONT_TOKEN,
+        shouldConfigureSourcePlugin: false,
+      },
+    },
+    {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         typekit: {

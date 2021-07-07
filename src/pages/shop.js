@@ -1,18 +1,29 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { SectionHeader } from "../components/Slices"
+import Cart from "../components/Shop/Cart"
+import ProductCard from "../components/Shop/ProductCard"
 
-const Shop = () => {
+const Shop = ({
+  data: {
+    allShopifyProduct: { nodes: products },
+  },
+}) => {
   return (
     <Layout cover={<div className="h-40 bg-red" />}>
-      <div className="">
-        <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
+      <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
 
-        <div
-          className="flex items-center justify-center"
-          style={{ height: "50vh" }}
-        >
-          <h1 className="font-snell text-5xl md:text-7xl pl-4">Coming Soon</h1>
+      <div className="md:flex">
+        <div className="md:w-3/4 p-4 md:p-8">
+          <div className="grid grid-cols-2 gap-8">
+            {products.map((product, i) => (
+              <ProductCard product={product} key={i} />
+            ))}
+          </div>
+        </div>
+        <div className="md:w-1/4 p-4 md:p-8 md:pl-0">
+          <Cart />
         </div>
       </div>
     </Layout>
@@ -21,18 +32,32 @@ const Shop = () => {
 
 export default Shop
 
-// const Product = () => (
-//   <div>
-//     <img className="h-96 w-full bg-black" alt="" />
-//     <h2 className="font-bureau-wide uppercase text-2xl py-2 font-bold">
-//       Title
-//     </h2>
-//     <p>Description</p>
-//     <p className="">
-//       Add To Cart:
-//       {["Small", "Medium", "Large"].map((size, i) => (
-//         <button className="pl-4 underline">{size}</button>
-//       ))}
-//     </p>
-//   </div>
-// )
+export const query = graphql`
+  query ShopPage {
+    allShopifyProduct {
+      nodes {
+        id
+        title
+        handle
+        descriptionHtml
+        featuredImage {
+          altText
+          gatsbyImageData(width: 900, height: 900)
+        }
+        priceRangeV2 {
+          maxVariantPrice {
+            amount
+          }
+          minVariantPrice {
+            amount
+          }
+        }
+        variants {
+          title
+          storefrontId
+          availableForSale
+        }
+      }
+    }
+  }
+`
