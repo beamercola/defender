@@ -38,7 +38,7 @@ const Layout = ({ children, animatedHeader, includeRecent = true }) => {
           </a>
           <a
             className="block p-6 leading-none text-yellow text-center text-2xl font-black font-bureau-wide uppercase hover:bg-black hover:text-white bg-orange"
-            href="https://adachiproject.wedid.it"
+            href="https://give.communityin.org/theadachiproject"
             target="_blank"
             rel="noreferrer"
           >

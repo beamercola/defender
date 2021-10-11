@@ -46,7 +46,7 @@ const Header = ({ toggleMenu }) => {
                     </Link>
                     <a
                       className="flex-grow"
-                      href="https://adachiproject.wedid.it"
+                      href="https://give.communityin.org/theadachiproject"
                       target="_blank"
                       rel="noreferrer"
                     >
