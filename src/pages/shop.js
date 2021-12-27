@@ -4,15 +4,24 @@ import Layout from "../components/Layout"
 import { SectionHeader } from "../components/Slices"
 // import Cart from "../components/Shop/Cart"
 import ProductCard from "../components/Shop/ProductCard"
+import Link from "../components/Link"
+import { useCartLinesTotalQuantity } from "@shopify/hydrogen"
 
 const Shop = ({
   data: {
     allShopifyProduct: { nodes: products },
   },
 }) => {
+  const qty = useCartLinesTotalQuantity()
+
   return (
     <Layout cover={<div className="h-40 bg-red" />}>
-      <SectionHeader className="px-8 border-t">SHOP</SectionHeader>
+      <SectionHeader className="px-8 border-t flex justify-between">
+        <div className="">SHOP</div>
+        <Link className="" to="/cart">
+          Cart ({qty})
+        </Link>
+      </SectionHeader>
 
       <div className="p-4 md:p-8 grid grid-cols-2 gap-8">
         {products.map((product, i) => (

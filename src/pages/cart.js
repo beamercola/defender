@@ -27,7 +27,7 @@ const Cart = () => {
     <Layout>
       {/* {cartItems.length === 0 && <h1>Add items to cart</h1>} */}
 
-      <div className="grid grid-cols-3 p-4 md:p-8">
+      <div className="grid grid-cols-3 p-4 md:p-8 gap-8">
         <div className="col-span-2 border">
           <CartLines>
             <div className="flex">
@@ -67,7 +67,9 @@ const Cart = () => {
           </CartLines>
         </div>
         <div className="">
-          <CartCheckoutButton>Check Out</CartCheckoutButton>
+          <CartCheckoutButton className="bg-black text-white text-2xl font-bureau-wide p-4 w-full">
+            Check Out
+          </CartCheckoutButton>
         </div>
       </div>
 
