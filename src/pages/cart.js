@@ -20,9 +20,6 @@ import {
 } from "@shopify/hydrogen"
 
 const Cart = () => {
-  const { lines } = useCart()
-  console.log(lines)
-
   return (
     <Layout>
       {/* {cartItems.length === 0 && <h1>Add items to cart</h1>} */}
