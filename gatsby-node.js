@@ -61,4 +61,24 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const products = await graphql(`
+    query {
+      allShopifyProduct {
+        nodes {
+          handle
+        }
+      }
+    }
+  `)
+
+  products.data.allShopifyProduct.nodes.forEach(node => {
+    createPage({
+      path: `/products/${node.handle}`,
+      component: path.resolve(`./src/templates/Product.js`),
+      context: {
+        handle: node.handle,
+      },
+    })
+  })
 }
