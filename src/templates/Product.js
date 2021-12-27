@@ -61,8 +61,11 @@ const Product = () => {
                 </select>
               </div>
 
-              <SelectedVariantAddToCartButton className="col-span-2 text-4xl p-8 font-bureau-wide uppercase bg-blue text-yellow hover:bg-green">
-                Add to cart
+              <SelectedVariantAddToCartButton
+                className="col-span-2 text-4xl p-8 font-bureau-wide uppercase bg-blue text-yellow hover:bg-green disabled:opacity-50"
+                disabled={!selectedVariant.availableForSale}
+              >
+                {selectedVariant.availableForSale ? "Add to cart" : "Sold Out"}
               </SelectedVariantAddToCartButton>
             </form>
           </StickyBox>
