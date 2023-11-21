@@ -52,7 +52,7 @@ const Header = ({ toggleMenu }) => {
                     >
                       Donate
                     </a>
-                    <Link className="flex-grow" to="/shop">
+                    <Link className="flex-grow" to="https://wearedefendershop.myshopify.com">
                       Shop
                     </Link>
                   </div>
