@@ -16,7 +16,7 @@ const primary = [
     to: "https://give.communityin.org/theadachiproject",
     className: "bg-green",
   },
-  { label: "Shop", to: "/shop", className: "bg-gray" },
+  { label: "Shop", to: "https://wearedefendershop.myshopify.com", className: "bg-gray" },
 ]
 
 const secondary = [
